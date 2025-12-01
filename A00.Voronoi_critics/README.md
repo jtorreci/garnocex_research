@@ -1,7 +1,6 @@
 # Reproducibility Package: Voronoi Probabilistic Framework
 
-<!-- DOI badge will be added after Zenodo deposit -->
-<!-- [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.XXXXXX.svg)](https://doi.org/10.5281/zenodo.XXXXXX) -->
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17772773.svg)](https://doi.org/10.5281/zenodo.17772773)
 
 This repository contains all code, data, and analysis scripts needed to reproduce the results from:
 
@@ -127,18 +126,18 @@ If you use this framework in your research, please cite:
 ```bibtex
 @article{voronoi_probabilistic_2025,
   title={The Hidden Cost of Straight Lines: Quantifying Misallocation Risk in Voronoi-Based Service Area Models},
-  author={[Authors]},
-  journal={[Journal]},
+  author={Torrecilla Pinero, J.A. and Ceballos Martínez, J.M. and Cuartero Sáez, A. and Plaza Caballero, P. and Cruces López, A.},
+  journal={Computers, Environment and Urban Systems},
   year={2025},
-  doi={[DOI]}
+  note={Submitted}
 }
 
 @software{voronoi_framework_code,
   title={Voronoi Probabilistic Framework - Reproducibility Package},
-  author={[Authors]},
+  author={Torrecilla Pinero, J.A. and Ceballos Martínez, J.M. and Cuartero Sáez, A. and Plaza Caballero, P. and Cruces López, A.},
   year={2025},
-  doi={10.5281/zenodo.XXXXXX},
-  url={https://github.com/username/voronoi-probabilistic-framework}
+  doi={10.5281/zenodo.17772773},
+  url={https://github.com/jtorreci/garnocex_research}
 }
 ```
 
@@ -149,8 +148,7 @@ We welcome contributions! Please see `docs/contributing.md` for guidelines.
 ## 📧 Contact
 
 For questions about the methodology or code:
-- [Author Name] - [email]
-- GitHub Issues: [Repository Issues](https://github.com/username/voronoi-probabilistic-framework/issues)
+- GitHub Issues: [Repository Issues](https://github.com/jtorreci/garnocex_research/issues)
 
 ## 📄 License
 
