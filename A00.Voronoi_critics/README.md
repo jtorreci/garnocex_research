@@ -124,13 +124,13 @@ To apply the framework to your own geographic area:
 If you use this framework in your research, please cite:
 
 ```bibtex
-@article{voronoi_probabilistic_2025,
+<!-- @article{voronoi_probabilistic_2025,
   title={The Hidden Cost of Straight Lines: Quantifying Misallocation Risk in Voronoi-Based Service Area Models},
   author={Torrecilla Pinero, J.A. and Ceballos Martínez, J.M. and Cuartero Sáez, A. and Plaza Caballero, P. and Cruces López, A.},
   journal={Computers, Environment and Urban Systems},
   year={2025},
   note={Submitted}
-}
+} -->
 
 @software{voronoi_framework_code,
   title={Voronoi Probabilistic Framework - Reproducibility Package},
