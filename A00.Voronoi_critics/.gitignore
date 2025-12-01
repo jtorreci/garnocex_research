@@ -1,0 +1,110 @@
+# Voronoi Probabilistic Framework - Git Ignore File
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.env
+.venv
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pytest
+.pytest_cache/
+.coverage
+htmlcov/
+
+# R
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+*.Rproj
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Results and outputs (keep structure, ignore content)
+results/figures/*.png
+results/figures/*.jpg
+results/figures/*.pdf
+results/tables/*.tex
+results/tables/*.csv
+results/spatial/*.csv
+results/spatial/*.shp
+results/spatial/*.geojson
+
+# Temporary analysis files
+temp/
+tmp/
+*.tmp
+
+# Large data files (add to LFS if needed)
+data/*.csv
+!data/sample_data.csv
+!data/test_data.csv
+
+# Configuration files with sensitive info
+config/secrets.yaml
+config/api_keys.json
+
+# Generated documentation
+docs/_build/
+docs/site/
+
+# LaTeX auxiliary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc
+
+# Backup files
+*.bak
+*.backup
+
+# Specific to this project
+*_anonymized.csv
+calibration_results_*.json
+parameter_estimates_*.json

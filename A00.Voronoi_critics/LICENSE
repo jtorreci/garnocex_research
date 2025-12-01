@@ -1,0 +1,42 @@
+Creative Commons Attribution 4.0 International License (CC-BY 4.0)
+
+Copyright (c) 2025 The Authors
+
+This work is licensed under the Creative Commons Attribution 4.0 International License.
+
+You are free to:
+- Share: copy and redistribute the material in any medium or format
+- Adapt: remix, transform, and build upon the material for any purpose, even commercially
+
+Under the following terms:
+- Attribution: You must give appropriate credit, provide a link to the license,
+  and indicate if changes were made. You may do so in any reasonable manner,
+  but not in any way that suggests the licensor endorses you or your use.
+
+No additional restrictions: You may not apply legal terms or technological measures
+that legally restrict others from doing anything the license permits.
+
+Full license text: https://creativecommons.org/licenses/by/4.0/legalcode
+
+---
+
+CITATION REQUIREMENT:
+
+If you use this code or data in your research, please cite:
+
+@article{voronoi_probabilistic_2025,
+  title={The Hidden Cost of Straight Lines: Quantifying Misallocation Risk
+         in Voronoi-Based Service Area Models},
+  author={[Authors - see published article]},
+  journal={Computers, Environment and Urban Systems},
+  year={2025},
+  doi={[DOI to be assigned]}
+}
+
+@software{voronoi_framework_code_2025,
+  title={Voronoi Probabilistic Framework - Reproducibility Package},
+  author={[Authors]},
+  year={2025},
+  url={https://github.com/[repository]},
+  doi={10.5281/zenodo.[ID]}
+}

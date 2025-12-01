@@ -1,0 +1,10 @@
+Metric,Value
+Global Moran's I,0.3727
+Expected Moran's I,-0.0027
+Z-score,7.2009
+P-value,0.0000
+Interpretation,"Positive spatial autocorrelation (clustering, I=0.373)"
+Total Municipalities,369
+Mean Beta Factor,1.323
+Std Beta Factor,0.112
+Spatial Randomness Test,FAILED

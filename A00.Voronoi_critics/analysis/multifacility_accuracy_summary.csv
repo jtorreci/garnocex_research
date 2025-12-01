@@ -1,0 +1,6 @@
+Method,Efficiency,Mean_Cost,High_Risk_Pct,Risk_Count
+Voronoi (Euclidean),1.897,19.9,18.3%,70
+Voronoi (Network),1.913,19.8,18.3%,70
+k=3 Nearest,1.913,19.8,18.3%,70
+k=5 Nearest,1.913,19.8,18.3%,70
+Optimal Approx,1.000,37.8,18.3%,70

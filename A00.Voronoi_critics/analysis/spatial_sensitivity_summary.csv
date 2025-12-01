@@ -1,0 +1,4 @@
+Model,Mean_Beta,RMSE_vs_Original,MAE_vs_Original,Misallocation_Agreement,Sensitivity,Specificity
+Original Framework,Baseline,0.000,0.000,Reference,Reference,Reference
+CAR-Adjusted,1.075,0.129,0.125,0.859,0.000,1.000
+BYM-Adjusted,1.201,0.017,0.014,0.951,0.692,0.994

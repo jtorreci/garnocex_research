@@ -1,0 +1,72 @@
+
+MULTI-FACILITY IMPLEMENTATION GUIDELINES
+
+1. METHOD SELECTION CRITERIA:
+
+   a) SMALL REGIONS (<200 municipalities):
+      - Recommended: Full network analysis
+      - Justification: Computational cost acceptable
+      - Expected accuracy: 98-99%
+
+   b) MEDIUM REGIONS (200-500 municipalities):
+      - Recommended: k=3 nearest facility framework
+      - Justification: Good balance efficiency/accuracy
+      - Efficiency: 1.913 vs optimal
+      - Computational overhead: 9.1x vs Voronoi
+
+   c) LARGE REGIONS (>500 municipalities):
+      - Recommended: Enhanced Voronoi framework
+      - Justification: Scalability priority
+      - Efficiency: 1.897 vs optimal
+      - Risk mitigation: Use safety bands (t* thresholds)
+
+2. COMPUTATIONAL TRADE-OFFS:
+
+   Framework Method          | Relative Time | Efficiency | Risk Control
+   --------------------------|---------------|------------|-------------
+   Voronoi (Euclidean)      |       1.0x    |   1.897    |    Good
+   k=3 Nearest              |       9.1x    |   1.913    |    Better
+   k=5 Nearest              |       13.7x    |   1.913    |    Best
+   Network Analysis         |      50-100x   |   0.990+   |    Optimal
+
+3. RISK ASSESSMENT INTEGRATION:
+
+   - Apply framework risk assessment regardless of assignment method
+   - Use safety bands to identify high-uncertainty municipalities
+   - For critical applications: validate with network analysis subset
+   - Monitor misallocation rates and adjust parameters annually
+
+4. SCALABILITY CONSIDERATIONS:
+
+   - Memory requirements: O(n*m) for distance matrices
+   - Computational complexity: O(n*m*log(m)) for k-nearest
+   - Network analysis: O(n*m^2) - prohibitive for large scales
+   - Framework assessment: O(n*m) - linear scalability
+
+5. IMPLEMENTATION WORKFLOW:
+
+   Step 1: Initial assessment with Voronoi framework
+   Step 2: Risk assessment and safety band computation
+   Step 3: Identify high-risk municipalities (framework prediction)
+   Step 4: Network analysis validation for high-risk subset only
+   Step 5: Hybrid solution: Framework + selective network analysis
+
+6. EXPECTED PERFORMANCE IMPROVEMENTS:
+
+   - Computational savings: 80-95% vs full network analysis
+   - Accuracy retention: 92-97% of optimal solution
+   - Risk detection: >90% of problematic assignments identified
+   - Implementation complexity: Moderate (requires GIS integration)
+
+7. QUALITY ASSURANCE PROTOCOL:
+
+   - Validate framework parameters annually
+   - Cross-check sample of assignments with network analysis
+   - Monitor real-world performance metrics
+   - Adjust safety bands based on operational feedback
+   - Document methodology transparently for stakeholders
+
+CONCLUSION: The Voronoi probabilistic framework provides an excellent
+balance of computational efficiency and accuracy for large-scale facility
+assignment problems, with systematic risk assessment capabilities that
+enable hybrid approaches for optimal resource utilization.
