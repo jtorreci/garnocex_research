@@ -119,28 +119,6 @@ To apply the framework to your own geographic area:
 | Mountainous | 0.10-0.15 | Alpine regions |
 | Island/Complex | 0.12-0.20 | Archipelagos |
 
-## 📖 Citation
-
-If you use this framework in your research, please cite:
-
-```bibtex
-<!-- @article{voronoi_probabilistic_2025,
-  title={The Hidden Cost of Straight Lines: Quantifying Misallocation Risk in Voronoi-Based Service Area Models},
-  author={Torrecilla Pinero, J.A. and Ceballos Martínez, J.M. and Cuartero Sáez, A. and Plaza Caballero, P. and Cruces López, A.},
-  journal={Computers, Environment and Urban Systems},
-  year={2025},
-  note={Submitted}
-} -->
-
-@software{voronoi_framework_code,
-  title={Voronoi Probabilistic Framework - Reproducibility Package},
-  author={Torrecilla Pinero, J.A. and Ceballos Martínez, J.M. and Cuartero Sáez, A. and Plaza Caballero, P. and Cruces López, A.},
-  year={2025},
-  doi={10.5281/zenodo.17772773},
-  url={https://github.com/jtorreci/garnocex_research}
-}
-```
-
 ## 🤝 Contributing
 
 We welcome contributions! Please see `docs/contributing.md` for guidelines.
