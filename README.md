@@ -1,6 +1,6 @@
 # GARNOCEX Research Repository
 
-Research outputs and reproducibility packages from the **GARNOCEX project** — a collaborative agreement between the Regional Government of Extremadura (Junta de Extremadura), the College of Civil Engineers (Colegio de Ingenieros Técnicos de Obras Públicas), and the University of Extremadura.
+Research outputs and reproducibility packages from the **GARNOCEX project** -- a collaborative agreement between the Regional Government of Extremadura (Junta de Extremadura), the College of Civil Engineers (Colegio de Ingenieros Técnicos de Obras Públicas), and the University of Extremadura.
 
 ## About GARNOCEX
 
@@ -14,16 +14,16 @@ Each subdirectory corresponds to a specific research paper or analysis:
 
 | Folder | Title | Status |
 |--------|-------|--------|
-| [A00.Voronoi_critics](./A00.Voronoi_critics/) | The Hidden Cost of Straight Lines: Quantifying Misallocation Risk in Voronoi-Based Service Area Models | Submitted to CEUS |
+| [A00.Voronoi_critics](./A00.Voronoi_critics/) | A Probabilistic Framework for Misallocation Risk in Voronoi Tessellations: Theory and Empirical Validation | Under review |
 
 ## Quick Navigation
 
 ### A00.Voronoi_critics
 
-Reproducibility package for the Voronoi probabilistic framework paper analyzing waste treatment plant service areas:
-- **Key finding**: 15.4% misallocation rate in Euclidean Voronoi assignments
-- **Case study**: 383 municipalities, 46 waste treatment facilities in Extremadura
-- **Framework accuracy**: 97.6% at O(n) complexity
+Reproducibility package for the Voronoi misallocation risk framework:
+- **Key finding**: 15.9% misallocation rate in Euclidean Voronoi assignments vs. network-optimal
+- **Case study**: 383 municipalities, 46 waste treatment facilities in Extremadura, Spain
+- **Safety bands**: reduce network routing requirements by over 98%
 
 [View full documentation →](./A00.Voronoi_critics/README.md)
 
@@ -34,11 +34,3 @@ If you use materials from this repository, please cite the corresponding paper. 
 ## License
 
 Each subproject may have its own license. See the LICENSE file in each folder for details.
-
-## Contact
-
-- GitHub Issues: [Repository Issues](https://github.com/jtorreci/garnocex_research/issues)
-
----
-
-*This repository is maintained as part of the GARNOCEX project research outputs.*
