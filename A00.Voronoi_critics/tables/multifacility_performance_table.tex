@@ -1,0 +1,20 @@
+\begin{table*}[htbp]
+\caption{Computational performance comparison for multi-facility assignment methods.
+\textit{Mean Time}: average execution time in seconds for 383-municipality case study.
+\textit{Std Time}: standard deviation of execution times across multiple runs.
+\textit{Scalability}: time per municipality (seconds/municipality), measuring computational efficiency as problem size increases.
+All measurements based on empirical benchmarks with real Extremadura datasets (383 municipalities, 46 treatment plants).}
+\label{tab:multifacility_performance}
+\centering
+\begin{tabular}{lrrr}
+\toprule
+Method & Mean Time (s) & Std Time (s) & Scalability (s/muni) \\
+\midrule
+Voronoi (baseline) & 0.000154 & 0.000114 & 0.0135 \\
+k-nearest-3 & 0.001251 & 0.001145 & 0.0823 \\
+k-nearest-5 & 0.001312 & 0.001225 & 0.0837 \\
+Optimal approx (ours) & 0.003308 & 0.002680 & 0.2237 \\
+Network analysis & 0.003697 & 0.002645 & 0.3409 \\
+\bottomrule
+\end{tabular}
+\end{table*}

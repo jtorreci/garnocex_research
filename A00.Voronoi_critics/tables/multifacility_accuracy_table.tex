@@ -1,0 +1,23 @@
+\begin{table*}[htbp]
+\caption{Assignment accuracy and risk assessment for multi-facility methods.
+\textit{Efficiency}: ratio of network-optimal baseline cost to method cost (1.000 = baseline; values $>1.0$ indicate lower cost and superior efficiency; values $<1.0$ indicate higher cost).
+\textit{Mean Cost}: average assignment cost in km-weighted distance units across all municipalities.
+\textit{High Risk Pct}: percentage of municipalities flagged by probabilistic framework risk assessment (conservative metric prioritizing detection; see text for actual misallocation rates).
+\textit{Risk Count}: absolute number of high-risk municipalities (out of 383 total).
+Methods evaluated on Extremadura case study with network distances as ground truth.
+Note: ``Optimal Approx'' serves as network-optimal baseline (efficiency 1.000 by definition) and uses more conservative risk threshold ($\beta > 1.00$ vs $\beta > 1.25$ for other methods), resulting in higher risk percentage by design.}
+\label{tab:multifacility_accuracy}
+\centering
+\begin{tabular}{lrrrr}
+\toprule
+Method & Efficiency & Mean Cost & High Risk & Count \\
+       & (ratio)    & (km)      & (\%)      & (n=383) \\
+\midrule
+Voronoi (Euclidean) & 0.988 & 19,558 & 44.1 & 169 \\
+Voronoi (Network) & 1.038 & 18,616 & 50.4 & 193 \\
+k=3 Nearest & 1.038 & 18,616 & 34.7 & 133 \\
+k=5 Nearest & 1.038 & 18,616 & 24.5 & 94 \\
+Optimal approx (ours) & 1.000 & 19,332 & 94.5 & 362 \\
+\bottomrule
+\end{tabular}
+\end{table*}

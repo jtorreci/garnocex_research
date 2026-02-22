@@ -1,0 +1,3 @@
+Method,Municipalities,Correctly_Allocated,Misallocated,Accuracy_Pct,Misallocation_Pct
+Voronoi (Euclidean),383,-,-,-,-
+Voronoi (Network),383,324,59,84.6%,15.4%

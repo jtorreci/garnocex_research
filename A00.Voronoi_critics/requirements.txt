@@ -1,39 +1,8 @@
-# Voronoi Probabilistic Framework - Python Dependencies
-# For reproducibility of: "The Hidden Cost of Straight Lines: Quantifying Misallocation Risk in Voronoi-Based Service Area Models"
-
-# Core scientific computing
-numpy>=1.24.0
-scipy>=1.10.0
-pandas>=2.0.0
-
-# Statistical analysis and distributions
-scikit-learn>=1.3.0
-statsmodels>=0.14.0
-
-# Plotting and visualization
-matplotlib>=3.7.0
-seaborn>=0.12.0
-
-# Geospatial analysis (for spatial autocorrelation)
-geopandas>=0.13.0
-pysal>=23.7.0
-libpysal>=4.7.0
-esda>=2.5.0
-
-# Network analysis
-networkx>=3.1.0
-
-# Additional utilities
-tqdm>=4.65.0
-openpyxl>=3.1.0
-xlrd>=2.0.1
-
-# For R integration (spatial analysis)
-rpy2>=3.5.0
-
-# Development and testing
-pytest>=7.4.0
-jupyter>=1.0.0
-
-# LaTeX table generation
-tabulate>=0.9.0
+numpy>=1.21
+pandas>=1.4
+scipy>=1.7
+matplotlib>=3.5
+seaborn>=0.11
+networkx>=2.6
+shapely>=1.8
+scikit-learn>=1.0

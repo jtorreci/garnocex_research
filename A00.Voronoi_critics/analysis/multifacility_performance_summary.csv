@@ -1,6 +1,0 @@
-method,Mean_Time,Std_Time,Scalability
-k_nearest_3,0.001767,0.001825,0.0
-k_nearest_5,0.002091,0.002575,0.0
-network_analysis,0.007726,0.008706,0.0
-optimal_approx,0.003611,0.003672,0.0
-voronoi,0.000205,0.000169,0.0

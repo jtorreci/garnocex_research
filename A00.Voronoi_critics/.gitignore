@@ -1,110 +1,47 @@
-# Voronoi Probabilistic Framework - Git Ignore File
-
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
-.Python
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-wheels/
 *.egg-info/
-.installed.cfg
+dist/
+build/
+.eggs/
 *.egg
-MANIFEST
 
 # Virtual environments
+.venv/
 venv/
 env/
-ENV/
-.env
-.venv
 
-# Jupyter Notebook
-.ipynb_checkpoints
-
-# pytest
-.pytest_cache/
-.coverage
-htmlcov/
-
-# R
-.Rproj.user/
-.Rhistory
-.RData
-.Ruserdata
-*.Rproj
-
-# IDEs
+# IDE
 .vscode/
 .idea/
 *.swp
 *.swo
 *~
 
-# OS generated files
+# OS
 .DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
 Thumbs.db
+desktop.ini
 
-# Results and outputs (keep structure, ignore content)
-results/figures/*.png
-results/figures/*.jpg
-results/figures/*.pdf
-results/tables/*.tex
-results/tables/*.csv
-results/spatial/*.csv
-results/spatial/*.shp
-results/spatial/*.geojson
-
-# Temporary analysis files
-temp/
-tmp/
-*.tmp
-
-# Large data files (add to LFS if needed)
-data/*.csv
-!data/sample_data.csv
-!data/test_data.csv
-
-# Configuration files with sensitive info
-config/secrets.yaml
-config/api_keys.json
-
-# Generated documentation
-docs/_build/
-docs/site/
-
-# LaTeX auxiliary files
+# LaTeX auxiliary
 *.aux
 *.bbl
 *.blg
-*.fdb_latexmk
-*.fls
 *.log
 *.out
+*.fls
+*.fdb_latexmk
 *.synctex.gz
-*.toc
 
-# Backup files
+# Temporary files
+*.tmp.*
 *.bak
-*.backup
 
-# Specific to this project
-*_anonymized.csv
-calibration_results_*.json
-parameter_estimates_*.json
+# Large geospatial files (use Git LFS or download separately)
+# carreteras.geojson
+
+# Generated figures (reproducible from scripts)
+figures/*.pdf
+figures/*.png

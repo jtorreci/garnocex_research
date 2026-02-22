@@ -1,0 +1,16 @@
+\begin{table*}[htbp]
+\caption{Algorithmic complexity comparison (n=383). Complexity: Big-O notation; Accuracy: Extremadura case study; Practical: feasibility (+++ excellent, ++ good, X impractical). Network analysis optimal but computationally expensive.}
+\label{tab:algorithmic_complexity}
+\centering
+\begin{tabular}{lcccc}
+\toprule
+Method & Complexity & Accuracy & Practical & Data Required \\
+\midrule
+Voronoi (baseline) & $O(n)$ & 84.6\% & +++ & Euclidean distances \\
+k-nearest-3 & $O(n \log k)$ & 92.1\% & +++ & Euclidean distances \\
+k-nearest-5 & $O(n \log k)$ & 92.2\% & ++ & Euclidean distances \\
+\textbf{Optimal approx (ours)} & $O(n)$ & \textbf{97.6\%} & +++ & Both distance tables \\
+Network analysis & $O(n^2 \log n)$ & 100.0\% & X & Road network graph \\
+\bottomrule
+\end{tabular}
+\end{table*}
