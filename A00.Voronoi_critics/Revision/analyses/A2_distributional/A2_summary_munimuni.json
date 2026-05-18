@@ -1,0 +1,81 @@
+{
+  "mode": "munimuni",
+  "label": "muni-muni (n=90,300 pairs)",
+  "n_pairs": 90300,
+  "observed_misallocations": 61,
+  "n_munis_for_R": 301,
+  "best_by_wasserstein": "Inverse Weibull (Frechet)",
+  "best_by_AD": "Inverse Weibull (Frechet)",
+  "results": [
+    {
+      "distribution": "Lognormal",
+      "params": "(np.float64(0.5975), 1.0304, np.float64(0.2677))",
+      "loglik": 37365.33754773582,
+      "wasserstein1": 0.041814547597215576,
+      "anderson_darling": 1008.0771317984327,
+      "ks_stat": 0.06938831167896709,
+      "ks_p": 0.0,
+      "s_param_used": 0.16875727270322924,
+      "pred_misalloc_mean": 41.60537784435461,
+      "pred_misalloc_ci_lo": 41.19783834473778,
+      "pred_misalloc_ci_hi": 41.93103600751773,
+      "observed_in_ci": false
+    },
+    {
+      "distribution": "Gamma",
+      "params": "(np.float64(2.4419), np.float64(1.033), np.float64(0.1348))",
+      "loglik": 26154.591912355987,
+      "wasserstein1": 0.0635135856290615,
+      "anderson_darling": 2910.8558053543093,
+      "ks_stat": 0.12314257930426664,
+      "ks_p": 0.0,
+      "s_param_used": 0.14550040070601947,
+      "pred_misalloc_mean": 36.5343125,
+      "pred_misalloc_ci_lo": 36.250825,
+      "pred_misalloc_ci_hi": 86.9751125,
+      "observed_in_ci": true
+    },
+    {
+      "distribution": "Weibull",
+      "params": "(np.float64(0.5006), np.float64(1.0331), np.float64(0.0748))",
+      "loglik": -63819.49929720951,
+      "wasserstein1": 0.17983378752421775,
+      "anderson_darling": 69646.66784626662,
+      "ks_stat": 0.663253663868769,
+      "ks_p": 0.0,
+      "s_param_used": 0.19111658032709106,
+      "pred_misalloc_mean": 31.625225,
+      "pred_misalloc_ci_lo": 30.7559625,
+      "pred_misalloc_ci_hi": 40.7361875,
+      "observed_in_ci": false
+    },
+    {
+      "distribution": "Inverse Weibull (Frechet)",
+      "params": "(np.float64(3.5448), np.float64(0.8547), np.float64(0.3915))",
+      "loglik": 41435.41543421851,
+      "wasserstein1": 0.025628265324669233,
+      "anderson_darling": 333.71369096545095,
+      "ks_stat": 0.038527930575595115,
+      "ks_p": 6.680313800325928e-117,
+      "s_param_used": 0.14758742206005146,
+      "pred_misalloc_mean": 33.0028125,
+      "pred_misalloc_ci_lo": 32.458625,
+      "pred_misalloc_ci_hi": 33.774075,
+      "observed_in_ci": false
+    },
+    {
+      "distribution": "Generalized Gamma",
+      "params": "(np.float64(10.9558), np.float64(0.4861), np.float64(1.0329), np.float64(0.0021))",
+      "loglik": 33380.94174905897,
+      "wasserstein1": 0.04948826048550037,
+      "anderson_darling": 1544.1765162337397,
+      "ks_stat": 0.08254155659862439,
+      "ks_p": 0.0,
+      "s_param_used": 0.13614965322239594,
+      "pred_misalloc_mean": 34.5943875,
+      "pred_misalloc_ci_lo": 34.186225,
+      "pred_misalloc_ci_hi": 37.91505,
+      "observed_in_ci": false
+    }
+  ]
+}

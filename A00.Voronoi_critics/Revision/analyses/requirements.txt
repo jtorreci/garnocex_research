@@ -1,0 +1,35 @@
+# Revision analyses — Python dependencies
+# Tested with Python 3.11 on Windows 11
+
+# --- Core scientific stack ---
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1
+
+# --- Spatial statistics ---
+libpysal>=4.9
+esda>=2.5
+spreg>=1.4
+splot>=1.1
+
+# --- Bayesian inference (log-CAR) ---
+pymc>=5.10
+arviz>=0.17
+pytensor>=2.18
+
+# --- Geospatial I/O ---
+geopandas>=0.14
+shapely>=2.0
+pyogrio>=0.7
+
+# --- Distributional metrics ---
+POT>=0.9                 # Wasserstein distance
+statsmodels>=0.14        # Anderson-Darling, GoF tests
+
+# --- Plotting ---
+matplotlib>=3.8
+seaborn>=0.13
+
+# --- Utilities ---
+tqdm>=4.66
+tabulate>=0.9
