@@ -1,0 +1,16 @@
+{
+  "munimuni": {
+    "n_pairs": 90300,
+    "best_W1": "Inverse Weibull (Frechet)",
+    "best_AD": "Inverse Weibull (Frechet)",
+    "lognormal_pred": 41.60537784435461,
+    "weibull_pred": 31.625225
+  },
+  "muniplanta": {
+    "n_pairs": 383,
+    "best_W1": "Inverse Weibull (Frechet)",
+    "best_AD": "Inverse Weibull (Frechet)",
+    "lognormal_pred": 63.48171971675659,
+    "weibull_pred": 52.23609999999999
+  }
+}

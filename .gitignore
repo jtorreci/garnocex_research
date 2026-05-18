@@ -1,0 +1,34 @@
+# Heavy spatial source files (shapefiles, raster) — out of scope for GitHub
+# These are reconstructable from public data; the canonical processed datasets
+# (CSV) are committed under A00.Voronoi_critics/codigo/ and Revision/analyses/data/
+**/shp/carreteras.*
+**/shp/municipios.*
+**/shp/plantas.*
+**/shp/extremadura.*
+
+# Python bytecode / caches
+__pycache__/
+*.pyc
+*.pyo
+
+# LaTeX build artefacts
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.fdb_latexmk
+*.fls
+*.synctex.gz
+*.spl
+
+# Editor / OS
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local credentials (defensive — should never exist here)
+.env
+*.key
+credentials*

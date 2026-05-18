@@ -1,0 +1,46 @@
+[general]
+name=Voronoi Risk Toolbox
+qgisMinimumVersion=3.22
+description=Probabilistic framework for misallocation risk assessment in Voronoi tessellations under network distance metrics
+version=0.2.0
+author=Anonymized for peer review
+email=anonymous@example.org
+
+about=Implements the probabilistic framework described in:
+    [Authors anonymized for peer review] (2026) "A Probabilistic Framework for Misallocation Risk
+    in Voronoi Tessellations: Theory and Empirical Validation",
+    Geographical Analysis.
+
+    The toolbox provides five QGIS Processing algorithms:
+    1. Voronoi Assignment - Euclidean nearest-facility assignment + R ratio
+    2. Beta Calculator - network scaling factor via QNEAT3 + service-area polygons
+    3. Safety Bands - Theorem 1 misallocation probability + band polygons by risk level
+    4. Misallocation Detector - per-feature misallocation diagnostics
+    5. Anisotropy Map - directional detour coefficient alpha = beta_max/beta_min
+
+    All algorithms emit optional structured CSV audit logs for reproducibility.
+    QNEAT3 is required for algorithms 2 and 5 (network distances).
+
+changelog=0.2.0 (2026-05-09)
+    - Fixed FROM_ID_FIELD requirement for QNEAT3 OD matrix (auto-generated positional id)
+    - Fixed kappa computation in Safety Bands: now evaluated at projection Q on the bisector,
+      not at the segment midpoint (correct Lemma 1 implementation)
+    - New polygon outputs: Voronoi service-areas, network service-areas, misallocation cells,
+      safety band polygons by risk level
+    - Polygon outputs now share a common municipality-cell tessellation, making them
+      directly superimposable for visual auditing
+    - Optional structured CSV audit log for every algorithm
+    - Optional regional boundary parameter for clean polygon clipping
+
+    0.1.0 (initial release)
+
+tracker=https://anonymous.4open.science/r/garnocex_research-5FF2
+repository=https://anonymous.4open.science/r/garnocex_research-5FF2
+tags=voronoi, tessellation, network analysis, risk assessment, spatial statistics, facility location, misallocation
+homepage=https://anonymous.4open.science/r/garnocex_research-5FF2
+category=Analysis
+icon=icons/voronoi_risk.png
+experimental=True
+deprecated=False
+plugin_dependencies=QNEAT3
+hasProcessingProvider=yes

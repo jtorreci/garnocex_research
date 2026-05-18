@@ -1,0 +1,46 @@
+{
+  "built_at": "2026-05-09T10:16:36.308318+00:00",
+  "consolidation": {
+    "threshold_km": 15,
+    "absorbed_plants": [
+      2,
+      12,
+      17,
+      15,
+      40,
+      32,
+      23,
+      26,
+      28,
+      34,
+      35,
+      37,
+      38,
+      43
+    ],
+    "n_absorbed": 14,
+    "n_effective_plants": 32
+  },
+  "results": {
+    "n_municipalities": 383,
+    "n_misallocated_raw": 88,
+    "n_misallocated_consolidated": 61,
+    "rate_consolidated_pct": 15.926892950391645,
+    "beta_mean": 1.7246506283265675,
+    "beta_std": 0.9043296988510725,
+    "beta_min": 1.0268223738987357,
+    "beta_max": 10.272104692947682,
+    "n_with_coords": 382
+  },
+  "outputs": {
+    "csv": "municipios_canonical.csv",
+    "gpkg": "municipios_canonical.gpkg",
+    "csv_sha256": "a5ff7b5c07fa03d5bfec1efd6c7742a7a12039a19334420866603228951cf7f6"
+  },
+  "paper_published": {
+    "n_misallocated": 59,
+    "rate_pct": 15.4,
+    "delta_misallocated": 2,
+    "note": "Paper claims 59; canonical consolidated calculation gives 61. Gap of 2 attributed to a minor iteration of the consolidation logic not preserved."
+  }
+}

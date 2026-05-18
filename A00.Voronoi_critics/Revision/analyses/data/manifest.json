@@ -1,0 +1,166 @@
+{
+  "synced_at": "2026-05-09T09:57:52.312760+00:00",
+  "sources": {
+    "A01_scripts": "<PROJECT_ROOT>\\A01.Voronoi\\scripts",
+    "A01_shp": "<PROJECT_ROOT>\\A01.Voronoi\\shp",
+    "A00_codigo": "<PROJECT_ROOT>\\A00.Voronoi_critics\\codigo"
+  },
+  "files": {
+    "asignacion_municipios_euclidiana.csv": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\scripts\\asignacion_municipios_euclidiana.csv",
+      "sha256": "b96122bd938ded240dba32b43a01d54c25b8a342cc3c969908d3edf08e61bb38",
+      "bytes": 14135
+    },
+    "asignacion_municipios_real.csv": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\scripts\\asignacion_municipios_real.csv",
+      "sha256": "b37972ad06befd7fa732791929ac3a14ba8c9f7c29c1d378c387e334e52d3ff2",
+      "bytes": 12347
+    },
+    "detailed_ratios_analysis_filtered.csv": {
+      "source": "<PROJECT_ROOT>\\A00.Voronoi_critics\\codigo\\detailed_ratios_analysis_filtered.csv",
+      "sha256": "25ee64f9434bccda0e0bdff0170104fefa86b316675622a99e1918e1dc6acfe5",
+      "bytes": 708872
+    },
+    "complete_anisotropy_coefficients.csv": {
+      "source": "<PROJECT_ROOT>\\A00.Voronoi_critics\\codigo\\complete_anisotropy_coefficients.csv",
+      "sha256": "4941cab960efa379c06189e21038fcc6f9955d0fe0e946c52bfb78d78a2239ae",
+      "bytes": 2528
+    },
+    "plant_anisotropy_coefficients_filtered.csv": {
+      "source": "<PROJECT_ROOT>\\A00.Voronoi_critics\\codigo\\plant_anisotropy_coefficients_filtered.csv",
+      "sha256": "6a8b0cb46d455087347ea5c98e3408f3b52a28d7521a17cf3ae9750ac283c2d1",
+      "bytes": 31897
+    },
+    "coordenadas_municipios.csv": {
+      "source": "<PROJECT_ROOT>\\A00.Voronoi_critics\\codigo\\coordenadas_municipios.csv",
+      "sha256": "157d945226dfe4a583dc71413a28e7e292cce61a6f52609f426f176eec4f20c0",
+      "bytes": 19131
+    },
+    "coordenadas_plantas.csv": {
+      "source": "<PROJECT_ROOT>\\A00.Voronoi_critics\\codigo\\coordenadas_plantas.csv",
+      "sha256": "f0c6d358c69d375100b591834bc4119ceb54b3631da266304ec37bae5d541340",
+      "bytes": 3673
+    },
+    "D_real_municipios_clean.csv": {
+      "source": "<PROJECT_ROOT>\\A00.Voronoi_critics\\codigo\\tablas\\D_real_municipios_clean.csv",
+      "sha256": "cdd29c2b75611845f9495077bec4387e0bd0c3f83d4b5ae45155b6119879eb28",
+      "bytes": 7238178
+    },
+    "D_euclidea_municipios_clean.csv": {
+      "source": "<PROJECT_ROOT>\\A00.Voronoi_critics\\codigo\\tablas\\D_euclidea_municipios_clean.csv",
+      "sha256": "d81f81d1eaf747d47008f7ab132b2833d4e18bd4e0f02528b68c30f727a6285c",
+      "bytes": 4228321
+    },
+    "D_real_plantas_clean.csv": {
+      "source": "<PROJECT_ROOT>\\A00.Voronoi_critics\\codigo\\tablas\\D_real_plantas_clean.csv",
+      "sha256": "fac046b5c92245a418a672a63adf6ec4a5bca29c8082b4f46332da8ff5d71697",
+      "bytes": 859569
+    },
+    "D_euclidea_plantas_clean.csv": {
+      "source": "<PROJECT_ROOT>\\A00.Voronoi_critics\\codigo\\tablas\\D_euclidea_plantas_clean.csv",
+      "sha256": "8dd313081bbdd199fef7de6bc15e2062647d9c9fffa82b6a4e436a609739c6c6",
+      "bytes": 495744
+    },
+    "shp\\municipios.shp": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\municipios.shp",
+      "sha256": "528561c5495bf282e6a449b702ebd22c5a63b76c3a16c641ce25b4d94036f5b5",
+      "bytes": 3194172
+    },
+    "shp\\municipios.shx": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\municipios.shx",
+      "sha256": "d981553be44d54ab8bb49215aaf4035cc6d4f02df887a0594eca17280cecb677",
+      "bytes": 3204
+    },
+    "shp\\municipios.dbf": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\municipios.dbf",
+      "sha256": "60b3d190ffa9f19065472621ae6c23478fd8c99b90206d1f0b4fc61c39960f67",
+      "bytes": 280070
+    },
+    "shp\\municipios.prj": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\municipios.prj",
+      "sha256": "03329a8b83248ce6963187291d05a46dfd70b28854fccb01c3fcabd2a28fdcce",
+      "bytes": 404
+    },
+    "shp\\municipios.cpg": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\municipios.cpg",
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "bytes": 5
+    },
+    "shp\\plantas.shp": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\plantas.shp",
+      "sha256": "c87c2f8ba33cc60d7914abc68ec2f1c2c2273f6a5fb4d8fffbb84fb2277b9123",
+      "bytes": 1388
+    },
+    "shp\\plantas.shx": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\plantas.shx",
+      "sha256": "195410c6710615b0b489dedf836c6337cb03fae10ab3964875f808fe8b1d7411",
+      "bytes": 468
+    },
+    "shp\\plantas.dbf": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\plantas.dbf",
+      "sha256": "e5ce37e9f00c59ed6b1a4bdeec13fe602e9565f153c4ae3a935fc0fb29974715",
+      "bytes": 14348
+    },
+    "shp\\plantas.prj": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\plantas.prj",
+      "sha256": "03329a8b83248ce6963187291d05a46dfd70b28854fccb01c3fcabd2a28fdcce",
+      "bytes": 404
+    },
+    "shp\\plantas.cpg": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\plantas.cpg",
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "bytes": 5
+    },
+    "shp\\Extremadura.shp": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\Extremadura.shp",
+      "sha256": "915a9440befa7892e201b2f15b2e838279b2c7b18fb88ad178f8b959f3feceab",
+      "bytes": 196860
+    },
+    "shp\\Extremadura.shx": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\Extremadura.shx",
+      "sha256": "25d88fb47a6a2c810cef4e4a4654985d484a5b2aca06e7e9fb0c3163976ea02c",
+      "bytes": 108
+    },
+    "shp\\Extremadura.dbf": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\Extremadura.dbf",
+      "sha256": "4044a36410fdc0647c9da8b0f8f1c78029628ce73610a4fc70f43a75f917eefb",
+      "bytes": 1613
+    },
+    "shp\\Extremadura.prj": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\Extremadura.prj",
+      "sha256": "03329a8b83248ce6963187291d05a46dfd70b28854fccb01c3fcabd2a28fdcce",
+      "bytes": 404
+    },
+    "shp\\Extremadura.cpg": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\Extremadura.cpg",
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "bytes": 5
+    },
+    "shp\\carreteras.shp": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\carreteras.shp",
+      "sha256": "5d3e98467453cace82e4d869ff6a5d036b46ef72332178eb0151c9d750770dca",
+      "bytes": 30291412
+    },
+    "shp\\carreteras.shx": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\carreteras.shx",
+      "sha256": "9ed2761001d6d607b7fc90651e142e54b949d9b8e05c0d5f69b3b7a28fc63594",
+      "bytes": 1443388
+    },
+    "shp\\carreteras.dbf": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\carreteras.dbf",
+      "sha256": "65d2e67da300b9c5c3d4999be36e0775610aa7af15b555b598a7a4c3853817be",
+      "bytes": 619532752
+    },
+    "shp\\carreteras.prj": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\carreteras.prj",
+      "sha256": "03329a8b83248ce6963187291d05a46dfd70b28854fccb01c3fcabd2a28fdcce",
+      "bytes": 404
+    },
+    "shp\\carreteras.cpg": {
+      "source": "<PROJECT_ROOT>\\A01.Voronoi\\shp\\carreteras.cpg",
+      "sha256": "3ad3031f5503a4404af825262ee8232cc04d4ea6683d42c5dd0a2f2a27ac9824",
+      "bytes": 5
+    }
+  },
+  "missing": []
+}

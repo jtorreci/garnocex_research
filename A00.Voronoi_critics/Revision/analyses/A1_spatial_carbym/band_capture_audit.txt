@@ -1,0 +1,47 @@
+Total municipalities: 383
+Misallocated: 61
+Effective plants: 32
+
+Capture rates (cumulative):
+      q*   inside   fraction
+     20%       17      27.9%
+     10%       27      44.3%
+      5%       28      45.9%
+
+--- Misallocated munis OUTSIDE q*=5% safety band: 33 ---
+  Villamiel                            voronoi=plant20  net=plant31  x=  178km  y= 4455km
+  Hoyos                                voronoi=plant20  net=plant31  x=  183km  y= 4454km
+  SantibÃ¡Ã±ez el Bajo                 voronoi=plant25  net=plant22  x=  226km  y= 4452km
+  Perales del Puerto                   voronoi=plant20  net=plant31  x=  187km  y= 4451km
+  Cilleros                             voronoi=plant20  net=plant31  x=  177km  y= 4447km
+  Casas del CastaÃ±ar                  voronoi=plant22  net=plant29  x=  253km  y= 4444km
+  Valdeobispo                          voronoi=plant25  net=plant29  x=  223km  y= 4442km
+  GargÃ¼era                            voronoi=plant22  net=plant29  x=  250km  y= 4439km
+  Torrejoncillo                        voronoi=plant20  net=plant29  x=  204km  y= 4422km
+  Holguera                             voronoi=plant30  net=plant29  x=  214km  y= 4422km
+  Portezuelo                           voronoi=plant30  net=plant20  x=  203km  y= 4413km
+  Garrovillas de AlconÃ©tar            voronoi=plant30  net=plant44  x=  196km  y= 4402km
+  Peraleda de San RomÃ¡n               voronoi=plant42  net=plant27  x=  296km  y= 4402km
+  Valdelacasa de Tajo                  voronoi=plant42  net=plant27  x=  305km  y= 4400km
+  GarvÃ­n                              voronoi=plant42  net=plant27  x=  299km  y= 4399km
+  Campillo de Deleitosa                voronoi=plant42  net=plant27  x=  279km  y= 4398km
+  Villar del Pedroso                   voronoi=plant42  net=plant27  x=  312km  y= 4398km
+  Navezuelas                           voronoi=plant42  net=plant45  x=  290km  y= 4376km
+  Aliseda                              voronoi=plant44  net=plant46  x=  182km  y= 4370km
+  Garciaz                              voronoi=plant45  net=plant19  x=  274km  y= 4366km
+  Torreorgaz                           voronoi=plant41  net=plant46  x=  220km  y= 4364km
+  Aldea del Cano                       voronoi=plant41  net=plant46  x=  214km  y= 4354km
+  Alburquerque                         voronoi=plant39  net=plant18  x=  155km  y= 4349km
+  Roca de la Sierra. La                voronoi=plant 4  net=plant18  x=  181km  y= 4335km
+  Villar de Rena                       voronoi=plant36  net=plant 3  x=  257km  y= 4329km
+  Pueblonuevo del Guadiana             voronoi=plant 4  net=plant18  x=  175km  y= 4315km
+  Valdelacalzada                       voronoi=plant 4  net=plant18  x=  179km  y= 4311km
+  Usagre                               voronoi=plant10  net=plant 1  x=  223km  y= 4250km
+  Bienvenida                           voronoi=plant10  net=plant 1  x=  219km  y= 4244km
+  Oliva de la Frontera                 voronoi=plant 8  net=plant 5  x=  157km  y= 4244km
+  VillagarcÃ­a de la Torre             voronoi=plant10  net=plant 1  x=  231km  y= 4243km
+  Fuente de Cantos                     voronoi=plant 5  net=plant10  x=  211km  y= 4239km
+  Higuera la Real                      voronoi=plant 8  net=plant 5  x=  177km  y= 4228km
+
+Correctly assigned munis INSIDE q*=5% band: 58 / 322 (18.0%)
+  → these are ' false alarms' under the q*=5% threshold (flagged as risky, but actually correctly assigned in the network)
