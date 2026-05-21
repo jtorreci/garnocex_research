@@ -1,0 +1,26 @@
+name: voronoi-rev
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - numpy>=1.26
+  - scipy>=1.11
+  - pandas>=2.1
+  - matplotlib>=3.8
+  - seaborn>=0.13
+  - libpysal>=4.9
+  - esda>=2.5
+  - spreg>=1.4
+  - splot>=1.1
+  - geopandas>=0.14
+  - shapely>=2.0
+  - pyogrio>=0.7
+  - pymc>=5.10
+  - arviz>=0.17
+  - pytensor>=2.18
+  - statsmodels>=0.14
+  - tqdm>=4.66
+  - tabulate>=0.9
+  - pip
+  - pip:
+      - POT>=0.9

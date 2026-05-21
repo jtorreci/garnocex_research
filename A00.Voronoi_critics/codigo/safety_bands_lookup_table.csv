@@ -1,0 +1,91 @@
+Risk_Threshold,Geographic_Context,s_Parameter,Kappa_Parameter,Critical_Distance_t
+10%,Urban Dense,0.05,0.2,0.45
+10%,Urban Dense,0.05,0.5,0.18
+10%,Urban Dense,0.05,1.0,0.09
+10%,Urban Dense,0.05,1.5,0.06
+10%,Urban Dense,0.05,2.0,0.05
+10%,Flat Plains,0.08,0.2,0.72
+10%,Flat Plains,0.08,0.5,0.29
+10%,Flat Plains,0.08,1.0,0.14
+10%,Flat Plains,0.08,1.5,0.10
+10%,Flat Plains,0.08,2.0,0.07
+10%,Moderate Hills,0.1,0.2,0.91
+10%,Moderate Hills,0.1,0.5,0.36
+10%,Moderate Hills,0.1,1.0,0.18
+10%,Moderate Hills,0.1,1.5,0.12
+10%,Moderate Hills,0.1,2.0,0.09
+10%,Mountainous,0.12,0.2,1.09
+10%,Mountainous,0.12,0.5,0.43
+10%,Mountainous,0.12,1.0,0.22
+10%,Mountainous,0.12,1.5,0.14
+10%,Mountainous,0.12,2.0,0.11
+10%,Complex Terrain,0.15,0.2,1.36
+10%,Complex Terrain,0.15,0.5,0.54
+10%,Complex Terrain,0.15,1.0,0.27
+10%,Complex Terrain,0.15,1.5,0.18
+10%,Complex Terrain,0.15,2.0,0.14
+10%,Island/Archipelago,0.2,0.2,1.81
+10%,Island/Archipelago,0.2,0.5,0.72
+10%,Island/Archipelago,0.2,1.0,0.36
+10%,Island/Archipelago,0.2,1.5,0.24
+10%,Island/Archipelago,0.2,2.0,0.18
+20%,Urban Dense,0.05,0.2,0.30
+20%,Urban Dense,0.05,0.5,0.12
+20%,Urban Dense,0.05,1.0,0.06
+20%,Urban Dense,0.05,1.5,0.04
+20%,Urban Dense,0.05,2.0,0.03
+20%,Flat Plains,0.08,0.2,0.48
+20%,Flat Plains,0.08,0.5,0.19
+20%,Flat Plains,0.08,1.0,0.10
+20%,Flat Plains,0.08,1.5,0.06
+20%,Flat Plains,0.08,2.0,0.05
+20%,Moderate Hills,0.1,0.2,0.60
+20%,Moderate Hills,0.1,0.5,0.24
+20%,Moderate Hills,0.1,1.0,0.12
+20%,Moderate Hills,0.1,1.5,0.08
+20%,Moderate Hills,0.1,2.0,0.06
+20%,Mountainous,0.12,0.2,0.71
+20%,Mountainous,0.12,0.5,0.29
+20%,Mountainous,0.12,1.0,0.14
+20%,Mountainous,0.12,1.5,0.10
+20%,Mountainous,0.12,2.0,0.07
+20%,Complex Terrain,0.15,0.2,0.89
+20%,Complex Terrain,0.15,0.5,0.36
+20%,Complex Terrain,0.15,1.0,0.18
+20%,Complex Terrain,0.15,1.5,0.12
+20%,Complex Terrain,0.15,2.0,0.09
+20%,Island/Archipelago,0.2,0.2,1.19
+20%,Island/Archipelago,0.2,0.5,0.48
+20%,Island/Archipelago,0.2,1.0,0.24
+20%,Island/Archipelago,0.2,1.5,0.16
+20%,Island/Archipelago,0.2,2.0,0.12
+30%,Urban Dense,0.05,0.2,0.19
+30%,Urban Dense,0.05,0.5,0.07
+30%,Urban Dense,0.05,1.0,0.04
+30%,Urban Dense,0.05,1.5,0.02
+30%,Urban Dense,0.05,2.0,0.02
+30%,Flat Plains,0.08,0.2,0.30
+30%,Flat Plains,0.08,0.5,0.12
+30%,Flat Plains,0.08,1.0,0.06
+30%,Flat Plains,0.08,1.5,0.04
+30%,Flat Plains,0.08,2.0,0.03
+30%,Moderate Hills,0.1,0.2,0.37
+30%,Moderate Hills,0.1,0.5,0.15
+30%,Moderate Hills,0.1,1.0,0.07
+30%,Moderate Hills,0.1,1.5,0.05
+30%,Moderate Hills,0.1,2.0,0.04
+30%,Mountainous,0.12,0.2,0.44
+30%,Mountainous,0.12,0.5,0.18
+30%,Mountainous,0.12,1.0,0.09
+30%,Mountainous,0.12,1.5,0.06
+30%,Mountainous,0.12,2.0,0.04
+30%,Complex Terrain,0.15,0.2,0.56
+30%,Complex Terrain,0.15,0.5,0.22
+30%,Complex Terrain,0.15,1.0,0.11
+30%,Complex Terrain,0.15,1.5,0.07
+30%,Complex Terrain,0.15,2.0,0.06
+30%,Island/Archipelago,0.2,0.2,0.74
+30%,Island/Archipelago,0.2,0.5,0.30
+30%,Island/Archipelago,0.2,1.0,0.15
+30%,Island/Archipelago,0.2,1.5,0.10
+30%,Island/Archipelago,0.2,2.0,0.07

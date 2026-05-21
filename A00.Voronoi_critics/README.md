@@ -1,172 +1,213 @@
-# Reproducibility Package: Voronoi Probabilistic Framework
+# Voronoi Misallocation Risk: Reproducibility Package
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17772773.svg)](https://doi.org/10.5281/zenodo.17772773)
+Reproducibility package for the manuscript *"A Probabilistic Framework for Misallocation Risk in Voronoi Tessellations: Theory and Empirical Validation"*.
 
-This repository contains all code, data, and analysis scripts needed to reproduce the results from:
+## Overview
 
-**"The Hidden Cost of Straight Lines: Quantifying Misallocation Risk in Voronoi-Based Service Area Models"**
+This repository contains the data, analysis scripts, figure generation code, and a companion QGIS plugin to reproduce all results in the paper and its major revision. The framework derives a closed-form expression for misallocation probability in Voronoi tessellations when network distance replaces Euclidean distance, and provides diagnostic safety bands for identifying unreliable assignments.
 
-*Submitted to Computers, Environment and Urban Systems (CEUS)*
-
-## Key Findings (Extremadura Case Study)
-
-- **383 municipalities**, 46 treatment facilities
-- **15.4% misallocation rate** (59 municipalities incorrectly assigned by Euclidean Voronoi)
-- Log-Normal distribution best fit: μ = 0.166, σ = 0.093
-- Framework achieves **97.6% accuracy** at O(n) complexity
-
-## 📁 Repository Structure
+## Repository Structure
 
 ```
-voronoi-probabilistic-framework/
-├── README.md                          # This file
-├── requirements.txt                   # Python dependencies
-├── environment.yml                    # Conda environment
-├── data/
-│   ├── synthetic_data_generator.py    # Generate synthetic β factors
-│   ├── extremadura_anonymized.csv     # Anonymized real data
-│   └── geographic_coordinates.csv     # Municipality coordinates
-├── analysis/
-│   ├── distributional_robustness_analysis.py  # Table 2 & Fig 3-4
-│   ├── safety_bands_analysis.py              # Fig 5-7 & Table 3
-│   ├── spatial_analysis.R                    # Moran's I & CAR models
-│   └── multi_facility_validation.py          # Trade-off curves
-├── results/
-│   ├── figures/                       # All publication figures
-│   ├── tables/                        # All publication tables
-│   └── supplementary/                 # Additional analyses
-├── replication/
-│   ├── run_full_analysis.py          # One-click reproduction
-│   ├── calibration_new_region.py     # Apply to new geographic area
-│   └── parameter_estimation.py       # Estimate s for new data
-└── docs/
-    ├── methodology.md                 # Detailed methodology
-    ├── data_description.md            # Data documentation
-    └── parameter_guide.md             # Parameter calibration guide
+.
+├── codigo/                       # Input data + core analysis scripts (v1 submission)
+│   ├── coordenadas_{municipios,plantas}.csv         # Geographic coordinates
+│   ├── asignacion_municipios_{euclidiana,real}.csv  # Voronoi & network-optimal assignments
+│   ├── distancias_euclideas.csv                     # Euclidean distance matrix
+│   ├── *_anisotropy_coefficients*.csv               # Per-municipality / per-plant anisotropy
+│   ├── {detailed,plant}_ratios_analysis*.csv        # Beta-ratio analyses
+│   ├── ks_test_plant_municipality_results.csv       # KS test on plant–municipality dists.
+│   ├── misallocated_municipalities.csv              # List of misallocated municipalities
+│   ├── safety_bands_lookup_table.csv                # Safety band thresholds (various q*)
+│   ├── sensitivity_s_analysis.csv                   # Sensitivity to parameter s
+│   ├── calculate_anisotropy.py, calculate_plant_anisotropy.py
+│   ├── distancias.py, distributional_robustness_analysis.py
+│   └── safety_bands_analysis.py, recalculate_confidence_interval.py
+├── tables/                       # Distance matrices + manuscript tables
+│   ├── D_{euclidea,real}_{municipios,plantas}_clean.csv  # Distance matrices
+│   ├── *.csv                                        # Result tables (multifacility,
+│   │                                                  k-nearest capture, statistics, …)
+│   └── *.tex                                        # LaTeX-formatted manuscript tables
+├── figuras_clean/                # Figure generation scripts (Figures 1–15)
+│   ├── generate_figure{1..15}.py                    # One per manuscript figure
+│   ├── generate_figure11b_qualitative.py            # Qualitative companion to Fig. 11
+│   ├── generate_voronoi_map.py                      # Voronoi tessellation map
+│   ├── generate_network_voronoi_map.py              # Network-based service-area map
+│   ├── generate_study_area_{map,detail,location}.py # Study-area panels (Fig. 6)
+│   ├── generate_qq_plots.py                         # Q-Q diagnostic plots
+│   ├── generate_figure_pareto_capture.py            # k-nearest Pareto capture
+│   ├── study_area_map.pdf                           # Pre-rendered study-area figure
+│   └── FIGURES_DOCUMENTATION.md                     # Per-figure methodology notes
+├── scripts/                      # Additional analyses
+│   ├── analyze_k_nearest_capture.py                 # k-nearest capture rates
+│   ├── analyze_k_nearest_performance.py             # k-nearest accuracy / scalability
+│   ├── analyze_s_sensitivity_correct.py             # Corrected s-sensitivity sweep
+│   ├── analyze_plant_municipality_ks.py             # KS analysis on plant–muni distances
+│   ├── plot_plant_municipality_distributions.py     # Distribution plots
+│   ├── diagnose_misallocation_count.py              # Audit of misallocation totals
+│   ├── ks_test_distance_subsets.py                  # KS tests by distance subset
+│   ├── ks_table3_subsets.py                         # Table 3 subset KS aggregation
+│   └── README_ANALYSIS_SCRIPTS.md                   # Per-script documentation
+├── Revision/                     # Major-revision artefacts (response to reviewers)
+│   ├── README.md                                    # Overview of the revision package
+│   └── analyses/
+│       ├── A1_spatial_carbym/                       # Bayesian log-CAR + BYM2 fits
+│       ├── A2_distributional/                       # Wasserstein-1 + Anderson-Darling
+│       ├── A3_anisotropy/                           # Anisotropy coefficient + ROC
+│       ├── data/                                    # Canonical input dataset
+│       ├── outputs/figures/                         # PDF/PNG figures (A1, A2, A3)
+│       ├── outputs/tables/                          # LaTeX summary tables
+│       ├── environment.yml, requirements.txt
+│       └── README.md
+├── qgis_plugin/                  # Voronoi Risk Toolbox (QGIS Processing plugin)
+│   ├── voronoi_risk_toolbox/
+│   │   ├── algorithms/                              # 5 Processing algorithms:
+│   │   │   ├── voronoi_assignment.py                #   1. Euclidean Voronoi assignment
+│   │   │   ├── beta_calculator.py                   #   2. Network scaling factor (QNEAT3)
+│   │   │   ├── safety_bands.py                      #   3. Risk bands (Theorem 1)
+│   │   │   ├── misallocation_detector.py            #   4. Per-feature misallocation flags
+│   │   │   └── anisotropy_map.py                    #   5. Anisotropy α = β_max / β_min
+│   │   ├── plugin.py, provider.py, __init__.py, metadata.txt
+│   ├── docs/{THEORY,USER_MANUAL}.md
+│   ├── README.md, INSTALL_AND_TEST.md, CHANGELOG.md, PLUGIN_AUDIT.md
+│   └── test_data/
+├── extremadura.geojson           # Study region boundary (Extremadura, Spain)
+├── distributional_analysis.py    # Distributional comparison (Fig. 13)
+├── distributional_sensitivity_s.py  # Sensitivity to s parameter (Fig. 14)
+├── make_qq_final.py              # Q-Q plots for real data (Fig. 12)
+├── requirements.txt
+├── LICENSE
+└── README.md
 ```
 
-## 🚀 Quick Start
+## Data Description
 
-### Option 1: One-Click Reproduction
+### Input Data (`codigo/`)
+
+| File | Description |
+|------|-------------|
+| `coordenadas_municipios.csv` | Geographic coordinates of 383 municipalities |
+| `coordenadas_plantas.csv` | Geographic coordinates of 46 aggregate plants |
+| `distancias_euclideas.csv` | Euclidean distance matrix (municipalities × plants) |
+
+### Distance Matrices (`tables/`)
+
+| File | Description |
+|------|-------------|
+| `D_euclidea_municipios_clean.csv` | Euclidean distances: municipality-to-municipality |
+| `D_euclidea_plantas_clean.csv` | Euclidean distances: municipality-to-plant |
+| `D_real_municipios_clean.csv` | Network distances: municipality-to-municipality |
+| `D_real_plantas_clean.csv` | Network distances: municipality-to-plant |
+
+### Analysis Results (`codigo/`)
+
+| File | Description |
+|------|-------------|
+| `asignacion_municipios_euclidiana.csv` | Voronoi (Euclidean) facility assignments |
+| `asignacion_municipios_real.csv` | Network-optimal facility assignments |
+| `misallocated_municipalities.csv` | List of misallocated municipalities |
+| `complete_anisotropy_coefficients.csv` | Per-municipality anisotropy index |
+| `detailed_ratios_analysis.csv` | Beta ratio analysis (d_net / d_Euclidean) |
+| `safety_bands_lookup_table.csv` | Safety-band thresholds for various q* levels |
+| `sensitivity_s_analysis.csv` | Sensitivity of predictions to parameter s |
+
+## Quick Start
+
 ```bash
-git clone https://github.com/username/voronoi-probabilistic-framework.git
-cd voronoi-probabilistic-framework
+# Install dependencies for the paper analyses
 pip install -r requirements.txt
-python replication/run_full_analysis.py
+
+# Generate all manuscript figures
+cd figuras_clean
+python generate_figure1.py     # Histogram of network scaling factor β
+python generate_figure2.py     # Violin plots / CDF and theoretical fit
+# ... (see FIGURES_DOCUMENTATION.md for full per-figure details)
+
+# Run distributional and sensitivity analyses
+python ../distributional_analysis.py          # Fig. 13
+python ../distributional_sensitivity_s.py     # Fig. 14
+python ../make_qq_final.py                    # Fig. 12
+
+# Run additional analyses (k-nearest, KS subsets, diagnostics)
+python ../scripts/analyze_k_nearest_capture.py
+python ../scripts/analyze_s_sensitivity_correct.py
+python ../scripts/diagnose_misallocation_count.py
+
+# Reproduce the major-revision analyses
+cd ../Revision/analyses
+conda env create -f environment.yml      # or: pip install -r requirements.txt
+conda activate voronoi-revision
+python A1_spatial_carbym/run.py          # Bayesian log-CAR + BYM2
+python A2_distributional/run.py          # Wasserstein-1 + Anderson-Darling
+python A3_anisotropy/run.py              # Anisotropy coefficient + ROC
+
+# Install the QGIS plugin (see qgis_plugin/INSTALL_AND_TEST.md)
+# Copy qgis_plugin/voronoi_risk_toolbox/ into your QGIS plugin folder.
 ```
 
-### Option 2: Conda Environment
-```bash
-conda env create -f environment.yml
-conda activate voronoi-framework
-python replication/run_full_analysis.py
-```
+## Figure-to-Script Mapping
 
-## 📊 Main Results Reproduction
+| Figure | Script | Description |
+|--------|--------|-------------|
+| Fig. 1 | `figuras_clean/generate_figure1.py` | Histogram of network scaling factor β |
+| Fig. 2 | `figuras_clean/generate_figure2.py` | Violin plot of β distribution comparison |
+| Fig. 3 | `figuras_clean/generate_figure3.py` | Plant anisotropy analysis (2×2) |
+| Fig. 4 | `figuras_clean/generate_figure4.py` | Municipality assignment changes (real vs Voronoi) |
+| Fig. 5 | `figuras_clean/generate_figure5.py` | Q-Q plots of β vs theoretical distributions |
+| Fig. 6 | `figuras_clean/generate_figure6.py` (+ `generate_study_area_{map,detail,location}.py`) | Study area + β distribution composite |
+| Fig. 7 | *(TikZ in manuscript)* | Conceptual diagram |
+| Fig. 8 | `figuras_clean/generate_figure8.py` | Spatial analysis of β coefficients (2×2) |
+| Fig. 9 | `figuras_clean/generate_figure9.py` | Spatial sensitivity (CAR/BYM, 3×2) |
+| Fig. 10 | `figuras_clean/generate_figure10.py` | Safety bands for Voronoi risk assignment |
+| Fig. 11 | `figuras_clean/generate_figure11.py` (+ `generate_figure11b_qualitative.py`) | Computational performance / k-nearest capture |
+| Fig. 12 | `figuras_clean/generate_figure12.py` and `make_qq_final.py` | Distance improvement & Q-Q plots |
+| Fig. 13 | `figuras_clean/generate_figure13.py` and `distributional_analysis.py` | Distributional comparison |
+| Fig. 14 | `distributional_sensitivity_s.py` | Sensitivity of distributional predictions to s |
+| Fig. 15 | `figuras_clean/generate_figure15.py` | Euclidean vs network distance correlation |
 
-### Table 2: Distributional Comparison
-```bash
-python analysis/distributional_robustness_analysis.py
-# Outputs: distributional_comparison_table.tex
-#          qq_plots_comparison.png
-#          tail_behavior_comparison.png
-```
+See `figuras_clean/FIGURES_DOCUMENTATION.md` for the full per-figure methodology, data sources, and output filenames. Auxiliary scripts (`generate_voronoi_map.py`, `generate_network_voronoi_map.py`, `generate_qq_plots.py`, `generate_figure_pareto_capture.py`) produce supporting visualisations used in panels or supplementary materials.
 
-### Figure 5-7: Safety Band Calibration
-```bash
-python analysis/safety_bands_analysis.py
-# Outputs: safety_bands_calibration_curves.png
-#          safety_bands_contour_maps.png
-#          safety_bands_practical_examples.png
-```
+## Major Revision (`Revision/`)
 
-### Spatial Analysis (Requires R)
-```bash
-Rscript analysis/spatial_analysis.R
-# Outputs: moran_test_results.csv
-#          spatial_model_comparison.png
-```
+The `Revision/` folder contains the additional analyses produced for the major revision, organised by methodological line:
 
-## 🔧 Apply to New Geographic Region
+- **A1 — Spatial Bayesian models** (`Revision/analyses/A1_spatial_carbym/`): Bayesian log-CAR and BYM2 posterior fits on log(β), spatial LOOCV and Moran's I on residuals. Replaces the v1 synthetic calibrated study.
+- **A2 — Distributional ranking** (`Revision/analyses/A2_distributional/`): Wasserstein-1 and Anderson-Darling distributional ranking of five candidate distributions on both municipality-to-municipality and municipality-to-facility domains.
+- **A3 — Anisotropy** (`Revision/analyses/A3_anisotropy/`): Per-municipality anisotropy coefficient α = β_max / β_min, with ROC against observed misallocations.
 
-To apply the framework to your own geographic area:
+Each subfolder ships its own `README.md`, a runnable `run.py`, and canonical inputs in `Revision/analyses/data/`. Pre-generated outputs (figures and LaTeX tables) live under `Revision/analyses/outputs/`.
 
-1. **Prepare your data**: See `data/data_description.md` for format requirements
-2. **Estimate parameters**:
-   ```bash
-   python replication/parameter_estimation.py --input your_data.csv --output calibrated_params.json
-   ```
-3. **Generate safety bands**:
-   ```bash
-   python replication/calibration_new_region.py --params calibrated_params.json
-   ```
+See [`Revision/README.md`](Revision/README.md) for the full description and the mapping to specific reviewer comments.
 
-## 📋 Key Parameters
+## QGIS Plugin (`qgis_plugin/`)
 
-| Parameter | Description | Typical Range | Extremadura Value |
-|-----------|-------------|---------------|-------------------|
-| `s` | Geographic complexity | 0.03-0.20 | 0.093 |
-| `κ` | Geometric parameter | 0.1-2.0 | 0.5 |
-| `q*` | Risk threshold | 0.10-0.30 | 0.20 |
+The `qgis_plugin/voronoi_risk_toolbox/` folder packages the full framework as a QGIS Processing plugin — **Voronoi Risk Toolbox** (v0.2.0). It exposes five algorithms that practitioners can run interactively on their own facility / road-network data:
 
-## 🌍 Geographic Context Calibration
+1. **Voronoi Assignment** — Euclidean nearest-facility assignment, distance ratio R.
+2. **Beta Calculator** — network scaling factor β = d_network / d_Euclidean (needs QNEAT3).
+3. **Safety Bands** — misallocation probability per municipality (Theorem 1), safety-band polygons.
+4. **Misallocation Detector** — per-feature misallocation flags and distance savings.
+5. **Anisotropy Map** — anisotropy coefficient α = β_max / β_min per origin (needs QNEAT3).
 
-| Context | s Range | Examples |
-|---------|---------|-----------|
-| Urban Dense | 0.05-0.08 | Metropolitan cores |
-| Flat Plains | 0.03-0.06 | Agricultural areas |
-| Moderate Hills | 0.08-0.12 | Extremadura-like |
-| Mountainous | 0.10-0.15 | Alpine regions |
-| Island/Complex | 0.12-0.20 | Archipelagos |
+Requirements: QGIS 3.22+ and the [QNEAT3](https://plugins.qgis.org/plugins/QNEAT3/) plugin for the algorithms that compute network distance.
 
-## 📖 Citation
+Installation, parameters, and a usage walkthrough are documented in [`qgis_plugin/README.md`](qgis_plugin/README.md), [`qgis_plugin/INSTALL_AND_TEST.md`](qgis_plugin/INSTALL_AND_TEST.md), and [`qgis_plugin/docs/USER_MANUAL.md`](qgis_plugin/docs/USER_MANUAL.md). Theoretical background is summarised in [`qgis_plugin/docs/THEORY.md`](qgis_plugin/docs/THEORY.md).
 
-If you use this framework in your research, please cite:
+## Road Network Data
 
-```bibtex
-<!-- @article{voronoi_probabilistic_2025,
-  title={The Hidden Cost of Straight Lines: Quantifying Misallocation Risk in Voronoi-Based Service Area Models},
-  author={Torrecilla Pinero, J.A. and Ceballos Martínez, J.M. and Cuartero Sáez, A. and Plaza Caballero, P. and Cruces López, A.},
-  journal={Computers, Environment and Urban Systems},
-  year={2025},
-  note={Submitted}
-} -->
+The road network shapefile used to compute network distances (~620 MB) is not included in this repository due to size constraints. The network distances are provided pre-computed in `tables/D_real_*.csv`. The road network data was obtained from the Spatial Data Infrastructure of Extremadura (IDEEx) and OpenStreetMap, and can be reconstructed from those public sources.
 
-@software{voronoi_framework_code,
-  title={Voronoi Probabilistic Framework - Reproducibility Package},
-  author={Torrecilla Pinero, J.A. and Ceballos Martínez, J.M. and Cuartero Sáez, A. and Plaza Caballero, P. and Cruces López, A.},
-  year={2025},
-  doi={10.5281/zenodo.17772773},
-  url={https://github.com/jtorreci/garnocex_research}
-}
-```
+## Study Area
 
-## 🤝 Contributing
+Extremadura, Spain: 383 municipalities, 46 aggregate production facilities, 41,635 km².
 
-We welcome contributions! Please see `docs/contributing.md` for guidelines.
+## Requirements
 
-## 📧 Contact
+- Python ≥ 3.8.
+- `requirements.txt` — paper analyses (`codigo/`, `figuras_clean/`, `scripts/`).
+- `Revision/analyses/requirements.txt` / `Revision/analyses/environment.yml` — major-revision analyses (PyMC, etc.).
+- QGIS 3.22+ and the QNEAT3 plugin — only required to run the QGIS plugin.
 
-For questions about the methodology or code:
-- GitHub Issues: [Repository Issues](https://github.com/jtorreci/garnocex_research/issues)
+## License
 
-## 📄 License
-
-This project is licensed under the **Creative Commons Attribution 4.0 International License (CC-BY 4.0)** - see `LICENSE` file for details.
-
-This license is compatible with Elsevier's preprint policy and allows:
-- Sharing and adaptation for any purpose
-- Commercial use
-- With proper attribution required
-
-## 🏆 Acknowledgments
-
-This research was funded by the **GARNOCEX project**, a collaborative agreement between the Regional Government of Extremadura (Junta de Extremadura), the College of Civil Engineers (Colegio de Ingenieros de Caminos, Canales y Puertos), and the University of Extremadura.
-
-Technical acknowledgments:
-- QNEAT3 plugin for network analysis
-- SciPy and R spatial analysis communities
-
----
-
-**Keywords**: Voronoi tessellation, probabilistic modeling, spatial optimization, network analysis, risk assessment, territorial planning
+MIT License. See [LICENSE](LICENSE) for details.

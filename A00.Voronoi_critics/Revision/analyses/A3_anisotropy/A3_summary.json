@@ -1,0 +1,23 @@
+{
+  "n_origins": 301,
+  "alpha_stats_all_plants": {
+    "mean": 1.8611698085810369,
+    "median": 1.5523578061554721,
+    "p90": 2.590867611420984,
+    "max": 12.225286137694436
+  },
+  "alpha_stats_near5_plants": {
+    "mean": 1.6453099384643242,
+    "median": 1.3499918562778188,
+    "p90": 2.2733913437190956,
+    "max": 12.225286137694436
+  },
+  "auc_alpha_all": 0.48161505981703034,
+  "auc_alpha_near5": 0.473082336382829,
+  "score_used": "alpha",
+  "youden_threshold": 1.3836825980982153,
+  "sensitivity": 0.7959183673469388,
+  "specificity": 0.2974137931034483,
+  "captured_misallocations": 39,
+  "total_misallocations_in_matched": 49
+}
