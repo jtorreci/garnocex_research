@@ -14,7 +14,8 @@ Each subdirectory corresponds to a specific research paper or analysis:
 
 | Folder | Title | Status |
 |--------|-------|--------|
-| [A00.Voronoi_critics](./A00.Voronoi_critics/) | The Hidden Cost of Straight Lines: Quantifying Misallocation Risk in Voronoi-Based Service Area Models | Submitted to CEUS |
+| [A00.Voronoi_critics](./A00.Voronoi_critics/) | A Probabilistic Framework for Misallocation Risk in Voronoi Tessellations: Theory and Empirical Validation | Under review at *Applied Geography* |
+| [A01.Voronoi](./A01.Voronoi/) | Spatial Cost Analysis of Construction and Demolition Waste Management: Beyond Geometric Proximity in Sparsely Populated Regions (Extremadura, Spain) | Submitted to *Waste Management* |
 
 ## Quick Navigation
 
@@ -26,6 +27,15 @@ Reproducibility package for the Voronoi probabilistic framework paper analyzing 
 - **Framework accuracy**: 97.6% at O(n) complexity
 
 [View full documentation →](./A00.Voronoi_critics/README.md)
+
+### A01.Voronoi
+
+Reproducibility package for the spatial cost analysis of CDW management in Extremadura:
+- **Headline cost figures**: €15.82/t (municipality-level mean) and €12.22/t (production-weighted system mean), spanning €5/t to ≈ €50/t across 383 municipalities.
+- **Cost model**: piecewise logarithmic treatment cost derived from a doubling rule, calibrated against operational data of four regional CDW companies.
+- **Rationalisation potential**: consolidating 14 redundant co-located facilities saves ≈ €303,000/yr (4.5%) without increasing transport distances.
+
+[View full documentation →](./A01.Voronoi/README.md)
 
 ## Citation
 
