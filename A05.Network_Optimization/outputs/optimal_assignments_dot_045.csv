@@ -1,0 +1,384 @@
+mun_key,name,prod,plant_id,dist_km,cost
+badajoz,Badajoz,66750.3000,18,10.4018,6.4868
+mrida,Mérida,25377.7500,14,38.4093,17.2781
+don benito,Don Benito,16105.9500,3,8.1106,6.8314
+almendralejo,Almendralejo,15114.6000,9,21.5139,11.3884
+villanueva de la serena,Villanueva de la Serena,11627.1000,3,17.1378,9.9909
+zafra,Zafra,7390.8000,9,13.7918,8.6856
+montijo,Montijo,7306.2000,14,27.7232,13.5379
+villafranca de los barros,Villafranca de los Barros,6010.2000,9,14.7853,9.0334
+olivenza,Olivenza,5333.4000,13,3.1659,8.1978
+jerez de los caballeros,Jerez de los Caballeros,4606.6500,5,32.1145,19.0182
+azuaga,Azuaga,3735.4500,10,39.0197,20.4484
+santos de maimona,Santos de Maimona. Los,3686.8500,9,13.9345,8.7356
+guarea,Guareña,3290.4000,3,37.3024,17.0485
+fuente del maestre,Fuente del Maestre,3132.9000,9,2.6784,4.7960
+castuera,Castuera,2967.3000,6,2.8805,9.2589
+calamonte,Calamonte,2780.1000,14,2.7778,4.8070
+llerena,Llerena,2698.6500,10,2.7152,7.7418
+puebla de la calzada,Puebla de la Calzada,2656.3500,18,29.8974,13.3103
+san vicente de alcntara,San Vicente de Alcántara,2613.6000,39,14.8485,13.9272
+alburquerque,Alburquerque,2566.8000,18,41.6405,17.4204
+aceuchal,Aceuchal,2555.5500,9,19.9972,10.8575
+oliva de la frontera,Oliva de la Frontera,2525.4000,5,49.2316,25.0092
+talavera la real,Talavera la Real,2479.0500,18,22.2359,10.6288
+cabeza del buey,Cabeza del Buey,2434.9500,7,1.5397,13.2157
+campanario,Campanario,2415.1500,3,13.1912,8.6096
+fregenal de la sierra,Fregenal de la Sierra,2356.6500,8,3.4265,9.9930
+quintana de la serena,Quintana de la Serena,2281.0500,6,2.5680,9.1496
+fuente de cantos,Fuente de Cantos,2267.5500,10,27.8074,16.5241
+navalvillar de pela,Navalvillar de Pela,2154.1500,3,39.6785,17.8802
+monesterio,Monesterio,1970.1000,10,34.1360,18.7391
+santa amalia,Santa Amalia,1946.7000,3,21.1656,11.4006
+santa marta,Santa Marta,1944.9000,9,32.7471,15.3200
+arroyo de san servn,Arroyo de San Serván,1924.2000,14,10.3530,7.4584
+valverde de legans,Valverde de Leganés,1869.7500,13,10.7148,10.8399
+zalamea de la serena,Zalamea de la Serena,1790.1000,6,16.4782,14.0181
+hornachos,Hornachos,1740.1500,1,16.6456,14.5506
+barcarrota,Barcarrota,1664.1000,13,31.7811,18.2131
+herrera del duque,Herrera del Duque,1659.6000,11,41.8672,23.0943
+villanueva del fresno,Villanueva del Fresno,1655.1000,13,42.2612,21.8811
+talarrubias,Talarrubias,1633.5000,11,16.7720,14.3110
+zarza,Zarza. La,1603.3500,14,30.3860,14.4699
+ribera del fresno,Ribera del Fresno,1559.7000,1,0.5992,8.9343
+burguillos del cerro,Burguillos del Cerro,1478.7000,5,12.5574,12.1732
+orellana la vieja,Orellana la Vieja,1356.7500,3,25.7330,12.9992
+zahnos,Zah¡nos,1307.7000,13,48.8231,24.1778
+puebla de sancho prez,Puebla de Sancho P‚rez,1304.5500,9,17.6909,10.0503
+solana de los barros,Solana de los Barros,1271.7000,14,27.6408,13.5091
+valdelacalzada,Valdelacalzada,1261.8000,18,25.4826,11.7651
+lobn,Lobón,1225.3500,14,22.4072,11.6773
+monterrubio de la serena,Monterrubio de la Serena,1219.5000,6,20.4832,15.4199
+fuentes de len,Fuentes de León,1156.9500,8,17.3857,14.8787
+garrovilla,Garrovilla. La,1127.7000,14,17.9550,10.1191
+berlanga,Berlanga,1117.8000,10,28.2928,16.6940
+higuera la real,Higuera la Real,1113.3000,5,60.8096,29.0615
+villar del rey,Villar del Rey,1073.7000,18,27.7184,12.5477
+granja de torrehermosa,Granja de Torrehermosa,1069.6500,10,56.1860,26.4566
+medelln,Medell¡n,1051.6500,3,17.0511,9.9606
+bienvenida,Bienvenida,1046.7000,9,43.1872,18.9740
+codosera,Codosera. La,1044.9000,39,35.3945,21.1183
+valencia del ventoso,Valencia del Ventoso,1012.0500,5,17.5058,13.9051
+coronada,Coronada. La,1007.5500,3,5.4386,5.8962
+torremeja,Torremej¡a,1002.6000,14,16.0682,9.4587
+siruela,Siruela,986.4000,11,3.6874,9.7314
+higuera de vargas,Higuera de Vargas,969.3000,13,34.6033,19.2009
+segura de len,Segura de León,963.0000,8,11.3611,12.7701
+salvalen,Salvaleón,922.0500,9,39.9102,17.8271
+pueblonuevo del guadiana,Pueblonuevo del Guadiana,908.1000,18,17.6427,9.0211
+alange,Alange,902.2500,14,24.9668,12.5732
+puebla de obando,Puebla de Obando,894.6000,18,43.6671,18.1297
+albuera,Albuera. La,893.7000,18,32.9084,14.3641
+usagre,Usagre,880.2000,9,38.5057,17.3355
+fuenlabrada de los montes,Fuenlabrada de los Montes,879.7500,11,33.6180,20.2071
+alconchel,Alconchel,877.9500,13,22.2740,14.8856
+oliva de mrida,Oliva de Mérida,843.7500,3,38.7077,17.5404
+salvatierra de los barros,Salvatierra de los Barros,804.6000,9,26.7646,13.2261
+villalba de los barros,Villalba de los Barros,744.3000,9,14.8896,9.0699
+casas de don pedro,Casas de Don Pedro,734.4000,11,33.4893,20.1621
+esparragalejo,Esparragalejo,711.0000,14,13.4995,8.5597
+montemoln,Montemolín,690.3000,10,28.4239,16.7399
+roca de la sierra,Roca de la Sierra. La,686.7000,18,34.5852,14.9510
+campillo de llerena,Campillo de Llerena,683.1000,10,42.7350,21.7488
+cabeza la vaca,Cabeza la Vaca,665.5500,8,23.3038,16.9500
+villar de rena,Villar de Rena,655.6500,3,19.6757,10.8792
+trujillanos,Trujillanos,647.5500,14,16.6223,9.6526
+valle de la serena,Valle de la Serena,641.2500,3,33.0594,15.5635
+parra,Parra. La,625.5000,9,19.4511,10.6664
+mirandilla,Mirandilla,619.6500,14,18.4701,10.2993
+haba,Haba. La,615.1500,3,11.6530,8.0713
+villagonzalo,Villagonzalo,606.6000,14,35.5700,16.2843
+feria,Feria,603.4500,9,14.7155,9.0089
+medina de las torres,Medina de las Torres,602.1000,5,12.4674,12.1417
+valdetorres,Valdetorres,598.9500,3,28.4562,13.9524
+almendral,Almendral,588.1500,13,25.5615,16.0362
+corte de peleas,Corte de Peleas,588.1500,9,35.6324,16.3298
+cheles,Cheles,579.1500,13,30.6502,17.8173
+puebla de alcocer,Puebla de Alcocer,572.4000,11,21.4161,15.9364
+torre de miguel sesmero,Torre de Miguel Sesmero,565.6500,13,28.3359,17.0073
+valdecaballeros,Valdecaballeros,548.1000,11,67.2698,31.9852
+pealsordo,Peñalsordo,544.5000,7,18.0750,19.0031
+valle de santa ana,Valle de Santa Ana,536.4000,9,49.4312,21.1594
+valverde de mrida,Valverde de Mérida,521.5500,14,27.9147,13.6050
+castilblanco,Castilblanco,517.9500,11,57.6631,28.6229
+bodonal de la sierra,Bodonal de la Sierra,512.5500,8,7.2598,11.3347
+nava de santiago,Nava de Santiago. La,490.0500,14,36.0383,16.4482
+esparragosa de la serena,Esparragosa de la Serena,489.6000,6,12.6402,12.6748
+maguilla,Maguilla,487.8000,10,26.0819,15.9202
+calera de len,Calera de León,477.0000,8,32.7999,20.2737
+ahillones,Ahillones,473.4000,10,20.3417,13.9111
+higuera de la serena,Higuera de la Serena,469.3500,6,21.6640,15.8332
+esparragosa de lares,Esparragosa de Lares,459.4500,11,25.6645,17.4234
+torremayor,Torremayor,451.8000,14,23.1203,11.9269
+villagarca de la torre,Villagarcía de la Torre,443.7000,9,47.3492,20.4307
+cordobilla de lcara,Cordobilla de Lácara,435.1500,41,30.9552,19.5948
+benquerencia de la serena,Benquerencia de la Serena,426.6000,6,9.6783,11.6382
+llera,Llera,426.1500,1,23.1417,16.8242
+san pedro de mrida,San Pedro de Mérida,396.0000,14,23.2628,11.9768
+calzadilla de los barros,Calzadilla de los Barros,388.3500,9,32.4265,15.2078
+puebla de la reina,Puebla de la Reina,387.0000,1,24.0399,17.1386
+acedera,Acedera,369.4500,3,33.9107,15.8615
+tliga,Táliga,360.4500,13,23.1371,15.1877
+valencia del mombuey,Valencia del Mombuey,351.9000,5,69.1912,31.9950
+puebla del maestre,Puebla del Maestre,349.6500,10,24.4543,15.3505
+manchita,Manchita,343.8000,3,45.8323,20.0340
+morera,Morera. La,338.4000,9,23.2961,12.0121
+fuente del arco,Fuente del Arco,337.5000,10,16.8628,12.6935
+don lvaro,Don Álvaro,334.3500,14,36.7864,16.7101
+alconera,Alconera,331.6500,5,7.4421,10.3829
+nogales,Nogales,325.8000,9,32.9618,15.3951
+helechosa de los montes,Helechosa de los Montes,322.2000,11,86.4949,38.7140
+valverde de llerena,Valverde de Llerena,321.3000,10,28.3102,16.7001
+palomas,Palomas,315.4500,1,20.2937,15.8274
+trasierra,Trasierra,310.9500,10,6.9134,9.2112
+valencia de las torres,Valencia de las Torres,309.1500,10,23.7059,15.0886
+garlitos,Garlitos,306.4500,11,20.6672,15.6743
+rena,Rena,301.0500,3,16.8589,9.8933
+malpartida de la serena,Malpartida de la Serena,297.9000,6,11.8854,12.4106
+peraleda del zaucejo,Peraleda del Zaucejo,273.6000,6,41.3400,22.7198
+magacela,Magacela,273.1500,3,12.5032,8.3688
+entrn bajo,Entrín Bajo,270.9000,9,39.2350,17.5907
+villarta de los montes,Villarta de los Montes,264.1500,11,117.1307,49.4365
+carmonita,Carmonita,261.4500,41,20.9655,16.0984
+cristina,Cristina,252.9000,3,34.6125,16.1071
+hinojosa del valle,Hinojosa del Valle,251.1000,1,10.3623,12.3514
+garbayuela,Garbayuela,246.1500,11,15.1058,13.7278
+puebla del prior,Puebla del Prior,245.2500,1,3.9956,10.1231
+retamal de llerena,Retamal de Llerena,225.4500,6,35.9398,20.8297
+mengabril,Mengabril,219.1500,3,11.6365,8.0655
+malcocinado,Malcocinado,202.0500,10,54.9020,26.0072
+valle de matamoros,Valle de Matamoros,190.3500,5,40.5967,21.9870
+zarzacapilla,Zarza-Capilla,181.3500,7,12.8817,17.1854
+higuera de llerena,Higuera de Llerena,158.8500,10,19.9945,13.7896
+baterno,Baterno,158.4000,11,17.1362,14.4385
+atalaya,Atalaya,152.1000,5,4.3305,9.2938
+valverde de burguillos,Valverde de Burguillos,144.9000,5,9.3381,11.0465
+orellana de la sierra,Orellana de la Sierra,139.9500,3,31.0686,14.8667
+lapa,Lapa. La,133.2000,9,20.7651,11.1263
+tamurejo,Tamurejo,116.5500,11,15.3650,13.8186
+aljucn,Aljucén,113.4000,14,23.9406,12.2140
+sanctispritus,Sancti-Spíritus,106.6500,11,8.1227,11.2838
+reina,Reina,90.4500,10,11.1755,10.7029
+casas de reina,Casas de Reina,88.2000,10,8.3430,9.7116
+capilla,Capilla,84.1500,7,21.4285,20.1768
+risco,Risco,74.7000,11,11.7314,12.5468
+carrascalejo,Carrascalejo. El,151.6500,27,55.6994,25.8991
+cceres,C ceres,41908.9500,46,11.2340,7.3848
+plasencia,Plasencia,18516.6000,29,5.7155,7.3960
+navalmoral de la mata,Navalmoral de la Mata,7752.6000,27,7.2448,8.9400
+coria,Coria,5803.2000,20,7.6267,10.4425
+miajadas,Miajadas,4652.1000,36,2.7776,9.8136
+trujillo,Trujillo,4419.9000,19,10.9589,12.5167
+talayuela,Talayuela,4149.9000,27,4.0222,7.8121
+moraleja,Moraleja,3599.1000,20,3.0866,8.8535
+arroyo de la luz,Arroyo de la Luz,2932.6500,46,22.8085,11.4359
+jaraz de la vera,Jara¡z de la Vera,2910.1500,22,4.7545,7.4689
+valencia de alcntara,Valencia de Alc ntara,2780.1000,39,2.5945,9.6383
+montehermoso,Montehermoso,2609.5500,25,3.9119,10.0860
+casar de cceres,Casar de Cáceres,2195.5500,46,5.9938,5.5507
+malpartida de plasencia,Malpartida de Plasencia,2082.1500,29,11.5054,9.4225
+malpartida de cceres,Malpartida de Cáceres,2011.0500,46,14.9192,8.6746
+hervs,Hervás,1856.7000,22,30.2172,16.3809
+torrejoncillo,Torrejoncillo,1502.1000,29,36.4989,18.1702
+jarandilla de la vera,Jarandilla de la Vera,1408.0500,22,3.3435,6.9751
+alcuscar,Alcuéscar,1354.5000,41,9.2274,11.9901
+losar de la vera,Losar de la Vera,1334.7000,22,6.8176,8.1910
+madroera,Madroñera,1312.2000,19,15.5799,14.1341
+valverde del fresno,Valverde del Fresno,1129.0500,31,47.3763,25.1527
+garrovillas de alcontar,Garrovillas de Alconétar,1026.0000,46,28.0215,13.2604
+aldeanueva de la vera,Aldeanueva de la Vera,1023.7500,22,8.3083,8.7128
+cabezuela del valle,Cabezuela del Valle,958.0500,22,5.5061,7.7320
+brozas,Brozas,955.3500,46,50.9591,21.2886
+villanueva de la vera,Villanueva de la Vera,948.6000,22,22.7405,13.7640
+guadalupe,Guadalupe,943.2000,45,29.2546,18.8703
+logrosn,Logrosán,940.5000,45,1.6342,9.2031
+sierra de fuentes,Sierra de Fuentes,938.2500,46,21.8591,11.1036
+navaconcejo,Navaconcejo,933.3000,22,8.5443,8.7953
+ceclavn,Ceclavín,924.3000,20,26.9120,17.1924
+montnchez,Montánchez,918.0000,41,2.7051,9.7073
+almoharn,Almoharín,898.6500,36,13.6985,13.6359
+aliseda,Aliseda,891.9000,46,32.4126,14.7973
+galisteo,Galisteo,885.6000,29,16.0670,11.0190
+madrigalejo,Madrigalejo,878.8500,45,40.5956,22.8396
+cilleros,Cilleros,840.6000,31,36.7426,21.4309
+zarza de granadilla,Zarza de Granadilla,838.8000,22,12.1692,10.0641
+madrigal de la vera,Madrigal de la Vera,818.5500,22,32.2220,17.0826
+caamero,Cañamero,804.1500,45,11.8755,12.7876
+serradilla,Serradilla,794.7000,29,32.9451,16.9264
+torreorgaz,Torreorgaz,793.8000,46,24.3017,11.9585
+pinofranqueado,Pinofranqueado,759.1500,31,30.4517,19.2291
+zorita,Zorita,752.8500,45,22.3224,16.4440
+gata,Gata,747.9000,31,18.1474,14.9225
+alcntara,Alcántara,743.8500,46,59.5616,24.2994
+guijo de galisteo,Guijo de Galisteo,724.9500,25,8.5064,11.6940
+piornal,Piornal,691.6500,22,24.3700,14.3344
+ahigal,Ahigal,655.6500,22,26.8394,15.1986
+peraleda de la mata,Peraleda de la Mata,653.8500,27,20.2591,13.4950
+navas del madroo,Navas del Madro¤o,649.8000,46,40.9936,17.8007
+nuomoral,Nuñomoral,645.7500,31,56.2838,28.2703
+valdefuentes,Valdefuentes,636.7500,41,11.1289,12.6556
+zarza la mayor,Zarza la Mayor,634.0500,20,28.4585,17.7337
+casatejada,Casatejada,629.5500,27,3.2326,7.5357
+casar de palomero,Casar de Palomero,620.1000,22,43.0577,20.8750
+jerte,Jerte,599.4000,22,5.6127,7.7693
+almaraz,Almaraz,594.4500,27,1.2109,6.8281
+majadas,Majadas,583.6500,27,8.7718,9.4744
+caaveral,Cañaveral,577.8000,46,36.2117,16.1270
+rosalejo,Rosalejo,577.8000,27,27.3059,15.9614
+caminomorisco,Caminomorisco,566.1000,31,34.9630,20.8080
+riolobos,Riolobos,565.6500,29,21.3485,12.8676
+castaar de ibor,Casta¤ar de Ibor,551.2500,27,41.1503,20.8069
+tornavacas,Tornavacas,531.4500,22,12.6935,10.2476
+torrecillas de la tiesa,Torrecillas de la Tiesa,530.5500,19,18.4863,15.1513
+pesga,Pesga. La,505.3500,22,42.7913,20.7818
+carcaboso,Carcaboso,498.6000,29,14.2418,10.3802
+garganta la olla,Garganta la Olla,477.9000,22,13.3687,10.4839
+torremocha,Torremocha,467.1000,46,32.6225,14.8708
+eljas,Eljas,464.8500,31,48.3404,25.4901
+campo lugar,Campo Lugar,463.5000,36,14.2870,13.8419
+ala,Al¡a,459.4500,45,39.3957,22.4196
+arroyomolinos,Arroyomolinos,449.5500,41,8.4681,11.7243
+monroy,Monroy,447.3000,46,37.3759,16.5345
+torno,Torno. El,444.6000,29,28.4863,15.3658
+cumbre,Cumbre. La,441.9000,19,20.8920,15.9933
+hoyos,Hoyos,439.2000,31,25.7836,17.5952
+mohedas de granadilla,Mohedas de Granadilla,439.2000,22,31.0260,16.6640
+perales del puerto,Perales del Puerto,436.5000,31,25.4482,17.4778
+talavn,Talav n,415.3500,46,33.2239,15.0812
+san martn de trevejo,San Martín de Trevejo,412.2000,31,46.3888,24.8070
+cuacos de yuste,Cuacos de Yuste,411.7500,22,11.3222,9.7676
+tejeda de titar,Tejeda de Tiétar,399.1500,22,17.0374,11.7679
+acehche,Acehúche,383.4000,20,28.8354,17.8655
+escurial,Escurial,382.9500,36,1.6927,9.4339
+garciaz,Garciaz,382.9500,19,34.3665,20.7094
+membro,Membrío,382.9500,39,25.6593,17.7110
+deleitosa,Deleitosa,377.1000,27,27.3501,15.9768
+santibez el bajo,Santibáñez el Bajo,373.0500,22,30.5731,16.5054
+saucedilla,Saucedilla,361.8000,27,5.7937,8.4321
+aldeanueva del camino,Aldeanueva del Camino,360.0000,22,0.8181,6.0912
+albal,Albalá,359.1000,41,3.3523,9.9338
+aldeacentenera,Aldeacentenera,348.3000,19,35.4113,21.0751
+casas del monte,Casas del Monte,344.7000,22,9.5827,9.1588
+valdeobispo,Valdeobispo,342.4500,29,19.0561,12.0652
+holguera,Holguera,341.1000,29,25.9148,14.4658
+mirabel,Mirabel,328.5000,29,21.9504,13.0782
+aldea del cano,Aldea del Cano,324.4500,46,29.6193,13.8196
+baos de montemayor,Baños de Montemayor,316.3500,22,38.3568,19.2297
+navezuelas,Navezuelas,314.1000,45,33.3380,20.2994
+casas de milln,Casas de Millán,310.5000,46,40.9803,17.7960
+salorino,Salorino,310.0500,39,30.2064,19.3025
+torrecilla de los ngeles,Torrecilla de los Ángeles,309.1500,31,20.0253,15.5798
+acebo,Acebo,308.2500,31,27.6818,18.2596
+santiago de alcntara,Santiago de Alcántara,308.2500,39,27.0105,18.1839
+pasarn de la vera,Pasarón de la Vera,304.6500,22,13.1780,10.4172
+villamiel,Villamiel,303.7500,31,38.4017,22.0115
+villar del pedroso,Villar del Pedroso,302.8500,27,49.6095,23.7676
+belvs de monroy,Belvís de Monroy,301.5000,27,11.4938,10.4271
+casas del castaar,Casas del Castañar,287.5500,29,27.2620,14.9373
+torre de santa mara,Torre de Santa María,284.4000,41,7.8643,11.5130
+guijo de granadilla,Guijo de Granadilla,281.2500,22,25.5668,14.7532
+torremenga,Torremenga,279.4500,22,7.0712,8.2798
+zarza de montnchez,Zarza de Montánchez,278.5500,41,18.5585,15.2560
+aceituna,Aceituna,277.6500,25,11.2633,12.6590
+torrejn el rubio,Torrejón el Rubio,276.3000,29,40.8312,19.6865
+torrequemada,Torrequemada,271.8000,46,27.3595,13.0287
+jaraicejo,Jaraicejo,265.5000,27,29.0561,16.5739
+valverde de la vera,Valverde de la Vera,264.6000,22,19.6465,12.6811
+torre de don miguel,Torre de Don Miguel,255.6000,31,14.2101,13.5445
+pozuelo de zarzn,Pozuelo de Zarzón,253.8000,25,11.7727,12.8372
+villa del campo,Villa del Campo,249.7500,25,12.9002,13.2319
+plasenzuela,Plasenzuela,242.1000,41,29.1741,18.9714
+bohonal de ibor,Bohonal de Ibor,240.7500,27,19.9464,13.3855
+berzocana,Berzocana,237.6000,45,18.5289,15.1162
+casares de las hurdes,Casares de las Hurdes,237.6000,31,64.0249,30.9797
+hernnprez,Hernán-Pérez,233.1000,31,14.1510,13.5238
+villanueva de la sierra,Villanueva de la Sierra,231.3000,25,18.6722,15.2521
+cadalso,Cadalso,227.7000,31,3.9093,9.9392
+navalvillar de ibor,Navalvillar de Ibor,226.8000,27,48.2619,23.2960
+arroyomolinos de la vera,Arroyomolinos de la Vera,223.6500,22,18.5665,12.3031
+cedillo,Cedillo,223.6500,39,45.4721,24.6455
+garganta,Garganta. La,220.5000,22,44.7002,21.4499
+ibahernando,Ibahernando,219.6000,19,15.4882,14.1020
+calzadilla,Calzadilla,218.2500,20,17.9964,14.0719
+barrado,Barrado,214.6500,22,25.6866,14.7952
+casillas de coria,Casillas de Coria,211.5000,20,17.4483,13.8801
+villasbuenas de gata,Villasbuenas de Gata,205.2000,31,16.5321,14.3572
+valdelacasa de tajo,Valdelacasa de Tajo,204.7500,27,41.0754,20.7807
+abertura,Abertura,204.3000,36,15.5004,14.2666
+palomero,Palomero,203.4000,22,37.3520,18.8781
+serrejn,Serrejón,199.8000,27,13.6532,11.1829
+hinojal,Hinojal,198.4500,46,26.5424,12.7427
+gargantilla,Gargantilla,198.0000,22,4.7205,7.4570
+santibez el alto,Santibáñez el Alto,196.2000,31,11.6499,12.6484
+cabaas del castillo,Cabañas del Castillo,190.3500,45,33.4845,20.3507
+robledillo de trujillo,Robledillo de Trujillo,189.0000,41,23.4226,16.9584
+cabezabellosa,Cabezabellosa,188.1000,22,26.6982,15.1492
+morcillo,Morcillo,188.1000,25,7.0003,11.1669
+portaje,Portaje,186.7500,20,4.6164,9.3889
+guijo de santa brbara,Guijo de Santa Bárbara,184.5000,22,8.1350,8.6521
+robledollano,Robledollano,180.9000,27,41.0972,20.7883
+puerto de santa cruz,Puerto de Santa Cruz,176.8500,19,16.2934,14.3838
+herreruela,Herreruela,173.7000,39,41.7361,23.3379
+valdastillas,Valdastillas,171.0000,22,19.2731,12.5504
+cabrero,Cabrero,166.0500,29,28.8121,15.4798
+herguijuela,Herguijuela,164.7000,19,17.7271,14.8856
+talaveruela de la vera,Talaveruela de la Vera,164.2500,22,18.5210,12.2872
+granja,Granja. La,162.4500,22,7.7760,8.5265
+aldea del obispo,Aldea del Obispo. La,157.5000,19,15.8707,14.2359
+casas de don gmez,Casas de Don Gómez,156.1500,20,11.1570,11.6781
+aldehuela de jerte,Aldehuela de Jerte,152.1000,29,18.4301,11.8461
+gordo,Gordo. El,152.1000,27,25.4810,15.3226
+carrascalejo,Carrascalejo,151.6500,27,55.6994,25.8991
+mata de alcntara,Mata de Alcántara,148.5000,46,53.3581,22.1282
+fresnedoso de ibor,Fresnedoso de Ibor,148.0500,27,33.0917,17.9864
+abada,Abadía,146.2500,22,5.1397,7.6038
+santa cruz de paniagua,Santa Cruz de Paniagua,141.7500,25,22.3791,16.5495
+villamesas,Villamesías,139.9500,36,14.9147,14.0615
+santa marta de magasca,Santa Marta de Magasca,139.0500,46,40.5514,17.6459
+santiago del campo,Santiago del Campo,138.1500,46,27.6035,13.1141
+robledillo de la vera,Robledillo de la Vera,137.2500,22,7.3737,8.3856
+salvatierra de santiago,Salvatierra de Santiago,135.9000,41,16.9232,14.6836
+santa ana,Santa Ana,134.5500,41,23.8511,17.1084
+peraleda de san romn,Peraleda de San Román,132.3000,27,29.9426,16.8842
+oliva de plasencia,Oliva de Plasencia,128.7000,29,15.5325,10.8319
+herrera de alcntara,Herrera de Alcántara,128.2500,39,47.1743,25.2412
+santa cruz de la sierra,Santa Cruz de la Sierra,121.5000,19,15.0822,13.9599
+portezuelo,Portezuelo,120.6000,20,15.4047,13.1648
+alcollarn,Alcollarín,119.7000,36,16.9913,14.7884
+viandar de la vera,Viandar de la Vera,119.7000,22,17.6388,11.9784
+millanes,Millanes,115.6500,27,6.1734,8.5650
+marchagaz,Marchagaz,111.6000,22,40.1780,19.8671
+rebollar,Rebollar,106.6500,22,18.7922,12.3821
+guijo de coria,Guijo de Coria,103.9500,25,13.8485,13.5638
+valdemorales,Valdemorales,103.5000,41,17.2140,14.7854
+villar de plasencia,Villar de Plasencia,103.0500,22,19.2638,12.5472
+ladrillar,Ladrillar,102.6000,31,68.9860,32.7160
+carbajo,Carbajo,102.1500,39,32.5025,20.1061
+romangordo,Romangordo,100.8000,27,11.1645,10.3118
+casas de don antonio,Casas de Don Antonio,95.8500,41,22.4438,16.6158
+valdehncar,Valdehúncar,95.4000,27,9.9152,9.8746
+conquista de la sierra,Conquista de la Sierra,94.5000,19,21.4418,16.1857
+piedras albas,Piedras Albas,93.1500,20,42.2762,22.5698
+collado,Collado,90.4500,22,7.9814,8.5983
+botija,Botija,89.5500,46,43.3759,18.6345
+hulaga,Huélaga,88.2000,20,9.5492,11.1154
+cerezo,Cerezo,85.5000,22,30.4637,16.4672
+descargamara,Descargamaría,85.5000,31,6.0756,10.6974
+segura de toro,Segura de Toro,83.7000,22,6.4228,8.0528
+toril,Toril,80.5500,27,10.2692,9.9985
+mesas de ibor,Mesas de Ibor,77.8500,27,27.3883,15.9902
+pescueza,Pescueza,70.6500,20,12.3150,12.0834
+villa del rey,Villa del Rey,70.6500,46,57.7549,23.6671
+jarilla,Jarilla,69.3000,22,13.8110,10.6387
+casas de miravete,Casas de Miravete,65.2500,27,14.2107,11.3780
+gargera,Gargüera,59.4000,29,25.1362,14.1932
+robledillo de gata,Robledillo de Gata,55.8000,31,9.0349,11.7332
+valdecaas de tajo,Valdecañas de Tajo,53.5500,27,36.1255,19.0482
+pedroso de acim,Pedroso de Acim,51.7500,46,42.9388,18.4815
+berrocalejo,Berrocalejo,47.2500,27,32.8937,17.9171
+garvn,Garvín,47.2500,27,34.2801,18.4023
+higuera,Higuera,45.0000,27,13.5535,11.1480
+benquerencia,Benquerencia,44.1000,41,21.3633,16.2376
+cachorrilla,Cachorrilla,41.8500,20,14.1785,12.7356
+campillo de deleitosa,Campillo de Deleitosa,35.5500,27,41.0068,20.7567
+ruanes,Ruanes,30.6000,41,20.7219,16.0131

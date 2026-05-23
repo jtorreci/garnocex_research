@@ -1,0 +1,29 @@
+name: a05-network
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+
+  # Core scientific computing
+  - numpy>=1.24.0
+  - scipy>=1.10.0
+  - pandas>=2.0.0
+
+  # Geospatial
+  - geopandas>=0.13.0
+  - shapely>=2.0.0
+  - fiona>=1.9.0
+
+  # Network
+  - networkx>=3.1.0
+
+  # Plotting
+  - matplotlib>=3.7.0
+
+  # Utilities
+  - tqdm>=4.65.0
+
+  # Development
+  - jupyter
+  - pytest>=7.4.0

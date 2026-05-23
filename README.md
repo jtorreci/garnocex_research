@@ -15,7 +15,8 @@ Each subdirectory corresponds to a specific research paper or analysis:
 | Folder | Title | Status |
 |--------|-------|--------|
 | [A00.Voronoi_critics](./A00.Voronoi_critics/) | A Probabilistic Framework for Misallocation Risk in Voronoi Tessellations: Theory and Empirical Validation | Under review at *Applied Geography* |
-| [A01.Voronoi](./A01.Voronoi/) | Spatial Cost Analysis of Construction and Demolition Waste Management: Beyond Geometric Proximity in Sparsely Populated Regions (Extremadura, Spain) | Submitted to *Waste Management* |
+| [A01.Voronoi](./A01.Voronoi/) | Spatial Cost Inequality in Construction and Demolition Waste Management in Sparsely Populated Regions: Evidence from Extremadura, Spain | Submitted to *Waste Management* |
+| [A05.Network_Optimization](./A05.Network_Optimization/) | Network Rationalization of Construction and Demolition Waste Treatment Plants: Cost-Based Assignment and the Scale--Circularity Nexus---A Case Study of Extremadura, Spain | Manuscript in preparation |
 
 ## Quick Navigation
 
@@ -36,6 +37,16 @@ Reproducibility package for the spatial cost analysis of CDW management in Extre
 - **Rationalisation potential**: consolidating 14 redundant co-located facilities saves ≈ €303,000/yr (4.5%) without increasing transport distances.
 
 [View full documentation →](./A01.Voronoi/README.md)
+
+### A05.Network_Optimization
+
+Reproducibility package for the network rationalisation paper. Builds on A00's road-network distances and A01's piecewise logarithmic cost model:
+- **Iterative cost-based heuristic**: stabilises in 6 iterations at a 24-plant configuration with 8 plants receiving zero throughput.
+- **System cost reduction**: 11.34 €/t (cost-based heuristic) vs 12.22 €/t (A01 diagnostic baseline), a 7.2 % saving (2.8 % relative to A05's own 32-plant distance baseline of 11.67 €/t).
+- **Local change**: only 65 of 383 municipalities switch plant; the remaining 318 keep their baseline allocation.
+- **Scale--circularity nexus**: 23 of 24 surviving plants exceed the 5,000 t/y viability threshold for mechanical separation (vs 24 of 32 in the baseline).
+
+[View full documentation →](./A05.Network_Optimization/README.md)
 
 ## Citation
 

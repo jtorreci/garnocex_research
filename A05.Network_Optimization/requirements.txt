@@ -1,0 +1,26 @@
+# A05 Network Rationalization - Python Dependencies
+# Reproducibility package for the cost-based assignment heuristic and
+# three-panel routed-flow figure.
+
+# Core scientific computing
+numpy>=1.24.0
+scipy>=1.10.0
+pandas>=2.0.0
+
+# Geospatial
+geopandas>=0.13.0
+shapely>=2.0.0
+fiona>=1.9.0
+
+# Network / routing
+networkx>=3.1.0
+
+# Plotting
+matplotlib>=3.7.0
+
+# Utilities
+tqdm>=4.65.0
+
+# Development
+jupyter>=1.0.0
+pytest>=7.4.0

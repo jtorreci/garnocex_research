@@ -1,0 +1,13 @@
+scenario_group,scenario_name,rho_trans,dotacion,method,n_active_plants,cost_per_tonne,total_cost_eur,max_cost,gini,n_above_5000,n_above_15000,n_above_40000,notes
+transport,rho_025,0.2500,0.5000,greedy,24,9.5125,5244546.3646,37.4852,0.1752,,,,24-plant pilot within near-optimal plateau
+transport,rho_025,0.2500,0.5000,iterative,23,9.4881,5231104.0057,37.4638,,22,9,5,counts computed from final assignments
+transport,rho_035,0.3500,0.5000,greedy,24,11.3607,6263532.6651,49.1983,0.1923,,,,24-plant pilot within near-optimal plateau
+transport,rho_035,0.3500,0.5000,iterative,24,11.3369,6250391.6806,49.1983,,23,10,5,counts computed from final assignments
+transport,rho_045,0.4500,0.5000,greedy,24,13.2041,7279856.2266,60.9113,0.2103,,,,24-plant pilot within near-optimal plateau
+transport,rho_045,0.4500,0.5000,iterative,26,13.1193,7233098.2012,60.9113,,23,10,5,counts computed from final assignments
+demand,dot_045,0.3500,0.4500,greedy,24,11.6085,5760090.9218,49.4365,0.1896,,,,24-plant pilot within near-optimal plateau
+demand,dot_045,0.3500,0.4500,iterative,24,11.5746,5743304.8532,49.4365,,21,10,5,counts computed from final assignments
+demand,dot_050,0.3500,0.5000,greedy,24,11.3607,6263532.6651,49.1983,0.1923,,,,24-plant pilot within near-optimal plateau
+demand,dot_050,0.3500,0.5000,iterative,24,11.3369,6250391.6806,49.1983,,23,10,5,counts computed from final assignments
+demand,dot_055,0.3500,0.5500,greedy,24,11.1383,6754977.4152,48.9538,0.1952,,,,24-plant pilot within near-optimal plateau
+demand,dot_055,0.3500,0.5500,iterative,25,11.1038,6734052.6518,48.9538,,23,12,5,counts computed from final assignments
