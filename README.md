@@ -16,7 +16,8 @@ Each subdirectory corresponds to a specific research paper or analysis:
 |--------|-------|--------|
 | [A00.Voronoi_critics](./A00.Voronoi_critics/) | A Probabilistic Framework for Misallocation Risk in Voronoi Tessellations: Theory and Empirical Validation | Under review at *Applied Geography* |
 | [A01.Voronoi](./A01.Voronoi/) | Spatial Cost Inequality in Construction and Demolition Waste Management in Sparsely Populated Regions: Evidence from Extremadura, Spain | Submitted to *Waste Management* |
-| [A05.Network_Optimization](./A05.Network_Optimization/) | Network Rationalization of Construction and Demolition Waste Treatment Plants: Cost-Based Assignment and the Scale--Circularity Nexus---A Case Study of Extremadura, Spain | Manuscript in preparation |
+| [A03.Diagnostic_Indicators](./A03.Diagnostic_Indicators/) | Diagnostic Indicators for CDW Treatment Plant Networks: A Plant-Level and Network-Level Panel Framework | Submitted to *Waste Management & Research* |
+| [A05.Network_Optimization](./A05.Network_Optimization/) | Network Rationalization of Construction and Demolition Waste Treatment Plants: Cost-Based Assignment and the Scale--Circularity Nexus---A Case Study of Extremadura, Spain | Submitted to *Resources, Conservation and Recycling* |
 
 ## Quick Navigation
 
@@ -37,6 +38,17 @@ Reproducibility package for the spatial cost analysis of CDW management in Extre
 - **Rationalisation potential**: consolidating 14 redundant co-located facilities saves ≈ €303,000/yr (4.5%) without increasing transport distances.
 
 [View full documentation →](./A01.Voronoi/README.md)
+
+### A03.Diagnostic_Indicators
+
+Reproducibility package for the two-panel diagnostic indicator framework comparing three flow scenarios:
+- **S1→S3 net saving: 7.2% (0.88 €/t)** purely from treatment-cost reduction via throughput concentration; transport costs actually rise slightly.
+- **S1 proximity baseline**: C̄ = 12.22 €/t (transport 6.03 + treatment 6.19), Gini = 0.187, 32 plants.
+- **S2 real observed flows**: C̄ = 12.11 €/t (transport 6.30 + treatment 5.81), Gini = 0.208, 36 active plants.
+- **S3 cost-optimal network**: C̄ = 11.34 €/t (transport 6.42 + treatment 4.92), Gini = 0.197, 24 plants.
+- **Framework**: two 7-indicator panels (plant-level + network-level); legacy indices IET/ICR/IER/ISD shown algebraically collinear.
+
+[View full documentation →](./A03.Diagnostic_Indicators/README.md)
 
 ### A05.Network_Optimization
 
