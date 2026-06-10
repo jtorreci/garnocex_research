@@ -1,0 +1,36 @@
+﻿Indicator,S1_Administrative,S2_Real_flows,S3_Optimised
+SCOPE,,,
+N plants,32,23,24
+N municipalities,383,354,382
+Total prod (t/yr),"551,205","264,686","551,331"
+PLANT-LEVEL (means),,,
+C_i (EUR/t),15.51,42.02,13.10
+U_i,N/A,N/A,N/A
+D_i^90 (km),31.2,20.2,33.4
+Prec_i,1.000,0.710,0.914
+Rec_i,1.000,0.766,0.942
+Leak_dg_i (EUR/t),0.00,0.97,0.00
+IET_i mean (%),100.0,983.9,102.1
+IET_i median (%),100.0,280.1,86.5
+NETWORK-LEVEL,,,
+C_bar (EUR/t),12.22,10.62,11.34
+Gini(C_m),0.1874,0.3685,0.1974
+MAD_C (EUR/t),4.28,5.39,4.18
+CVaR_0.9(D) (km),42.7,53.9,43.3
+micro-F1,1.0000,0.7385,0.9170
+IGET (%),100.0,84.3,90.5
+CV(T_i),1.089,1.784,1.002
+SYSTEM TOTALS,,,
+System cost (EUR/yr),"6,736,148","2,810,994","6,252,428"
+Total t-km,"9,492,291","3,494,228","10,114,189"
+Irrat. leak (EUR/yr),0,"100,681",0
+REDUNDANCY CHECK,,,
+IGCR = 10000/IGET,100.00,118.62,110.52
+IGSD = IGCR - 100,0.00,18.62,10.52
+,,,
+ECONOMIC COMPARISON,,,
+Delta C_bar S2-S1 (EUR/t),,-1.60,
+Delta C_bar S2-S3 (EUR/t),,-0.72,
+Delta C_bar S1-S3 (EUR/t),+0.88,,
+Annual saving S1->S3 (EUR/yr),"485,148",,
+Potential saving S2->S3 (EUR/yr),,"-190,711",

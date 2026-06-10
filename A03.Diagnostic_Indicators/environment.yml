@@ -1,0 +1,43 @@
+name: a03-diagnostic-indicators
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+
+  # Core scientific computing
+  - numpy>=1.24.0
+  - scipy>=1.10.0
+  - pandas>=2.0.0
+
+  # Statistical analysis
+  - statsmodels>=0.14.0
+  - scikit-learn>=1.3.0
+
+  # Plotting
+  - matplotlib>=3.7.0
+  - seaborn>=0.12.0
+
+  # Geospatial
+  - geopandas>=0.13.0
+  - shapely>=2.0.0
+  - fiona>=1.9.0
+  - pysal>=23.7.0
+  - libpysal>=4.7.0
+  - esda>=2.5.0
+
+  # Network
+  - networkx>=3.1.0
+
+  # Utilities
+  - tqdm>=4.65.0
+  - openpyxl>=3.1.0
+  - tabulate>=0.9.0
+
+  # Development
+  - jupyter
+  - pytest>=7.4.0
+
+  - pip
+  - pip:
+    - openrouteservice>=2.3.3

@@ -1,0 +1,384 @@
+municipio,poblacion,km2,densidad,provincia,planta_id,planta_municipio,distancia_km,produccion_t,tkm,C_trans,C_trat,C_fix_unit,C_tot
+Villarta de los Montes,587,123.32,4.76,Badajoz,11,Siruela,117.13,293.5,34377.86,41.0,8.2,7.85,49.2
+Carrascalejo,337,48.48,6.95,CÂ ceres,42,Castañar de Ibor,54.19,168.5,9130.37,18.97,20.06,19.71,39.03
+Helechosa de los Montes,716,308.72,2.32,Badajoz,11,Siruela,86.49,358.0,30965.17,30.27,8.2,7.85,38.48
+Valdecaballeros,1218,90.12,13.52,Badajoz,11,Siruela,67.27,609.0,40967.32,23.54,8.2,7.85,31.75
+Cabañas del Castillo,423,105.27,4.02,CÂ ceres,42,Castañar de Ibor,32.69,211.5,6913.7,11.44,20.06,19.71,31.51
+Valencia del Mombuey,782,74.95,10.43,Badajoz,5,Atalaya,69.19,391.0,27053.75,24.22,7.09,6.74,31.3
+Monroy,994,204.45,4.86,CÂ ceres,33,Serradilla,31.43,497.0,15622.74,11.0,19.84,19.49,30.85
+Santiago del Campo,307,73.33,4.19,CÂ ceres,30,Cañaveral,25.41,153.5,3900.74,8.89,21.63,21.28,30.52
+Talav n,923,98.48,9.37,CÂ ceres,30,Cañaveral,25.31,461.5,11678.99,8.86,21.63,21.28,30.48
+Granja de Torrehermosa,2377,151.69,15.67,Badajoz,16,Monterrubio de la Serena,44.02,1188.5,52319.01,15.41,14.4,14.05,29.8
+Castilblanco,1151,132.24,8.7,Badajoz,11,Siruela,57.66,575.5,33185.14,20.18,8.2,7.85,28.38
+Higuera la Real,2474,125.64,19.69,Badajoz,5,Atalaya,60.81,1237.0,75221.44,21.28,7.09,6.74,28.37
+Hinojal,441,63.45,6.95,CÂ ceres,30,Cañaveral,18.63,220.5,4106.83,6.52,21.63,21.28,28.15
+Deleitosa,838,144.21,5.81,CÂ ceres,42,Castañar de Ibor,23.05,419.0,9659.71,8.07,20.06,19.71,28.13
+Torrejón el Rubio,614,221.88,2.77,CÂ ceres,33,Serradilla,21.99,307.0,6749.42,7.69,19.84,19.49,27.54
+Fresnedoso de Ibor,329,54.66,6.02,CÂ ceres,42,Castañar de Ibor,17.19,164.5,2827.39,6.02,20.06,19.71,26.08
+Malcocinado,449,26.24,17.11,Badajoz,10,Llerena,54.9,224.5,12325.51,19.22,6.66,6.31,25.88
+Villar del Pedroso,673,242.4,2.78,CÂ ceres,27,Navalmoral de la Mata,49.61,336.5,16693.61,17.36,8.41,8.06,25.77
+Eljas,1033,32.55,31.74,CÂ ceres,31,Cadalso,48.34,516.5,24967.82,16.92,8.81,8.46,25.73
+Valverde del Fresno,2509,196.97,12.74,CÂ ceres,31,Cadalso,47.38,1254.5,59433.57,16.58,8.81,8.46,25.4
+Herrera de Alcántara,285,121.61,2.34,CÂ ceres,39,Valencia de Alcántara,47.17,142.5,6722.33,16.51,8.61,8.26,25.12
+San Martín de Trevejo,916,24.76,37.0,CÂ ceres,31,Cadalso,46.39,458.0,21246.06,16.24,8.81,8.46,25.05
+Pedroso de Acim,115,33.23,3.46,CÂ ceres,30,Cañaveral,9.51,57.5,546.78,3.33,21.63,21.28,24.95
+Piedras Albas,207,4.54,45.59,CÂ ceres,24,Ceclavín,19.59,103.5,2027.92,6.86,18.04,17.69,24.9
+Cedillo,497,61.56,8.07,CÂ ceres,39,Valencia de Alcántara,45.47,248.5,11299.82,15.92,8.61,8.26,24.52
+Garganta. La,490,24.08,20.35,CÂ ceres,22,Cabezuela del Valle,44.7,245.0,10951.54,15.65,8.81,8.46,24.46
+Oliva de la Frontera,5612,149.34,37.58,Badajoz,5,Atalaya,49.23,2806.0,138143.82,17.23,7.09,6.74,24.32
+Mirabel,730,49.3,14.81,CÂ ceres,33,Serradilla,12.78,365.0,4663.75,4.47,19.84,19.49,24.32
+Acehúche,852,91.06,9.36,CÂ ceres,24,Ceclavín,17.89,426.0,7621.98,6.26,18.04,17.69,24.3
+Casas de Millán,690,152.91,4.51,CÂ ceres,30,Cañaveral,7.55,345.0,2605.38,2.64,21.63,21.28,24.27
+Pesga. La,1123,19.88,56.49,CÂ ceres,21,Nuñomoral,41.77,561.5,23456.15,14.62,9.38,9.03,24.0
+Zah¡nos,2906,45.3,64.15,Badajoz,13,Olivenza,48.82,1453.0,70940.0,17.09,6.59,6.24,23.67
+Robledollano,402,61.74,6.51,CÂ ceres,42,Castañar de Ibor,9.51,201.0,1911.86,3.33,20.06,19.71,23.39
+Peraleda del Zaucejo,608,163.65,3.72,Badajoz,16,Monterrubio de la Serena,25.16,304.0,7647.49,8.8,14.4,14.05,23.2
+Herreruela,386,113.72,3.39,CÂ ceres,44,Brozas,37.69,193.0,7274.34,13.19,9.9,9.55,23.1
+Navalvillar de Ibor,504,55.53,9.08,CÂ ceres,42,Castañar de Ibor,8.48,252.0,2136.52,2.97,20.06,19.71,23.03
+Madrigalejo,1953,100.81,19.37,CÂ ceres,45,Logrosán,40.6,976.5,39641.62,14.21,8.69,8.34,22.9
+Herrera del Duque,3688,277.31,13.3,Badajoz,11,Siruela,41.87,1844.0,77203.17,14.65,8.2,7.85,22.86
+Valdelacasa de Tajo,455,72.9,6.24,CÂ ceres,27,Navalmoral de la Mata,41.08,227.5,9344.65,14.38,8.41,8.06,22.79
+Campillo de Deleitosa,79,25.6,3.09,CÂ ceres,27,Navalmoral de la Mata,41.01,39.5,1619.77,14.35,8.41,8.06,22.76
+Al¡a,1021,599.51,1.7,CÂ ceres,45,Logrosán,39.4,510.5,20111.5,13.79,8.69,8.34,22.48
+Cañaveral,1284,86.48,14.85,CÂ ceres,30,Cañaveral,2.2,642.0,1411.76,0.77,21.63,21.28,22.4
+Villamiel,675,73.09,9.24,CÂ ceres,31,Cadalso,38.4,337.5,12960.57,13.44,8.81,8.46,22.25
+Baños de Montemayor,703,21.98,31.98,CÂ ceres,22,Cabezuela del Valle,38.36,351.5,13482.41,13.42,8.81,8.46,22.24
+Alcollarín,266,79.92,3.33,CÂ ceres,36,Escurial,16.99,133.0,2259.84,5.95,16.09,15.74,22.04
+Manchita,764,38.23,19.98,Badajoz,3,Don Benito,45.83,382.0,17507.96,16.04,5.83,5.48,21.87
+Cilleros,1868,208.94,8.94,CÂ ceres,31,Cadalso,36.74,934.0,34317.62,12.86,8.81,8.46,21.67
+Campillo de Llerena,1518,234.04,6.49,Badajoz,10,Llerena,42.74,759.0,32435.89,14.96,6.66,6.31,21.62
+Valle de Santa Ana,1192,3.73,319.57,Badajoz,9,Fuente del Maestre,49.43,596.0,29461.0,17.3,4.22,3.87,21.52
+Abertura,454,62.71,7.24,CÂ ceres,36,Escurial,15.5,227.0,3518.59,5.43,16.09,15.74,21.52
+Villagarcía de la Torre,986,67.47,14.61,Badajoz,1,Ribera del Fresno,37.15,493.0,18316.71,13.0,8.5,8.15,21.5
+Villanueva del Fresno,3678,360.18,10.21,Badajoz,13,Olivenza,42.26,1839.0,77718.38,14.79,6.59,6.24,21.38
+Zarza la Mayor,1409,170.28,8.27,CÂ ceres,24,Ceclavín,9.35,704.5,6587.32,3.27,18.04,17.69,21.31
+Villamesías,311,46.47,6.69,CÂ ceres,36,Escurial,14.91,155.5,2319.23,5.22,16.09,15.74,21.31
+Valle de Matamoros,423,4.9,86.33,Badajoz,5,Atalaya,40.6,211.5,8586.2,14.21,7.09,6.74,21.3
+Aldeacentenera,774,110.56,7.0,CÂ ceres,19,Trujillo,35.41,387.0,13704.18,12.39,8.81,8.46,21.21
+Retamal de Llerena,501,96.12,5.21,Badajoz,6,Quintana de la Serena,35.94,250.5,9002.93,12.58,8.55,8.2,21.12
+Campo Lugar,1030,73.06,14.1,CÂ ceres,36,Escurial,14.29,515.0,7357.8,5.0,16.09,15.74,21.09
+Valdecañas de Tajo,119,18.81,6.33,CÂ ceres,27,Navalmoral de la Mata,36.13,59.5,2149.46,12.64,8.41,8.06,21.05
+Codosera. La,2322,69.63,33.35,Badajoz,39,Valencia de Alcántara,35.39,1161.0,41093.03,12.39,8.61,8.26,21.0
+Almoharín,1997,93.68,21.32,CÂ ceres,36,Escurial,13.7,998.5,13677.99,4.79,16.09,15.74,20.89
+Garciaz,851,150.28,5.66,CÂ ceres,19,Trujillo,34.37,425.5,14622.93,12.03,8.81,8.46,20.84
+Casta¤ar de Ibor,1225,146.97,8.34,CÂ ceres,42,Castañar de Ibor,1.97,612.5,1209.14,0.69,20.06,19.71,20.76
+Serradilla,1766,259.19,6.81,CÂ ceres,33,Serradilla,2.55,883.0,2253.96,0.89,19.84,19.49,20.74
+Salvaleón,2049,71.8,28.54,Badajoz,13,Olivenza,39.7,1024.5,40676.37,13.9,6.59,6.24,20.48
+Navalvillar de Pela,4787,251.17,19.06,Badajoz,45,Logrosán,33.53,2393.5,80248.98,11.73,8.69,8.34,20.43
+Garvín,105,38.27,2.74,CÂ ceres,27,Navalmoral de la Mata,34.28,52.5,1799.71,12.0,8.41,8.06,20.41
+Navezuelas,698,59.99,11.64,CÂ ceres,45,Logrosán,33.34,349.0,11634.95,11.67,8.69,8.34,20.36
+Calera de León,1060,68.38,15.5,Badajoz,8,Fregenal de la Sierra,32.8,530.0,17383.94,11.48,8.84,8.49,20.32
+Azuaga,8301,497.89,16.67,Badajoz,10,Llerena,39.02,4150.5,161951.42,13.66,6.66,6.31,20.32
+Madrigal de la Vera,1819,41.63,43.69,CÂ ceres,22,Cabezuela del Valle,32.22,909.5,29305.93,11.28,8.81,8.46,20.09
+Bienvenida,2326,92.17,25.24,Badajoz,1,Ribera del Fresno,33.06,1163.0,38453.71,11.57,8.5,8.15,20.07
+Carbajo,227,27.94,8.12,CÂ ceres,39,Valencia de Alcántara,32.5,113.5,3689.03,11.38,8.61,8.26,19.98
+Fuenlabrada de los Montes,1955,191.92,10.19,Badajoz,11,Siruela,33.62,977.5,32861.61,11.77,8.2,7.85,19.97
+Casas de Don Pedro,1632,142.66,11.44,Badajoz,11,Siruela,33.49,816.0,27327.29,11.72,8.2,7.85,19.92
+Berrocalejo,105,14.28,7.35,CÂ ceres,27,Navalmoral de la Mata,32.89,52.5,1726.92,11.51,8.41,8.06,19.92
+Mohedas de Granadilla,976,58.72,16.62,CÂ ceres,21,Nuñomoral,30.01,488.0,14644.31,10.5,9.38,9.03,19.88
+Oliva de Mérida,1875,254.51,7.37,Badajoz,1,Ribera del Fresno,32.4,937.5,30379.16,11.34,8.5,8.15,19.84
+Palomero,452,20.27,22.3,CÂ ceres,25,Montehermoso,31.92,226.0,7213.4,11.17,8.64,8.29,19.81
+Marchagaz,248,9.47,26.19,CÂ ceres,21,Nuñomoral,29.7,124.0,3683.01,10.4,9.38,9.03,19.77
+Ceclavín,2054,159.49,12.88,CÂ ceres,24,Ceclavín,4.89,1027.0,5018.05,1.71,18.04,17.69,19.75
+Botija,199,18.82,10.57,CÂ ceres,41,Montánchez,31.1,99.5,3094.13,10.88,8.8,8.45,19.68
+Garrovillas de Alconétar,2280,206.85,11.02,CÂ ceres,44,Brozas,27.8,1140.0,31696.4,9.73,9.9,9.55,19.64
+Cordobilla de Lácara,967,36.93,26.18,Badajoz,41,Montánchez,30.96,483.5,14966.83,10.83,8.8,8.45,19.63
+Santibáñez el Bajo,829,46.15,17.96,CÂ ceres,22,Cabezuela del Valle,30.57,414.5,12672.56,10.7,8.81,8.46,19.51
+Cerezo,190,18.14,10.47,CÂ ceres,22,Cabezuela del Valle,30.46,95.0,2894.06,10.66,8.81,8.46,19.48
+Santa Marta de Magasca,309,39.68,7.79,CÂ ceres,19,Trujillo,30.45,154.5,4704.79,10.66,8.81,8.46,19.47
+Hervás,4126,59.78,69.02,CÂ ceres,22,Cabezuela del Valle,30.22,2063.0,62338.11,10.58,8.81,8.46,19.39
+Valle de la Serena,1425,125.26,11.38,Badajoz,6,Quintana de la Serena,30.62,712.5,21815.11,10.72,8.55,8.2,19.26
+Salorino,689,157.65,4.37,CÂ ceres,39,Valencia de Alcántara,30.21,344.5,10406.11,10.57,8.61,8.26,19.18
+Plasenzuela,538,36.67,14.67,CÂ ceres,41,Montánchez,29.17,269.0,7847.82,10.21,8.8,8.45,19.01
+Capilla,187,146.99,1.27,Badajoz,7,Cabeza del Buey,21.43,93.5,2003.56,7.5,11.44,11.09,18.94
+Guadalupe,2096,68.19,30.74,CÂ ceres,45,Logrosán,29.25,1048.0,30658.83,10.24,8.69,8.34,18.93
+Peraleda de San Román,294,61.9,4.75,CÂ ceres,27,Navalmoral de la Mata,29.94,147.0,4401.57,10.48,8.41,8.06,18.89
+Guareña,7312,238.34,30.68,Badajoz,3,Don Benito,37.3,3656.0,136377.68,13.06,5.83,5.48,18.89
+Higuera de Vargas,2154,67.59,31.87,Badajoz,13,Olivenza,34.6,1077.0,37267.73,12.11,6.59,6.24,18.7
+Monesterio,4378,322.35,13.58,Badajoz,10,Llerena,34.14,2189.0,74723.69,11.95,6.66,6.31,18.61
+Jaraicejo,590,177.48,3.32,CÂ ceres,27,Navalmoral de la Mata,29.06,295.0,8571.56,10.17,8.41,8.06,18.58
+Cabrero,369,6.63,55.66,CÂ ceres,22,Cabezuela del Valle,27.8,184.5,5129.19,9.73,8.81,8.46,18.54
+Acebo,685,57.02,12.01,CÂ ceres,31,Cadalso,27.68,342.5,9481.01,9.69,8.81,8.46,18.5
+Torno. El,988,22.26,44.38,CÂ ceres,22,Cabezuela del Valle,27.64,494.0,13656.15,9.68,8.81,8.46,18.49
+Jerez de los Caballeros,10237,740.55,13.82,Badajoz,5,Atalaya,32.11,5118.5,164378.18,11.24,7.09,6.74,18.33
+Calzadilla de los Barros,863,52.23,16.52,Badajoz,5,Atalaya,32.05,431.5,13828.24,11.22,7.09,6.74,18.3
+Ahigal,1457,52.07,27.98,CÂ ceres,22,Cabezuela del Valle,26.84,728.5,19552.48,9.39,8.81,8.46,18.21
+Cabezabellosa,418,33.56,12.46,CÂ ceres,22,Cabezuela del Valle,26.7,209.0,5579.92,9.34,8.81,8.46,18.16
+Torrejoncillo,3338,94.54,35.31,CÂ ceres,29,Plasencia,36.5,1669.0,60916.65,12.77,5.31,4.96,18.09
+Puebla de Obando,1988,23.65,84.06,Badajoz,18,Badajoz,43.67,994.0,43405.09,15.28,2.8,2.45,18.08
+Santiago de Alcántara,685,95.67,7.16,CÂ ceres,39,Valencia de Alcántara,27.01,342.5,9251.1,9.45,8.61,8.26,18.06
+Mesas de Ibor,173,48.75,3.55,CÂ ceres,27,Navalmoral de la Mata,27.39,86.5,2369.09,9.59,8.41,8.06,18.0
+Rosalejo,1284,41.82,30.7,CÂ ceres,27,Navalmoral de la Mata,27.31,642.0,17530.4,9.56,8.41,8.06,17.97
+Cristina,562,15.81,35.55,Badajoz,3,Don Benito,34.61,281.0,9726.11,12.11,5.83,5.48,17.95
+Hoyos,976,15.09,64.68,CÂ ceres,31,Cadalso,25.78,488.0,12582.41,9.02,8.81,8.46,17.84
+Barrado,477,21.29,22.4,CÂ ceres,22,Cabezuela del Valle,25.69,238.5,6126.25,8.99,8.81,8.46,17.8
+Peñalsordo,1210,47.33,25.57,Badajoz,7,Cabeza del Buey,18.08,605.0,10935.38,6.33,11.44,11.09,17.77
+Guijo de Granadilla,625,73.03,8.56,CÂ ceres,22,Cabezuela del Valle,25.57,312.5,7989.64,8.95,8.81,8.46,17.76
+Perales del Puerto,970,36.28,26.74,CÂ ceres,31,Cadalso,25.45,485.0,12342.39,8.91,8.81,8.46,17.72
+Barcarrota,3698,136.11,27.17,Badajoz,13,Olivenza,31.78,1849.0,58763.29,11.12,6.59,6.24,17.71
+Acedera,821,82.47,9.96,Badajoz,3,Don Benito,33.91,410.5,13920.36,11.87,5.83,5.48,17.7
+Membrío,851,207.74,4.1,CÂ ceres,39,Valencia de Alcántara,25.66,425.5,10918.04,8.98,8.61,8.26,17.59
+Torrequemada,604,30.81,19.6,CÂ ceres,41,Montánchez,25.04,302.0,7562.76,8.76,8.8,8.45,17.56
+Mérida,56395,857.12,65.8,Badajoz,14,Mérida,38.41,28197.5,1083045.92,13.44,4.03,3.68,17.47
+Casar de Palomero,1378,36.91,37.33,CÂ ceres,21,Nuñomoral,22.9,689.0,15777.56,8.01,9.38,9.03,17.39
+Alburquerque,5704,723.23,7.89,Badajoz,18,Badajoz,41.64,2852.0,118758.75,14.57,2.8,2.45,17.37
+Piornal,1537,36.39,42.24,CÂ ceres,22,Cabezuela del Valle,24.37,768.5,18728.36,8.53,8.81,8.46,17.34
+Gordo. El,338,78.6,4.3,CÂ ceres,27,Navalmoral de la Mata,25.48,169.0,4306.28,8.92,8.41,8.06,17.33
+Cheles,1287,47.94,26.85,Badajoz,13,Olivenza,30.65,643.5,19723.42,10.73,6.59,6.24,17.31
+Entrín Bajo,602,9.74,61.81,Badajoz,4,Talavera la Real,29.75,301.0,8956.06,10.41,6.83,6.48,17.25
+Usagre,1956,240.75,8.12,Badajoz,1,Ribera del Fresno,24.92,978.0,24374.97,8.72,8.5,8.15,17.22
+Esparragosa de Lares,1021,208.61,4.89,Badajoz,11,Siruela,25.66,510.5,13101.72,8.98,8.2,7.85,17.19
+Ladrillar,228,53.03,4.3,CÂ ceres,21,Nuñomoral,22.26,114.0,2537.9,7.79,9.38,9.03,17.17
+Santa Ana,299,34.99,8.55,CÂ ceres,41,Montánchez,23.85,149.5,3565.74,8.35,8.8,8.45,17.15
+Miajadas,10338,120.75,85.61,CÂ ceres,36,Escurial,2.78,5169.0,14357.21,0.97,16.09,15.74,17.06
+Cabeza la Vaca,1479,64.0,23.11,Badajoz,8,Fregenal de la Sierra,23.3,739.5,17233.13,8.16,8.84,8.49,17.0
+Robledillo de Trujillo,420,44.78,9.38,CÂ ceres,41,Montánchez,23.42,210.0,4918.76,8.2,8.8,8.45,17.0
+Puebla de la Reina,860,131.72,6.53,Badajoz,1,Ribera del Fresno,24.04,430.0,10337.14,8.41,8.5,8.15,16.91
+Don Álvaro,743,32.07,23.17,Badajoz,14,Mérida,36.79,371.5,13666.16,12.88,4.03,3.68,16.91
+Villanueva de la Vera,2108,129.66,16.26,CÂ ceres,22,Cabezuela del Valle,22.74,1054.0,23968.49,7.96,8.81,8.46,16.77
+Orellana de la Sierra,311,16.68,18.65,Badajoz,3,Don Benito,31.07,155.5,4831.17,10.87,5.83,5.48,16.71
+Escurial,851,100.71,8.45,CÂ ceres,36,Escurial,1.69,425.5,720.25,0.59,16.09,15.74,16.68
+Casas de Don Antonio,213,31.34,6.8,CÂ ceres,41,Montánchez,22.44,106.5,2390.26,7.86,8.8,8.45,16.65
+Nava de Santiago. La,1089,45.03,24.18,Badajoz,14,Mérida,36.04,544.5,19622.85,12.61,4.03,3.68,16.65
+Montemolín,1534,202.72,7.57,Badajoz,10,Llerena,28.42,767.0,21801.16,9.95,6.66,6.31,16.61
+Llera,947,71.5,13.24,Badajoz,1,Ribera del Fresno,23.14,473.5,10957.59,8.1,8.5,8.15,16.6
+Valverde de Llerena,714,41.22,17.32,Badajoz,10,Llerena,28.31,357.0,10106.75,9.91,6.66,6.31,16.57
+Berlanga,2484,127.79,19.44,Badajoz,10,Llerena,28.29,1242.0,35139.6,9.9,6.66,6.31,16.56
+Monterrubio de la Serena,2710,314.95,8.6,Badajoz,16,Monterrubio de la Serena,6.05,1355.0,8196.34,2.12,14.4,14.05,16.51
+Pinofranqueado,1687,146.84,11.49,CÂ ceres,21,Nuñomoral,20.36,843.5,17174.73,7.13,9.38,9.03,16.5
+Zorita,1673,186.96,8.95,CÂ ceres,45,Logrosán,22.32,836.5,18672.72,7.81,8.69,8.34,16.5
+Torre de Miguel Sesmero,1257,57.99,21.68,Badajoz,13,Olivenza,28.34,628.5,17809.13,9.92,6.59,6.24,16.5
+Villagonzalo,1348,40.82,33.02,Badajoz,14,Mérida,35.57,674.0,23974.17,12.45,4.03,3.68,16.48
+Santa Cruz de Paniagua,315,83.81,3.76,CÂ ceres,25,Montehermoso,22.38,157.5,3524.7,7.83,8.64,8.29,16.47
+Fuente de Cantos,5039,251.77,20.01,Badajoz,10,Llerena,27.81,2519.5,70060.67,9.73,6.66,6.31,16.39
+Conquista de la Sierra,210,41.77,5.03,CÂ ceres,19,Trujillo,21.44,105.0,2251.39,7.5,8.81,8.46,16.32
+Benquerencia,98,13.31,7.36,CÂ ceres,41,Montánchez,21.36,49.0,1046.8,7.48,8.8,8.45,16.28
+Alcántara,1653,551.99,2.99,CÂ ceres,44,Brozas,18.09,826.5,14954.41,6.33,9.9,9.55,16.24
+Puebla de la Calzada,5903,14.25,414.25,Badajoz,4,Talavera la Real,26.75,2951.5,78938.17,9.36,6.83,6.48,16.19
+Carmonita,581,38.89,14.94,Badajoz,41,Montánchez,20.97,290.5,6090.49,7.34,8.8,8.45,16.14
+Higuera de la Serena,1043,58.4,17.86,Badajoz,6,Quintana de la Serena,21.66,521.5,11297.79,7.58,8.55,8.2,16.13
+Cumbre. La,982,113.52,8.65,CÂ ceres,19,Trujillo,20.89,491.0,10257.97,7.31,8.81,8.46,16.12
+Ruanes,68,15.11,4.5,CÂ ceres,41,Montánchez,20.72,34.0,704.54,7.25,8.8,8.45,16.05
+Corte de Peleas,1307,42.32,30.88,Badajoz,4,Talavera la Real,26.15,653.5,17090.19,9.15,6.83,6.48,15.99
+Montijo,16236,119.68,135.66,Badajoz,4,Talavera la Real,26.09,8118.0,211797.26,9.13,6.83,6.48,15.96
+Zarza-Capilla,403,92.01,4.38,Badajoz,7,Cabeza del Buey,12.88,201.5,2595.66,4.51,11.44,11.09,15.95
+Torremocha,1038,63.83,16.26,CÂ ceres,41,Montánchez,20.32,519.0,10544.11,7.11,8.8,8.45,15.91
+Torrecilla de los Ángeles,687,43.29,15.87,CÂ ceres,31,Cadalso,20.03,343.5,6878.68,7.01,8.81,8.46,15.82
+Valdetorres,1331,39.69,33.53,Badajoz,3,Don Benito,28.46,665.5,18937.59,9.96,5.83,5.48,15.79
+Maguilla,1084,97.87,11.08,Badajoz,10,Llerena,26.08,542.0,14136.37,9.13,6.66,6.31,15.79
+Mata de Alcántara,330,33.5,9.85,CÂ ceres,44,Brozas,16.74,165.0,2761.56,5.86,9.9,9.55,15.76
+Nogales,724,80.66,8.98,Badajoz,9,Fuente del Maestre,32.96,362.0,11932.17,11.54,4.22,3.87,15.75
+Puebla de Alcocer,1272,296.72,4.29,Badajoz,11,Siruela,21.42,636.0,13620.62,7.5,8.2,7.85,15.7
+Valverde de la Vera,588,46.95,12.52,CÂ ceres,22,Cabezuela del Valle,19.65,294.0,5776.06,6.88,8.81,8.46,15.69
+Santa Marta,4322,119.73,36.1,Badajoz,9,Fuente del Maestre,32.75,2161.0,70766.44,11.46,4.22,3.87,15.68
+Palomas,701,40.52,17.3,Badajoz,1,Ribera del Fresno,20.29,350.5,7112.94,7.1,8.5,8.15,15.6
+Valdastillas,380,8.1,46.91,CÂ ceres,22,Cabezuela del Valle,19.27,190.0,3661.89,6.75,8.81,8.46,15.56
+Villar de Plasencia,229,24.99,9.16,CÂ ceres,22,Cabezuela del Valle,19.26,114.5,2205.71,6.74,8.81,8.46,15.56
+Almendral,1307,67.5,19.36,Badajoz,13,Olivenza,25.56,653.5,16704.47,8.95,6.59,6.24,15.53
+Peraleda de la Mata,1453,92.06,15.78,CÂ ceres,27,Navalmoral de la Mata,20.26,726.5,14718.23,7.09,8.41,8.06,15.5
+Garlitos,681,129.32,5.27,Badajoz,11,Siruela,20.67,340.5,7037.19,7.23,8.2,7.85,15.44
+Rebollar,237,11.51,20.59,CÂ ceres,22,Cabezuela del Valle,18.79,118.5,2226.87,6.58,8.81,8.46,15.39
+Bohonal de Ibor,535,64.6,8.28,CÂ ceres,27,Navalmoral de la Mata,19.95,267.5,5335.67,6.98,8.41,8.06,15.39
+Arroyomolinos de la Vera,497,23.19,21.43,CÂ ceres,22,Cabezuela del Valle,18.57,248.5,4613.78,6.5,8.81,8.46,15.31
+Talaveruela de la Vera,365,21.34,17.1,CÂ ceres,22,Cabezuela del Valle,18.52,182.5,3380.08,6.48,8.81,8.46,15.3
+Zarza de Montánchez,619,36.82,16.81,CÂ ceres,41,Montánchez,18.56,309.5,5743.85,6.5,8.8,8.45,15.29
+Torrecillas de la Tiesa,1179,139.55,8.45,CÂ ceres,19,Trujillo,18.49,589.5,10897.68,6.47,8.81,8.46,15.28
+Puebla del Maestre,777,79.17,9.81,Badajoz,10,Llerena,24.45,388.5,9500.5,8.56,6.66,6.31,15.22
+Berzocana,528,133.59,3.95,CÂ ceres,45,Logrosán,18.53,264.0,4891.62,6.49,8.69,8.34,15.18
+Villanueva de la Sierra,514,43.62,11.78,CÂ ceres,25,Montehermoso,18.67,257.0,4798.76,6.54,8.64,8.29,15.17
+Gata,1662,94.18,17.65,CÂ ceres,31,Cadalso,18.15,831.0,15080.48,6.35,8.81,8.46,15.17
+Calzadilla,485,76.34,6.35,CÂ ceres,20,Moraleja,18.0,242.5,4364.12,6.3,8.73,8.38,15.03
+Herguijuela,366,41.97,8.72,CÂ ceres,19,Trujillo,17.73,183.0,3244.06,6.2,8.81,8.46,15.02
+Viandar de la Vera,266,28.0,9.5,CÂ ceres,22,Cabezuela del Valle,17.64,133.0,2345.96,6.17,8.81,8.46,14.99
+Valencia de las Torres,687,210.22,3.27,Badajoz,10,Llerena,23.71,343.5,8142.99,8.3,6.66,6.31,14.96
+Fuentes de León,2571,109.86,23.4,Badajoz,8,Fregenal de la Sierra,17.39,1285.5,22349.27,6.08,8.84,8.49,14.93
+Roca de la Sierra. La,1526,109.6,13.92,Badajoz,18,Badajoz,34.59,763.0,26388.51,12.1,2.8,2.45,14.9
+Navas del Madro¤o,1444,112.29,12.86,CÂ ceres,44,Brozas,14.25,722.0,10287.15,4.99,9.9,9.55,14.89
+Casas del Castañar,639,24.63,25.94,CÂ ceres,29,Plasencia,27.26,319.5,8710.2,9.54,5.31,4.96,14.85
+Orellana la Vieja,3015,37.05,81.38,Badajoz,3,Don Benito,25.73,1507.5,38792.47,9.01,5.83,5.48,14.84
+Casillas de Coria,470,61.97,7.58,CÂ ceres,20,Moraleja,17.45,235.0,4100.36,6.11,8.73,8.38,14.84
+Aliseda,1982,80.51,24.62,CÂ ceres,46,Cáceres,32.41,991.0,32120.89,11.34,3.49,3.14,14.83
+Valdemorales,230,9.89,23.26,CÂ ceres,41,Montánchez,17.21,115.0,1979.61,6.02,8.8,8.45,14.82
+Caminomorisco,1258,147.06,8.55,CÂ ceres,21,Nuñomoral,15.53,629.0,9771.42,5.44,9.38,9.03,14.82
+Tejeda de Tiétar,887,52.83,16.79,CÂ ceres,22,Cabezuela del Valle,17.04,443.5,7556.07,5.96,8.81,8.46,14.78
+Salvatierra de Santiago,302,33.4,9.04,CÂ ceres,41,Montánchez,16.92,151.0,2555.41,5.92,8.8,8.45,14.72
+Albuera. La,1986,26.37,75.31,Badajoz,4,Talavera la Real,22.47,993.0,22308.11,7.86,6.83,6.48,14.7
+Táliga,801,31.31,25.58,Badajoz,13,Olivenza,23.14,400.5,9266.41,8.1,6.59,6.24,14.68
+Zarza. La,3563,63.19,56.39,Badajoz,14,Mérida,30.39,1781.5,54132.68,10.64,4.03,3.68,14.67
+Villasbuenas de Gata,456,46.83,9.74,CÂ ceres,31,Cadalso,16.53,228.0,3769.32,5.79,8.81,8.46,14.6
+Puerto de Santa Cruz,393,33.72,11.65,CÂ ceres,19,Trujillo,16.29,196.5,3201.66,5.7,8.81,8.46,14.51
+Alconchel,1951,294.95,6.61,Badajoz,13,Olivenza,22.27,975.5,21728.27,7.8,6.59,6.24,14.38
+Holguera,758,37.19,20.38,CÂ ceres,29,Plasencia,25.91,379.0,9821.73,9.07,5.31,4.96,14.38
+Aldea del Obispo. La,350,37.85,9.25,CÂ ceres,19,Trujillo,15.87,175.0,2777.38,5.55,8.81,8.46,14.37
+Hornachos,3867,295.94,13.07,Badajoz,1,Ribera del Fresno,16.65,1933.5,32184.34,5.83,8.5,8.15,14.33
+Zalamea de la Serena,3978,245.7,16.19,Badajoz,6,Quintana de la Serena,16.48,1989.0,32775.06,5.77,8.55,8.2,14.31
+Madroñera,2916,132.91,21.94,CÂ ceres,19,Trujillo,15.58,1458.0,22715.47,5.45,8.81,8.46,14.26
+Ibahernando,488,76.95,6.34,CÂ ceres,19,Trujillo,15.49,244.0,3779.13,5.42,8.81,8.46,14.23
+Baterno,352,62.1,5.67,Badajoz,11,Siruela,17.14,176.0,3015.96,6.0,8.2,7.85,14.2
+Casares de las Hurdes,528,20.75,25.45,CÂ ceres,21,Nuñomoral,13.69,264.0,3614.85,4.79,9.38,9.03,14.17
+Portezuelo,268,126.11,2.13,CÂ ceres,20,Moraleja,15.4,134.0,2064.23,5.39,8.73,8.38,14.12
+Gargüera,132,51.6,2.56,CÂ ceres,29,Plasencia,25.14,66.0,1658.99,8.8,5.31,4.96,14.11
+Santa Cruz de la Sierra,270,44.6,6.05,CÂ ceres,19,Trujillo,15.08,135.0,2036.1,5.28,8.81,8.46,14.09
+Talarrubias,3630,339.31,10.7,Badajoz,11,Siruela,16.77,1815.0,30441.11,5.87,8.2,7.85,14.07
+Aldea del Cano,721,28.69,25.13,CÂ ceres,46,Cáceres,29.62,360.5,10677.75,10.37,3.49,3.14,13.85
+San Vicente de Alcántara,5808,275.31,21.1,Badajoz,39,Valencia de Alcántara,14.85,2904.0,43119.96,5.2,8.61,8.26,13.81
+Valverde de Mérida,1159,51.65,22.44,Badajoz,14,Mérida,27.91,579.5,16176.59,9.77,4.03,3.68,13.8
+Torre de Don Miguel,568,11.55,49.18,CÂ ceres,31,Cadalso,14.21,284.0,4035.66,4.97,8.81,8.46,13.79
+Ahillones,1052,21.54,48.84,Badajoz,10,Llerena,20.34,526.0,10699.72,7.12,6.66,6.31,13.78
+Hernán-Pérez,518,35.76,14.49,CÂ ceres,31,Cadalso,14.15,259.0,3665.11,4.95,8.81,8.46,13.77
+Solana de los Barros,2826,65.03,43.46,Badajoz,14,Mérida,27.64,1413.0,39056.47,9.67,4.03,3.68,13.71
+Cachorrilla,93,41.38,2.25,CÂ ceres,20,Moraleja,14.18,46.5,659.3,4.96,8.73,8.38,13.69
+Higuera de Llerena,353,113.4,3.11,Badajoz,10,Llerena,19.99,176.5,3529.03,7.0,6.66,6.31,13.66
+Jarilla,154,28.47,5.41,CÂ ceres,22,Cabezuela del Valle,13.81,77.0,1063.45,4.83,8.81,8.46,13.65
+Salvatierra de los Barros,1788,74.96,23.85,Badajoz,9,Fuente del Maestre,26.76,894.0,23927.51,9.37,4.22,3.87,13.59
+Tamurejo,259,29.71,8.72,Badajoz,11,Siruela,15.37,129.5,1989.77,5.38,8.2,7.85,13.58
+Garganta la Olla,1062,48.06,22.1,CÂ ceres,22,Cabezuela del Valle,13.37,531.0,7098.76,4.68,8.81,8.46,13.49
+Garbayuela,547,84.14,6.5,Badajoz,11,Siruela,15.11,273.5,4131.44,5.29,8.2,7.85,13.49
+Guijo de Coria,231,74.75,3.09,CÂ ceres,25,Montehermoso,13.85,115.5,1599.51,4.85,8.64,8.29,13.48
+Pasarón de la Vera,677,38.97,17.37,CÂ ceres,22,Cabezuela del Valle,13.18,338.5,4460.76,4.61,8.81,8.46,13.43
+Lobón,2723,57.65,47.23,Badajoz,4,Talavera la Real,18.8,1361.5,25592.2,6.58,6.83,6.48,13.41
+Casas de Miravete,145,50.16,2.89,CÂ ceres,27,Navalmoral de la Mata,14.21,72.5,1030.28,4.97,8.41,8.06,13.38
+Tornavacas,1181,76.6,15.42,CÂ ceres,22,Cabezuela del Valle,12.69,590.5,7495.54,4.44,8.81,8.46,13.26
+Santa Amalia,4326,73.6,58.78,Badajoz,3,Don Benito,21.17,2163.0,45781.12,7.41,5.83,5.48,13.24
+Valencia del Ventoso,2249,99.19,22.67,Badajoz,5,Atalaya,17.51,1124.5,19685.25,6.13,7.09,6.74,13.21
+Serrejón,444,124.15,3.58,CÂ ceres,27,Navalmoral de la Mata,13.65,222.0,3031.02,4.78,8.41,8.06,13.19
+Higuera,100,40.53,2.47,CÂ ceres,27,Navalmoral de la Mata,13.55,50.0,677.68,4.74,8.41,8.06,13.15
+Villa del Campo,555,56.92,9.75,CÂ ceres,25,Montehermoso,12.9,277.5,3579.82,4.52,8.64,8.29,13.15
+Zarza de Granadilla,1864,133.56,13.96,CÂ ceres,22,Cabezuela del Valle,12.17,932.0,11341.73,4.26,8.81,8.46,13.07
+Pescueza,157,52.06,3.02,CÂ ceres,20,Moraleja,12.31,78.5,966.73,4.31,8.73,8.38,13.04
+Villa del Rey,157,57.29,2.74,CÂ ceres,44,Brozas,8.93,78.5,700.76,3.12,9.9,9.55,13.03
+Esparragosa de la Serena,1088,21.7,50.14,Badajoz,6,Quintana de la Serena,12.64,544.0,6876.24,4.42,8.55,8.2,12.97
+Puebla de Sancho P‚rez,2899,56.69,51.14,Badajoz,5,Atalaya,16.65,1449.5,24135.4,5.83,7.09,6.74,12.92
+Santibáñez el Alto,436,99.07,4.4,CÂ ceres,31,Cadalso,11.65,218.0,2539.67,4.08,8.81,8.46,12.89
+Cañamero,1787,151.45,11.8,CÂ ceres,45,Logrosán,11.88,893.5,10610.72,4.16,8.69,8.34,12.85
+Segura de León,2140,104.39,20.5,Badajoz,8,Fregenal de la Sierra,11.36,1070.0,12156.33,3.98,8.84,8.49,12.82
+Riolobos,1257,49.49,25.4,CÂ ceres,29,Plasencia,21.35,628.5,13417.54,7.47,5.31,4.96,12.78
+Cuacos de Yuste,915,52.63,17.39,CÂ ceres,22,Cabezuela del Valle,11.32,457.5,5179.89,3.96,8.81,8.46,12.78
+Alange,2005,160.29,12.51,Badajoz,14,Mérida,24.97,1002.5,25029.25,8.74,4.03,3.68,12.77
+Pozuelo de Zarzón,564,47.43,11.89,CÂ ceres,25,Montehermoso,11.77,282.0,3319.89,4.12,8.64,8.29,12.76
+Villar de Rena,1457,82.39,17.68,Badajoz,3,Don Benito,19.68,728.5,14333.76,6.89,5.83,5.48,12.72
+Malpartida de la Serena,662,26.33,25.14,Badajoz,6,Quintana de la Serena,11.89,331.0,3934.07,4.16,8.55,8.2,12.71
+Valdefuentes,1415,27.14,52.14,CÂ ceres,41,Montánchez,11.13,707.5,7873.7,3.9,8.8,8.45,12.69
+Trujillo,9822,649.53,15.12,CÂ ceres,19,Trujillo,10.96,4911.0,53819.1,3.84,8.81,8.46,12.65
+Casas de Don Gómez,347,31.16,11.14,CÂ ceres,20,Moraleja,11.16,173.5,1935.74,3.9,8.73,8.38,12.64
+Aceituna,617,40.08,15.39,CÂ ceres,25,Montehermoso,11.26,308.5,3474.74,3.94,8.64,8.29,12.58
+Fuente del Arco,750,115.36,6.5,Badajoz,10,Llerena,16.86,375.0,6323.55,5.9,6.66,6.31,12.56
+Villar del Rey,2386,98.87,24.13,Badajoz,18,Badajoz,27.72,1193.0,33068.09,9.7,2.8,2.45,12.5
+Belvís de Monroy,670,44.98,14.9,CÂ ceres,27,Navalmoral de la Mata,11.49,335.0,3850.41,4.02,8.41,8.06,12.43
+Aljucén,252,19.07,13.21,Badajoz,14,Mérida,23.94,126.0,3016.51,8.38,4.03,3.68,12.41
+Morera. La,752,43.39,17.33,Badajoz,9,Fuente del Maestre,23.3,376.0,8759.34,8.15,4.22,3.87,12.37
+Romangordo,224,39.07,5.73,CÂ ceres,27,Navalmoral de la Mata,11.16,112.0,1250.42,3.91,8.41,8.06,12.32
+Risco,166,39.48,4.2,Badajoz,11,Siruela,11.73,83.0,973.71,4.11,8.2,7.85,12.31
+San Pedro de Mérida,880,22.73,38.72,Badajoz,14,Mérida,23.26,440.0,10235.62,8.14,4.03,3.68,12.17
+Casas del Monte,766,27.61,27.74,CÂ ceres,22,Cabezuela del Valle,9.58,383.0,3670.18,3.35,8.81,8.46,12.17
+Hinojosa del Valle,558,46.03,12.12,Badajoz,1,Ribera del Fresno,10.36,279.0,2891.07,3.63,8.5,8.15,12.13
+Torremayor,1004,21.0,47.81,Badajoz,14,Mérida,23.12,502.0,11606.4,8.09,4.03,3.68,12.12
+Huélaga,196,10.73,18.27,CÂ ceres,20,Moraleja,9.55,98.0,935.82,3.34,8.73,8.38,12.07
+Alcuéscar,3010,108.92,27.63,CÂ ceres,41,Montánchez,9.23,1505.0,13887.18,3.23,8.8,8.45,12.03
+Toril,179,149.76,1.2,CÂ ceres,27,Navalmoral de la Mata,10.27,89.5,919.09,3.59,8.41,8.06,12.0
+Torreorgaz,1764,28.78,61.29,CÂ ceres,46,Cáceres,24.3,882.0,21434.14,8.51,3.49,3.14,11.99
+Cabeza del Buey,5411,475.02,11.39,Badajoz,7,Cabeza del Buey,1.54,2705.5,4165.59,0.54,11.44,11.09,11.98
+Valdeobispo,761,42.1,18.08,CÂ ceres,29,Plasencia,19.06,380.5,7250.84,6.67,5.31,4.96,11.98
+Robledillo de Gata,124,31.07,3.99,CÂ ceres,31,Cadalso,9.03,62.0,560.16,3.16,8.81,8.46,11.98
+Benquerencia de la Serena,948,102.81,9.22,Badajoz,6,Quintana de la Serena,9.68,474.0,4587.52,3.39,8.55,8.2,11.93
+Villafranca de los Barros,13356,102.42,130.4,Badajoz,1,Ribera del Fresno,9.8,6678.0,65455.94,3.43,8.5,8.15,11.93
+Valdehúncar,212,25.6,8.28,CÂ ceres,27,Navalmoral de la Mata,9.92,106.0,1051.01,3.47,8.41,8.06,11.88
+Villanueva de la Serena,25838,152.57,169.35,Badajoz,3,Don Benito,17.14,12919.0,221402.9,6.0,5.83,5.48,11.83
+Navaconcejo,2074,51.4,40.35,CÂ ceres,22,Cabezuela del Valle,8.54,1037.0,8860.41,2.99,8.81,8.46,11.8
+Medell¡n,2337,64.96,35.98,Badajoz,3,Don Benito,17.05,1168.5,19924.18,5.97,5.83,5.48,11.8
+Arroyomolinos,999,115.12,8.68,CÂ ceres,41,Montánchez,8.47,499.5,4229.8,2.96,8.8,8.45,11.76
+Aldehuela de Jerte,338,11.76,28.74,CÂ ceres,29,Plasencia,18.43,169.0,3114.68,6.45,5.31,4.96,11.76
+Almendralejo,33588,164.27,204.47,Badajoz,9,Fuente del Maestre,21.51,16794.0,361304.22,7.53,4.22,3.87,11.75
+Rena,669,10.78,62.06,Badajoz,3,Don Benito,16.86,334.5,5639.29,5.9,5.83,5.48,11.73
+Aldeanueva de la Vera,2275,37.6,60.51,CÂ ceres,22,Cabezuela del Valle,8.31,1137.5,9450.74,2.91,8.81,8.46,11.72
+Valdelacalzada,2804,31.79,88.2,Badajoz,18,Badajoz,25.48,1402.0,35726.6,8.92,2.8,2.45,11.72
+Guijo de Santa Bárbara,410,34.54,11.87,CÂ ceres,22,Cabezuela del Valle,8.14,205.0,1667.68,2.85,8.81,8.46,11.66
+Guijo de Galisteo,1611,62.28,25.87,CÂ ceres,25,Montehermoso,8.51,805.5,6851.92,2.98,8.64,8.29,11.61
+Collado,201,44.94,4.47,CÂ ceres,22,Cabezuela del Valle,7.98,100.5,802.13,2.79,8.81,8.46,11.61
+Torre de Santa María,632,19.07,33.14,CÂ ceres,41,Montánchez,7.86,316.0,2485.11,2.75,8.8,8.45,11.55
+Granja. La,361,14.94,24.16,CÂ ceres,22,Cabezuela del Valle,7.78,180.5,1403.57,2.72,8.81,8.46,11.54
+Lapa. La,296,8.1,36.54,Badajoz,9,Fuente del Maestre,20.77,148.0,3073.24,7.27,4.22,3.87,11.49
+Burguillos del Cerro,3286,187.54,17.52,Badajoz,5,Atalaya,12.56,1643.0,20631.87,4.4,7.09,6.74,11.48
+Majadas,1297,51.96,24.96,CÂ ceres,27,Navalmoral de la Mata,8.77,648.5,5688.52,3.07,8.41,8.06,11.48
+Arroyo de la Luz,6517,128.06,50.89,CÂ ceres,46,Cáceres,22.81,3258.5,74321.37,7.98,3.49,3.14,11.47
+Nuñomoral,1435,94.78,15.14,CÂ ceres,21,Nuñomoral,5.95,717.5,4270.21,2.08,9.38,9.03,11.46
+Medina de las Torres,1338,87.37,15.31,Badajoz,5,Atalaya,12.47,669.0,8340.66,4.36,7.09,6.74,11.45
+Coria,12896,103.46,124.65,CÂ ceres,20,Moraleja,7.63,6448.0,49176.69,2.67,8.73,8.38,11.4
+Robledillo de la Vera,305,12.83,23.77,CÂ ceres,22,Cabezuela del Valle,7.37,152.5,1124.48,2.58,8.81,8.46,11.39
+Bodonal de la Sierra,1139,68.37,16.66,Badajoz,8,Fregenal de la Sierra,7.26,569.5,4134.46,2.54,8.84,8.49,11.38
+Torremenga,621,12.15,51.11,CÂ ceres,22,Cabezuela del Valle,7.07,310.5,2195.61,2.47,8.81,8.46,11.29
+Aceuchal,5679,63.08,90.03,Badajoz,9,Fuente del Maestre,20.0,2839.5,56782.18,7.0,4.22,3.87,11.22
+Losar de la Vera,2966,82.08,36.14,CÂ ceres,22,Cabezuela del Valle,6.82,1483.0,10110.45,2.39,8.81,8.46,11.2
+Sierra de Fuentes,2085,25.21,82.71,CÂ ceres,46,Cáceres,21.86,1042.5,22788.09,7.65,3.49,3.14,11.14
+Morcillo,418,16.23,25.75,CÂ ceres,25,Montehermoso,7.0,209.0,1463.07,2.45,8.64,8.29,11.09
+Segura de Toro,186,14.73,12.63,CÂ ceres,22,Cabezuela del Valle,6.42,93.0,597.32,2.25,8.81,8.46,11.06
+Sancti-Spíritus,237,33.56,7.06,Badajoz,11,Siruela,8.12,118.5,962.54,2.84,8.2,7.85,11.05
+Carrascalejo. El,85,12.77,6.66,Badajoz,14,Mérida,19.98,42.5,849.33,6.99,4.03,3.68,11.03
+Parra. La,1390,78.21,17.77,Badajoz,9,Fuente del Maestre,19.45,695.0,13518.53,6.81,4.22,3.87,11.03
+Navalmoral de la Mata,17228,155.96,110.46,CÂ ceres,27,Navalmoral de la Mata,7.24,8614.0,62406.91,2.54,8.41,8.06,10.95
+Descargamaría,190,52.92,3.59,CÂ ceres,31,Cadalso,6.08,95.0,577.18,2.13,8.81,8.46,10.94
+Brozas,2123,398.84,5.32,CÂ ceres,44,Brozas,2.95,1061.5,3128.28,1.03,9.9,9.55,10.94
+Galisteo,1968,79.52,24.75,CÂ ceres,29,Plasencia,16.07,984.0,15809.89,5.62,5.31,4.96,10.93
+Jerte,1332,58.95,22.6,CÂ ceres,22,Cabezuela del Valle,5.61,666.0,3738.05,1.96,8.81,8.46,10.78
+Oliva de Plasencia,286,88.73,3.22,CÂ ceres,29,Plasencia,15.53,143.0,2221.14,5.44,5.31,4.96,10.75
+Cabezuela del Valle,2129,56.57,37.63,CÂ ceres,22,Cabezuela del Valle,5.51,1064.5,5861.24,1.93,8.81,8.46,10.74
+Abadía,325,45.08,7.21,CÂ ceres,22,Cabezuela del Valle,5.14,162.5,835.21,1.8,8.81,8.46,10.61
+Reina,201,72.43,2.78,Badajoz,10,Llerena,11.18,100.5,1123.14,3.91,6.66,6.31,10.57
+Millanes,257,17.61,14.59,CÂ ceres,27,Navalmoral de la Mata,6.17,128.5,793.28,2.16,8.41,8.06,10.57
+Mirandilla,1377,41.59,33.11,Badajoz,14,Mérida,18.47,688.5,12716.66,6.46,4.03,3.68,10.5
+Jara¡z de la Vera,6467,62.53,103.42,CÂ ceres,22,Cabezuela del Valle,4.75,3233.5,15373.67,1.66,8.81,8.46,10.48
+Gargantilla,440,20.87,21.08,CÂ ceres,22,Cabezuela del Valle,4.72,220.0,1038.51,1.65,8.81,8.46,10.47
+Campanario,5367,257.32,20.86,Badajoz,3,Don Benito,13.19,2683.5,35398.47,4.62,5.83,5.48,10.45
+Saucedilla,804,60.41,13.31,CÂ ceres,27,Navalmoral de la Mata,5.79,402.0,2329.05,2.03,8.41,8.06,10.44
+Valverde de Burguillos,322,19.41,16.59,Badajoz,5,Atalaya,9.34,161.0,1503.43,3.27,7.09,6.74,10.36
+Portaje,415,100.55,4.13,CÂ ceres,20,Moraleja,4.62,207.5,957.91,1.62,8.73,8.38,10.35
+Valverde de Leganés,4155,72.98,56.93,Badajoz,13,Olivenza,10.71,2077.5,22260.08,3.75,6.59,6.24,10.34
+Garrovilla. La,2506,33.46,74.9,Badajoz,14,Mérida,17.95,1253.0,22497.58,6.28,4.03,3.68,10.32
+Carcaboso,1108,20.29,54.61,CÂ ceres,29,Plasencia,14.24,554.0,7889.95,4.98,5.31,4.96,10.3
+Magacela,607,75.82,8.01,Badajoz,3,Don Benito,12.5,303.5,3794.71,4.38,5.83,5.48,10.21
+Cadalso,506,7.35,68.84,CÂ ceres,31,Cadalso,3.91,253.0,989.06,1.37,8.81,8.46,10.18
+Fregenal de la Sierra,5237,236.65,22.13,Badajoz,8,Fregenal de la Sierra,3.43,2618.5,8972.24,1.2,8.84,8.49,10.04
+Montehermoso,5799,96.45,60.12,CÂ ceres,25,Montehermoso,3.91,2899.5,11342.65,1.37,8.64,8.29,10.01
+Jarandilla de la Vera,3129,61.51,50.87,CÂ ceres,22,Cabezuela del Valle,3.34,1564.5,5230.9,1.17,8.81,8.46,9.98
+Albalá,798,38.49,20.73,CÂ ceres,41,Montánchez,3.35,399.0,1337.59,1.17,8.8,8.45,9.97
+Haba. La,1367,86.57,15.79,Badajoz,3,Don Benito,11.65,683.5,7964.85,4.08,5.83,5.48,9.91
+Mengabril,487,43.81,11.12,Badajoz,3,Don Benito,11.64,243.5,2833.48,4.07,5.83,5.48,9.91
+Puebla del Prior,545,35.88,15.19,Badajoz,1,Ribera del Fresno,4.0,272.5,1088.79,1.4,8.5,8.15,9.9
+Trujillanos,1439,20.27,70.99,Badajoz,14,Mérida,16.62,719.5,11959.73,5.82,4.03,3.68,9.85
+Talayuela,9222,227.03,40.62,CÂ ceres,27,Navalmoral de la Mata,4.02,4611.0,18546.46,1.41,8.41,8.06,9.82
+Moraleja,7998,147.6,54.19,CÂ ceres,20,Moraleja,3.09,3999.0,12343.27,1.08,8.73,8.38,9.81
+Montánchez,2040,112.66,18.11,CÂ ceres,41,Montánchez,2.71,1020.0,2759.22,0.95,8.8,8.45,9.75
+Alconera,737,32.71,22.53,Badajoz,5,Atalaya,7.44,368.5,2742.41,2.6,7.09,6.74,9.69
+Torremej¡a,2228,24.3,91.69,Badajoz,14,Mérida,16.07,1114.0,17900.03,5.62,4.03,3.68,9.66
+Casas de Reina,196,49.8,3.94,Badajoz,10,Llerena,8.34,98.0,817.62,2.92,6.66,6.31,9.58
+Castuera,6594,432.04,15.26,Badajoz,6,Quintana de la Serena,2.88,3297.0,9496.95,1.01,8.55,8.2,9.55
+Casatejada,1399,111.82,12.51,CÂ ceres,27,Navalmoral de la Mata,3.23,699.5,2261.19,1.13,8.41,8.06,9.54
+Valencia de Alc ntara,6178,594.83,10.39,CÂ ceres,39,Valencia de Alcántara,2.59,3089.0,8014.38,0.91,8.61,8.26,9.52
+Siruela,2192,202.47,10.83,Badajoz,11,Siruela,3.69,1096.0,4041.44,1.29,8.2,7.85,9.49
+Quintana de la Serena,5069,141.55,35.81,Badajoz,6,Quintana de la Serena,2.57,2534.5,6508.67,0.9,8.55,8.2,9.44
+Villalba de los Barros,1654,90.84,18.21,Badajoz,9,Fuente del Maestre,14.89,827.0,12313.7,5.21,4.22,3.87,9.43
+Feria,1341,73.72,18.19,Badajoz,9,Fuente del Maestre,14.72,670.5,9866.73,5.15,4.22,3.87,9.37
+Malpartida de Plasencia,4627,372.65,12.42,CÂ ceres,29,Plasencia,11.51,2313.5,26617.71,4.03,5.31,4.96,9.34
+Logrosán,2090,365.31,5.72,CÂ ceres,45,Logrosán,1.63,1045.0,1707.72,0.57,8.69,8.34,9.26
+Aldeanueva del Camino,800,20.05,39.9,CÂ ceres,22,Cabezuela del Valle,0.82,400.0,327.24,0.29,8.81,8.46,9.1
+Santos de Maimona. Los,8193,108.62,75.43,Badajoz,9,Fuente del Maestre,13.93,4096.5,57082.83,4.88,4.22,3.87,9.09
+Trasierra,691,58.18,11.88,Badajoz,10,Llerena,6.91,345.5,2388.58,2.42,6.66,6.31,9.08
+Zafra,16424,62.6,262.36,Badajoz,9,Fuente del Maestre,13.79,8212.0,113257.99,4.83,4.22,3.87,9.04
+Pueblonuevo del Guadiana,2018,28.55,70.68,Badajoz,18,Badajoz,17.64,1009.0,17801.46,6.17,2.8,2.45,8.97
+Almaraz,1321,33.91,38.96,CÂ ceres,27,Navalmoral de la Mata,1.21,660.5,799.81,0.42,8.41,8.06,8.83
+Esparragalejo,1580,16.78,94.16,Badajoz,14,Mérida,13.5,790.0,10664.64,4.72,4.03,3.68,8.76
+Ribera del Fresno,3466,185.62,18.67,Badajoz,1,Ribera del Fresno,0.6,1733.0,1038.35,0.21,8.5,8.15,8.71
+Malpartida de Cáceres,4469,32.16,138.96,CÂ ceres,46,Cáceres,14.92,2234.5,33336.86,5.22,3.49,3.14,8.71
+Don Benito,35791,561.99,63.69,Badajoz,3,Don Benito,8.11,17895.5,145142.6,2.84,5.83,5.48,8.67
+Atalaya,338,22.68,14.9,Badajoz,5,Atalaya,4.33,169.0,731.85,1.52,7.09,6.74,8.6
+Talavera la Real,5509,61.5,89.58,Badajoz,4,Talavera la Real,3.21,2754.5,8841.84,1.12,6.83,6.48,7.96
+Coronada. La,2239,81.18,27.58,Badajoz,3,Don Benito,5.44,1119.5,6088.49,1.9,5.83,5.48,7.74
+Olivenza,11852,430.14,27.55,Badajoz,13,Olivenza,3.17,5926.0,18760.89,1.11,6.59,6.24,7.69
+Arroyo de San Serván,4276,50.12,85.32,Badajoz,14,Mérida,10.35,2138.0,22134.67,3.62,4.03,3.68,7.66
+Llerena,5997,157.08,38.18,Badajoz,10,Llerena,2.72,2998.5,8141.43,0.95,6.66,6.31,7.61
+C ceres,93131,1750.33,53.21,CÂ ceres,46,Cáceres,11.23,46565.5,523115.1,3.93,3.49,3.14,7.42
+Plasencia,41148,217.94,188.8,CÂ ceres,29,Plasencia,5.72,20574.0,117591.41,2.0,5.31,4.96,7.31
+Badajoz,148334,1470.43,100.88,Badajoz,18,Badajoz,10.4,74167.0,771470.16,3.64,2.8,2.45,6.44
+Casar de Cáceres,4879,130.3,37.44,CÂ ceres,46,Cáceres,5.99,2439.5,14621.76,2.1,3.49,3.14,5.58
+Fuente del Maestre,6962,179.7,38.74,Badajoz,9,Fuente del Maestre,2.68,3481.0,9323.61,0.94,4.22,3.87,5.15
+Calamonte,6178,7.85,787.01,Badajoz,14,Mérida,2.78,3089.0,8580.53,0.97,4.03,3.68,5.0
