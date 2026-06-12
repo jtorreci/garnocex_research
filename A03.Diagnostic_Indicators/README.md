@@ -147,7 +147,7 @@ section below.
 
 | Package | Description |
 |---------|-------------|
-| [A01.Voronoi](../A01.Voronoi/) | Spatial cost inequality in CDW management (Waste Management, Elsevier) — provides the S1 baseline data |
+| [A01.Voronoi](../A01.Voronoi/) | Spatial cost inequality in CDW management (Waste Management Bulletin, Elsevier) — provides the S1 baseline data |
 | [A05.Network_Optimization](../A05.Network_Optimization/) | Network rationalisation via iterative cost-optimal assignment — provides the S3 data |
 
 ## Citation

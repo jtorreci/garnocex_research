@@ -97,7 +97,7 @@ python replication/generate_three_panel_a05.py
 ## Companion Papers
 
 - **A00 — Voronoi misallocation** (`A00.Voronoi_critics/`): the probabilistic framework that justifies the use of road-network rather than Euclidean distances. Currently under review at *Applied Geography*.
-- **A01 — Spatial cost analysis** (`A01.Voronoi/`): the diagnostic that calibrates the piecewise logarithmic cost model used here and quantifies the territorial cost penalty. Currently submitted to *Waste Management*.
+- **A01 — Spatial cost analysis** (`A01.Voronoi/`): the diagnostic that calibrates the piecewise logarithmic cost model used here and quantifies the territorial cost penalty. Currently submitted to *Waste Management Bulletin*.
 
 The three papers share input data (municipality and plant coordinates, the road-network distance matrix); the cost model is calibrated in A01 and inherited here without modification.
 

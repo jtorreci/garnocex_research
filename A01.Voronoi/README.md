@@ -2,10 +2,9 @@
 
 This directory contains all code and data needed to reproduce the results of:
 
-**"Spatial Cost Analysis of Construction and Demolition Waste Management:
-Beyond Geometric Proximity in Sparsely Populated Regions (Extremadura, Spain)"**
+**"Spatial Cost Inequality in Construction and Demolition Waste Management in Sparsely Populated Regions: Evidence from Extremadura, Spain"**
 
-*Submitted to Waste Management (Elsevier)*
+*Submitted to Waste Management Bulletin (Elsevier)*
 
 ## Key Findings (Extremadura case study)
 
@@ -129,12 +128,12 @@ The methodological companion paper that quantifies the bias of Voronoi-based all
 ## Citation
 
 ```bibtex
-@article{torrecillaSpatialCostAnalysis2026,
-  title   = {Spatial Cost Analysis of Construction and Demolition Waste Management:
-             Beyond Geometric Proximity in Sparsely Populated Regions (Extremadura, Spain)},
+@article{torrecillaSpatialCostInequality2026,
+  title   = {Spatial Cost Inequality in Construction and Demolition Waste Management
+             in Sparsely Populated Regions: Evidence from Extremadura, Spain},
   author  = {Torrecilla-Pinero, J.A. and Ceballos-Martinez, J.M. and Plaza Caballero, P.
              and Cruces Lopez, A. and Cuartero Saez, A.},
-  journal = {Waste Management},
+  journal = {Waste Management Bulletin},
   year    = {2026},
   note    = {Manuscript under review}
 }

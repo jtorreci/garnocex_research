@@ -15,7 +15,7 @@ Each subdirectory corresponds to a specific research paper or analysis:
 | Folder | Title | Status |
 |--------|-------|--------|
 | [A00.Voronoi_critics](./A00.Voronoi_critics/) | A Probabilistic Framework for Misallocation Risk in Voronoi Tessellations: Theory and Empirical Validation | Under review at *Applied Geography* |
-| [A01.Voronoi](./A01.Voronoi/) | Spatial Cost Inequality in Construction and Demolition Waste Management in Sparsely Populated Regions: Evidence from Extremadura, Spain | Submitted to *Waste Management* |
+| [A01.Voronoi](./A01.Voronoi/) | Spatial Cost Inequality in Construction and Demolition Waste Management in Sparsely Populated Regions: Evidence from Extremadura, Spain | Submitted to *Waste Management Bulletin* |
 | [A03.Diagnostic_Indicators](./A03.Diagnostic_Indicators/) | Diagnostic Indicators for CDW Treatment Plant Networks: A Plant-Level and Network-Level Panel Framework | Submitted to *Waste Management & Research* |
 | [A05.Network_Optimization](./A05.Network_Optimization/) | Network Rationalization of Construction and Demolition Waste Treatment Plants: Cost-Based Assignment and the Scale--Circularity Nexus---A Case Study of Extremadura, Spain | Submitted to *Resources, Conservation and Recycling* |
 
