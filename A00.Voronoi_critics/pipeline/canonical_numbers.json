@@ -1,0 +1,164 @@
+{
+  "generated_utc": "2026-07-25T22:34:19+00:00",
+  "configuration": {
+    "network": "carreteras.shp (IGN roads+streets, no camino/senda)",
+    "snap_tolerance_m": 5.0,
+    "facilities_layer": "Plantas_Ext.shp",
+    "d_r": "total_cost (entry+network+exit)",
+    "consolidation_km": 15.0,
+    "bootstrap": 4000,
+    "seed": 42
+  },
+  "counts": {
+    "municipalities": 383,
+    "facilities_physical": 46,
+    "facilities_effective": 34,
+    "routes_muni_facility": 17618,
+    "misallocated": 49,
+    "misallocated_pct": 12.79
+  },
+  "predictor_domain": {
+    "n": 383,
+    "m": 0.4133,
+    "s": 0.2883,
+    "beta_min": 1.0268,
+    "beta_median": 1.4259,
+    "beta_below_one": 0
+  },
+  "pooled_muni_facility": {
+    "n": 17618,
+    "m": 0.2651,
+    "s": 0.1337
+  },
+  "muni_muni": {
+    "operational": {
+      "n": 146306,
+      "m": 0.29279493486630076,
+      "s": 0.16779404015429003,
+      "beta_min": 1.0259224383093428
+    },
+    "full": {
+      "n": 144022,
+      "m": 0.19206121874948529,
+      "s": 0.09086303303968957,
+      "beta_min": 1.0162632701153473
+    }
+  },
+  "R": {
+    "n": 383,
+    "median": 1.8491
+  },
+  "ranking": [
+    {
+      "distribution": "Lognormal",
+      "W1": 0.0277,
+      "A2": 0.1638,
+      "KS": 0.0202,
+      "pred": 52.65,
+      "ci_lo": 45.95,
+      "ci_hi": 59.53,
+      "contains_observed": true,
+      "over_predicts": true
+    },
+    {
+      "distribution": "Generalized Gamma",
+      "W1": 0.0305,
+      "A2": 0.2843,
+      "KS": 0.023,
+      "pred": 47.89,
+      "ci_lo": 43.64,
+      "ci_hi": 56.45,
+      "contains_observed": true,
+      "over_predicts": false
+    },
+    {
+      "distribution": "Inverse Weibull (Frechet)",
+      "W1": 0.0493,
+      "A2": 0.5558,
+      "KS": 0.0325,
+      "pred": 47.23,
+      "ci_lo": 44.46,
+      "ci_hi": 50.63,
+      "contains_observed": true,
+      "over_predicts": false
+    },
+    {
+      "distribution": "Weibull",
+      "W1": 0.3105,
+      "A2": 180.0188,
+      "KS": 0.5034,
+      "pred": 44.82,
+      "ci_lo": 36.38,
+      "ci_hi": 55.19,
+      "contains_observed": true,
+      "over_predicts": false
+    },
+    {
+      "distribution": "Gamma",
+      "W1": 0.7738,
+      "A2": 115.7695,
+      "KS": 0.4723,
+      "pred": 70.72,
+      "ci_lo": 44.78,
+      "ci_hi": 99.58,
+      "contains_observed": true,
+      "over_predicts": true
+    }
+  ],
+  "safety_bands": {
+    "q_star": 0.1,
+    "t_star_median_m": 4888.3,
+    "municipalities_inside": 164
+  },
+  "misallocated_municipalities": [
+    "Acebo",
+    "Alburquerque",
+    "Alcántara",
+    "Aldea del Cano",
+    "Botija",
+    "Cabrero",
+    "Campillo de Deleitosa",
+    "Casas del Castañar",
+    "Casillas de Coria",
+    "Cerezo",
+    "Cristina",
+    "Garciaz",
+    "Gargüera",
+    "Garrovillas de Alconétar",
+    "Garvín",
+    "Granja de Torrehermosa",
+    "Guareña",
+    "Guijo de Granadilla",
+    "Helechosa de los Montes",
+    "Holguera",
+    "Jaraicejo",
+    "Madrigalejo",
+    "Navezuelas",
+    "Palomero",
+    "Peraleda de San Román",
+    "Perales del Puerto",
+    "Piornal",
+    "Portezuelo",
+    "Puebla de Obando",
+    "Pueblonuevo del Guadiana",
+    "Rena",
+    "Riolobos",
+    "Robledillo de Trujillo",
+    "Roca de la Sierra, La",
+    "Santa Amalia",
+    "Santiago del Campo",
+    "Solana de los Barros",
+    "Torno, El",
+    "Torreorgaz",
+    "Valdelacalzada",
+    "Valdelacasa de Tajo",
+    "Valdeobispo",
+    "Valencia del Mombuey",
+    "Valle de Matamoros",
+    "Valle de Santa Ana",
+    "Villanueva de la Sierra",
+    "Villar de Rena",
+    "Villar del Pedroso",
+    "Villarta de los Montes"
+  ]
+}

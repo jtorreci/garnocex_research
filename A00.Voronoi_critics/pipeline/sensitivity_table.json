@@ -1,0 +1,50 @@
+{
+  "Adopted": {
+    "groups": 34,
+    "misallocated": 49,
+    "pct": 12.793733681462141,
+    "s": 0.28828451609796174,
+    "n_beta": 383,
+    "beta_min": 1.0268335434469151
+  },
+  "Facilities not consolidated": {
+    "groups": 46,
+    "misallocated": 62,
+    "pct": 16.18798955613577,
+    "s": 0.28828451609796174,
+    "n_beta": 383,
+    "beta_min": 1.0268335434469151
+  },
+  "Network without urban street classes": {
+    "groups": 34,
+    "misallocated": 59,
+    "pct": 15.404699738903394,
+    "s": 0.37280480915968117,
+    "n_beta": 350,
+    "beta_min": 1.0268223738997242
+  },
+  "Unrestricted network (tracks, footpaths)": {
+    "groups": 34,
+    "misallocated": 17,
+    "pct": 4.438642297650131,
+    "s": 0.15555902724783585,
+    "n_beta": 380,
+    "beta_min": 1.0268223738997175
+  },
+  "Graph built with zero tolerance": {
+    "groups": 34,
+    "misallocated": 48,
+    "pct": 12.532637075718016,
+    "s": 0.35325593405695616,
+    "n_beta": 383,
+    "beta_min": 1.0268223738997175
+  },
+  "Access legs excluded from $d_r$": {
+    "groups": 34,
+    "misallocated": 48,
+    "pct": 12.532637075718016,
+    "s": 0.3030760066274158,
+    "n_beta": 383,
+    "beta_min": 0.6377983847589243
+  }
+}

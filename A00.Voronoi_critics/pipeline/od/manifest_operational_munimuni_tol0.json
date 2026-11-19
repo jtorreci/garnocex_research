@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-07-25T16:23:39+00:00",
+  "qgis": "3.40.9-Bratislava",
+  "algorithm": "qneat3:OdMatrixFromLayersAsTable",
+  "network_case": "operational",
+  "network_layer": "\\\\192.168.1.12\\personal_folder\\Dropbox\\Universidad\\Investigacion\\Biblio_matcher\\Projects\\Garnocex\\A00.Voronoi_critics\\analyses\\data\\shp\\carreteras.shp",
+  "network_sha256": "5d3e98467453cace82e4d869ff6a5d036b46ef72332178eb0151c9d750770dca",
+  "pairs": "muni-muni",
+  "n_origins": 383,
+  "n_destinations": 383,
+  "rows_written": 146689,
+  "elapsed_min": 3.28,
+  "parameters": {
+    "INPUT": "\\\\192.168.1.12\\personal_folder\\Dropbox\\Universidad\\Investigacion\\Biblio_matcher\\Projects\\Garnocex\\A00.Voronoi_critics\\analyses\\data\\shp\\carreteras.shp",
+    "FROM_ID_FIELD": "pos_id",
+    "TO_ID_FIELD": "pos_id",
+    "STRATEGY": 0,
+    "ENTRY_COST_CALCULATION_METHOD": 1,
+    "DEFAULT_DIRECTION": 2,
+    "DEFAULT_SPEED": 50,
+    "TOLERANCE": 0.0
+  },
+  "output_csv": "od_operational_munimuni_tol0.csv",
+  "output_sha256": "07f7629a006cebac7fae213ab6dedfadf76a1aff220d1d94ae28cc44bc1a17f6",
+  "crs": "EPSG:25830",
+  "notes": "d_r = total_cost = entry + network + exit (Definition 1). Joins by pos_id, never by name (D10)."
+}

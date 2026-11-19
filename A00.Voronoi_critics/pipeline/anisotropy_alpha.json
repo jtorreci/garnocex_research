@@ -1,0 +1,10 @@
+{
+  "n": 383,
+  "misallocated": 49,
+  "alpha_median": 1.602,
+  "alpha_p95": 3.098,
+  "alpha_max": 12.23,
+  "median_misallocated": 1.799,
+  "median_correct": 1.569,
+  "roc_auc": 0.6747
+}

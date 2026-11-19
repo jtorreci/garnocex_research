@@ -1,0 +1,43 @@
+{
+  "sources": {
+    "Caceres": "Z:\\Dropbox\\Universidad\\Investigacion\\Biblio_matcher\\Projects\\Garnocex\\Pablo Plaza\\SHP\\Transporte\\RT_CACERES\\RT_CACERES\\RT_VIARIA\\rt_tramo_vial.shp",
+    "Badajoz": "Z:\\Dropbox\\Universidad\\Investigacion\\Biblio_matcher\\Projects\\Garnocex\\Pablo Plaza\\SHP\\Transporte\\RT_BADAJOZ\\RT_BADAJOZ\\RT_VIARIA\\rt_tramo_vial.shp"
+  },
+  "class_field": "clased",
+  "total_km": 133903.1,
+  "excluded_classes": [
+    "camino",
+    "senda"
+  ],
+  "excluded_pct": 81.26,
+  "by_class": {
+    "Camino": {
+      "km": 94319.2,
+      "pct": 70.44
+    },
+    "Senda": {
+      "km": 14484.8,
+      "pct": 10.82
+    },
+    "Carretera convencional": {
+      "km": 13852.6,
+      "pct": 10.35
+    },
+    "Urbano": {
+      "km": 6821.0,
+      "pct": 5.09
+    },
+    "Autovía o autopista libre": {
+      "km": 4238.4,
+      "pct": 3.17
+    },
+    "Carretera multicarril": {
+      "km": 186.5,
+      "pct": 0.14
+    },
+    "Carril bici": {
+      "km": 0.6,
+      "pct": 0.0
+    }
+  }
+}

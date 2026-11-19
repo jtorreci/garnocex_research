@@ -1,0 +1,39 @@
+{
+  "case": "paved",
+  "label": "Red_Viaria / carreteras.shp (paved, 20,790 km)",
+  "network": "carreteras.shp",
+  "created_utc": "2026-07-25T12:12:26+00:00",
+  "consolidation_km": 15.0,
+  "facilities_physical": 46,
+  "facilities_logical": 32,
+  "n_municipalities": 218,
+  "beta_min": 1.036111179532114,
+  "beta_below_one": 0,
+  "predictor_domain": {
+    "m": 0.3537667656205097,
+    "s": 0.2837552244784969
+  },
+  "misallocated": 23,
+  "misallocated_pct": 10.55,
+  "lognormal_prediction": {
+    "pred": 32.01,
+    "ci_lo": 24.65,
+    "ci_hi": 39.08
+  },
+  "q_star": 0.1,
+  "median_t_star_m": 5519.146124104635,
+  "inputs": {
+    "od_plant_real": "\\\\192.168.1.12\\personal_folder\\Dropbox\\Universidad\\Investigacion\\Biblio_matcher\\Projects\\Garnocex\\A00.Voronoi_critics\\analyses\\data\\D_real_plantas_clean.csv",
+    "od_plant_eucl": "\\\\192.168.1.12\\personal_folder\\Dropbox\\Universidad\\Investigacion\\Biblio_matcher\\Projects\\Garnocex\\A00.Voronoi_critics\\analyses\\data\\D_euclidea_plantas_clean.csv",
+    "od_muni_real": "\\\\192.168.1.12\\personal_folder\\Dropbox\\Universidad\\Investigacion\\Biblio_matcher\\Projects\\Garnocex\\A00.Voronoi_critics\\analyses\\data\\D_real_municipios_clean.csv",
+    "od_muni_eucl": "\\\\192.168.1.12\\personal_folder\\Dropbox\\Universidad\\Investigacion\\Biblio_matcher\\Projects\\Garnocex\\A00.Voronoi_critics\\analyses\\data\\D_euclidea_municipios_clean.csv"
+  },
+  "input_sha256": {
+    "od_plant_real": "fac046b5c92245a418a672a63adf6ec4a5bca29c8082b4f46332da8ff5d71697",
+    "od_plant_eucl": "8dd313081bbdd199fef7de6bc15e2062647d9c9fffa82b6a4e436a609739c6c6",
+    "od_muni_real": "cdd29c2b75611845f9495077bec4387e0bd0c3f83d4b5ae45155b6119879eb28",
+    "od_muni_eucl": "d81f81d1eaf747d47008f7ab132b2833d4e18bd4e0f02528b68c30f727a6285c"
+  },
+  "n_bootstrap": 4000,
+  "seed": 42
+}

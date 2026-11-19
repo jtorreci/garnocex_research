@@ -1,0 +1,22 @@
+Z:\Dropbox\Universidad\Investigacion\Biblio_matcher\Projects\Garnocex\A00.Voronoi_critics\pipeline\run_routing.py:123: DeprecationWarning: QgsField constructor is deprecated
+  dp.addAttributes([QgsField("pos_id", QVariant.Int), QgsField("label", QVariant.String)])
+C:\Users/Usuario/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins\QNEAT3\algs\OdMatrixFromLayersAsTable.py:241: DeprecationWarning: QgsField constructor is deprecated
+  fields.append(QgsField('entry_cost', QVariant.Double, '', 20,7))
+C:\Users/Usuario/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins\QNEAT3\algs\OdMatrixFromLayersAsTable.py:242: DeprecationWarning: QgsField constructor is deprecated
+  fields.append(QgsField('network_cost', QVariant.Double, '', 20, 7))
+C:\Users/Usuario/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins\QNEAT3\algs\OdMatrixFromLayersAsTable.py:243: DeprecationWarning: QgsField constructor is deprecated
+  fields.append(QgsField('exit_cost', QVariant.Double, '', 20,7))
+C:\Users/Usuario/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins\QNEAT3\algs\OdMatrixFromLayersAsTable.py:244: DeprecationWarning: QgsField constructor is deprecated
+  fields.append(QgsField('total_cost', QVariant.Double, '', 20,7))
+QGIS 3.40.9-Bratislava | QNEAT3 algorithms: 14
+origins: 383 municipalities
+destinations: 383 | expected routes: 146,689
+running qneat3:OdMatrixFromLayersAsTable on network_full.gpkg (TOLERANCE=0) ...
+done in 26.1 min | rows=146,689 | fields=['origin_id', 'destination_id', 'entry_cost', 'network_cost', 'exit_cost', 'total_cost']
+wrote \\192.168.1.12\personal_folder\Dropbox\Universidad\Investigacion\Biblio_matcher\Projects\Garnocex\A00.Voronoi_critics\pipeline\od\od_full_munimuni_tol0.csv (146,689 rows)
+{
+  "network_case": "full",
+  "pairs": "muni-muni",
+  "rows_written": 146689,
+  "elapsed_min": 26.1
+}

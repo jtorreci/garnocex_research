@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-07-25T17:42:01+00:00",
+  "qgis": "3.40.9-Bratislava",
+  "algorithm": "qneat3:OdMatrixFromLayersAsTable",
+  "network_case": "full",
+  "network_layer": "\\\\192.168.1.12\\personal_folder\\Dropbox\\Universidad\\Investigacion\\Biblio_matcher\\Projects\\Garnocex\\A00.Voronoi_critics\\network\\network_full.gpkg",
+  "network_sha256": "b0587a171fd1701911f2aae37dcfee10b8b52dd087bf0b39e58630dc531d810d",
+  "pairs": "muni-plant",
+  "n_origins": 383,
+  "n_destinations": 46,
+  "rows_written": 17618,
+  "elapsed_min": 22.96,
+  "parameters": {
+    "INPUT": "\\\\192.168.1.12\\personal_folder\\Dropbox\\Universidad\\Investigacion\\Biblio_matcher\\Projects\\Garnocex\\A00.Voronoi_critics\\network\\network_full.gpkg",
+    "FROM_ID_FIELD": "pos_id",
+    "TO_ID_FIELD": "pos_id",
+    "STRATEGY": 0,
+    "ENTRY_COST_CALCULATION_METHOD": 1,
+    "DEFAULT_DIRECTION": 2,
+    "DEFAULT_SPEED": 50,
+    "TOLERANCE": 0.0
+  },
+  "output_csv": "od_full_muniplant_tol0.csv",
+  "output_sha256": "daa105b01a076d1230602a643753e7152ad91f65ed0870d589cabc7e749aba06",
+  "crs": "EPSG:25830",
+  "notes": "d_r = total_cost = entry + network + exit (Definition 1). Joins by pos_id, never by name (D10)."
+}

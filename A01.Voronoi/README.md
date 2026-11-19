@@ -4,7 +4,7 @@ This directory contains all code and data needed to reproduce the results of:
 
 **"Spatial Cost Inequality in Construction and Demolition Waste Management in Sparsely Populated Regions: Evidence from Extremadura, Spain"**
 
-*Submitted to Waste Management Bulletin (Elsevier)*
+*Waste Management Bulletin* (Elsevier), 4(3), 100355 (2026). https://doi.org/10.1016/j.wmb.2026.100355
 
 ## Key Findings (Extremadura case study)
 
@@ -131,11 +131,14 @@ The methodological companion paper that quantifies the bias of Voronoi-based all
 @article{torrecillaSpatialCostInequality2026,
   title   = {Spatial Cost Inequality in Construction and Demolition Waste Management
              in Sparsely Populated Regions: Evidence from Extremadura, Spain},
-  author  = {Torrecilla-Pinero, J.A. and Ceballos-Martinez, J.M. and Plaza Caballero, P.
-             and Cruces Lopez, A. and Cuartero Saez, A.},
+  author  = {Torrecilla-Pinero, J. A. and Ceballos-Mart{\'i}nez, J. M. and Plaza Caballero, P.
+             and Cruces L{\'o}pez, A. and Cuartero, A.},
   journal = {Waste Management Bulletin},
+  volume  = {4},
+  number  = {3},
+  pages   = {100355},
   year    = {2026},
-  note    = {Manuscript under review}
+  doi     = {10.1016/j.wmb.2026.100355}
 }
 ```
 

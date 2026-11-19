@@ -1,0 +1,39 @@
+{
+  "domain": "operational_munimuni",
+  "n": 146306,
+  "m": 0.29279493486630076,
+  "s": 0.16779404015429003,
+  "beta_min": 1.0259224383093428,
+  "ranking": [
+    {
+      "distribution": "Inverse Weibull (Frechet)",
+      "W1": 0.0244,
+      "A2": 450.1,
+      "KS": 0.035
+    },
+    {
+      "distribution": "Lognormal",
+      "W1": 0.0403,
+      "A2": 1450.1,
+      "KS": 0.065
+    },
+    {
+      "distribution": "Generalized Gamma",
+      "W1": 0.0505,
+      "A2": 2719.2,
+      "KS": 0.0886
+    },
+    {
+      "distribution": "Weibull",
+      "W1": 0.234,
+      "A2": 123483.3,
+      "KS": 0.7073
+    },
+    {
+      "distribution": "Gamma",
+      "W1": 1.4633,
+      "A2": 36829.2,
+      "KS": 0.3535
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+Z:\Dropbox\Universidad\Investigacion\Biblio_matcher\Projects\Garnocex\A00.Voronoi_critics\pipeline\run_routing.py:123: DeprecationWarning: QgsField constructor is deprecated
+  dp.addAttributes([QgsField("pos_id", QVariant.Int), QgsField("label", QVariant.String)])
+C:\Users/Usuario/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins\QNEAT3\algs\OdMatrixFromLayersAsTable.py:241: DeprecationWarning: QgsField constructor is deprecated
+  fields.append(QgsField('entry_cost', QVariant.Double, '', 20,7))
+C:\Users/Usuario/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins\QNEAT3\algs\OdMatrixFromLayersAsTable.py:242: DeprecationWarning: QgsField constructor is deprecated
+  fields.append(QgsField('network_cost', QVariant.Double, '', 20, 7))
+C:\Users/Usuario/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins\QNEAT3\algs\OdMatrixFromLayersAsTable.py:243: DeprecationWarning: QgsField constructor is deprecated
+  fields.append(QgsField('exit_cost', QVariant.Double, '', 20,7))
+C:\Users/Usuario/AppData/Roaming/QGIS/QGIS3/profiles/default/python/plugins\QNEAT3\algs\OdMatrixFromLayersAsTable.py:244: DeprecationWarning: QgsField constructor is deprecated
+  fields.append(QgsField('total_cost', QVariant.Double, '', 20,7))

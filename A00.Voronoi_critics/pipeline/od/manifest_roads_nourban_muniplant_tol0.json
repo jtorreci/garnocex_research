@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-07-25T20:15:05+00:00",
+  "qgis": "3.40.9-Bratislava",
+  "algorithm": "qneat3:OdMatrixFromLayersAsTable",
+  "network_case": "roads_nourban",
+  "network_layer": "\\\\192.168.1.12\\personal_folder\\Dropbox\\Universidad\\Investigacion\\Biblio_matcher\\Projects\\Garnocex\\A00.Voronoi_critics\\network\\network_roads_nourban.gpkg",
+  "network_sha256": "1cc7bbdd23c45e9d41d2f69fb912cbfae2a60c08d929896ce377fef237c6f3dc",
+  "pairs": "muni-plant",
+  "n_origins": 383,
+  "n_destinations": 46,
+  "rows_written": 17618,
+  "elapsed_min": 1.41,
+  "parameters": {
+    "INPUT": "\\\\192.168.1.12\\personal_folder\\Dropbox\\Universidad\\Investigacion\\Biblio_matcher\\Projects\\Garnocex\\A00.Voronoi_critics\\network\\network_roads_nourban.gpkg",
+    "FROM_ID_FIELD": "pos_id",
+    "TO_ID_FIELD": "pos_id",
+    "STRATEGY": 0,
+    "ENTRY_COST_CALCULATION_METHOD": 1,
+    "DEFAULT_DIRECTION": 2,
+    "DEFAULT_SPEED": 50,
+    "TOLERANCE": 0.0
+  },
+  "output_csv": "od_roads_nourban_muniplant_tol0.csv",
+  "output_sha256": "5339f91fa4c245df1b1cd03e0b6009a96061487d3f364679192a99356c854620",
+  "crs": "EPSG:25830",
+  "notes": "d_r = total_cost = entry + network + exit (Definition 1). Joins by pos_id, never by name (D10)."
+}

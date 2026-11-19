@@ -1,5 +1,30 @@
 """A.2 - Distributional ranking with Wasserstein and Anderson-Darling.
 
+    SUPERSEDED. Retained for provenance only; do not use to reproduce the
+    manuscript. The canonical ranking, its bootstrap and the misallocation
+    count are produced by pipeline/canonical_numbers.py, which reads the
+    revised routing output and the corrected facility layer (facilities/).
+
+    Two provenance notes, so the numbers this script printed can be told apart
+    from the published ones:
+
+      * N_BOOTSTRAP = 50 here. The manuscript reports B = 4,000, which comes
+        from pipeline/canonical_numbers.py, not from this run.
+      * OBSERVED_MISALLOCATIONS = 61 is the pre-revision count. The canonical
+        figure is 49; 61 is what the same criterion yields without facility
+        consolidation on the earlier routing.
+
+    On consolidation, to prevent a misreading of the code below: the 15 km
+    grouping is a consolidation of FLOWS, not of points. It is applied upstream,
+    in analyses/data/build_canonical_dataset.py, to the assignment itself
+    (`plant_consolidated`) - two plants within 15 km are one logical destination
+    because dispatching to either is the same haul. Plant coordinates are never
+    moved and beta is always computed to the physical plants, which is why s is
+    identical (0.288) with 46 and with 34 facilities in Table
+    `tab:sensitivity_config`. The manuscript reports the misallocation count
+    both ways. The PLANT_CONSOLIDATION dict below is a redundant local copy that
+    this script does not consume; it is not a missing step.
+
 Replaces Tables 3 and 4 of the manuscript (which use KS p-values
 that the reviewer correctly rejects for n=9112).
 
@@ -211,7 +236,10 @@ def run_one_mode(mode: str):
     # R values per muni: ratio of euclidean distance to 2nd-nearest vs nearest
     # CONSOLIDATED plant. Two physical plants in the same group count as one.
     df_eu_full = pd.read_csv(DATA / "D_euclidea_plantas_clean.csv")
-    # Plant consolidation map (same as build_canonical_dataset.py)
+    # Redundant local copy, not consumed here. The 15 km flow consolidation is
+    # applied to the assignment upstream in data/build_canonical_dataset.py; the
+    # R values below only need the per-destination minimum distance, which the
+    # TargetID de-duplication already gives. Kept so the two files can be diffed.
     PLANT_CONSOLIDATION = {
         2: 1, 12: 1, 17: 3, 15: 6, 40: 19, 32: 20,
         23: 22, 26: 22, 28: 22, 34: 27, 35: 27, 37: 27, 38: 36, 43: 36,

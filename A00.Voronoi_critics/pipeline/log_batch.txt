@@ -1,0 +1,3 @@
+bash: line 3: 30885 Segmentation fault      "$Q" run_routing.py --network operational --pairs muni-plant --tolerance 1 > log_op_mp_tol1.txt 2>&1
+bash: line 5: 30928 Segmentation fault      "$Q" run_routing.py --network full --pairs muni-plant --tolerance 0 > log_full_mp_tol0.txt 2>&1
+TODAS_TERMINADAS

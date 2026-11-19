@@ -14,8 +14,8 @@ Each subdirectory corresponds to a specific research paper or analysis:
 
 | Folder | Title | Status |
 |--------|-------|--------|
-| [A00.Voronoi_critics](./A00.Voronoi_critics/) | A Probabilistic Framework for Misallocation Risk in Voronoi Tessellations: Theory and Empirical Validation | Under review at *Applied Geography* |
-| [A01.Voronoi](./A01.Voronoi/) | Spatial Cost Inequality in Construction and Demolition Waste Management in Sparsely Populated Regions: Evidence from Extremadura, Spain | Submitted to *Waste Management Bulletin* |
+| [A00.Voronoi_critics](./A00.Voronoi_critics/) | A Probabilistic Framework for Misallocation Risk in Voronoi Tessellations: Theory and Empirical Validation | In preparation for submission |
+| [A01.Voronoi](./A01.Voronoi/) | Spatial Cost Inequality in Construction and Demolition Waste Management in Sparsely Populated Regions: Evidence from Extremadura, Spain | Published in *Waste Management Bulletin* 4(3), 100355 (2026), https://doi.org/10.1016/j.wmb.2026.100355 |
 | [A03.Diagnostic_Indicators](./A03.Diagnostic_Indicators/) | Diagnostic Indicators for CDW Treatment Plant Networks: A Plant-Level and Network-Level Panel Framework | Submitted to *Waste Management & Research* |
 | [A05.Network_Optimization](./A05.Network_Optimization/) | Network Rationalization of Construction and Demolition Waste Treatment Plants: Cost-Based Assignment and the Scale--Circularity Nexus---A Case Study of Extremadura, Spain | Submitted to *Resources, Conservation and Recycling* |
 
@@ -23,10 +23,11 @@ Each subdirectory corresponds to a specific research paper or analysis:
 
 ### A00.Voronoi_critics
 
-Reproducibility package for the Voronoi probabilistic framework paper analyzing waste treatment plant service areas:
-- **Key finding**: 15.4% misallocation rate in Euclidean Voronoi assignments
-- **Case study**: 383 municipalities, 46 waste treatment facilities in Extremadura
-- **Framework accuracy**: 97.6% at O(n) complexity
+Reproducibility package for the Voronoi probabilistic framework paper analysing waste treatment plant service areas:
+- **Key finding**: 49 of 383 municipalities (12.8%) misallocated under Euclidean Voronoi assignment
+- **Case study**: 383 municipalities, 46 physical waste treatment facilities, 34 effective after 15 km consolidation, in Extremadura
+- **Predictive interval**: Lognormal model predicts 52.6 misallocations, 95% PI [46.0, 59.5], containing the observed 49
+- **Assignment accuracy**: 97.7% of network-optimal assignments recovered with 2n route queries
 
 [View full documentation →](./A00.Voronoi_critics/README.md)
 
