@@ -11,7 +11,7 @@ It implements the probabilistic framework described in:
 
 > TBD (2026). *A Probabilistic Framework
 > for Misallocation Risk in Voronoi Tessellations: Theory and Empirical
-> Validation*. **Geographical Analysis** (under review, manuscript 2303622).
+> Validation*. Manuscript in preparation for submission.
 
 The toolbox lets a practitioner answer questions like:
 
@@ -165,9 +165,8 @@ the companion paper:
   author  = {{TBD}},
   title   = {A Probabilistic Framework for Misallocation Risk in Voronoi
              Tessellations: Theory and Empirical Validation},
-  journal = {Geographical Analysis},
   year    = {2026},
-  note    = {Under review, manuscript 2303622}
+  note    = {Manuscript in preparation}
 }
 
 @software{voronoi_risk_toolbox,

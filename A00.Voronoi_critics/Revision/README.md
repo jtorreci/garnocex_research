@@ -1,7 +1,7 @@
 # Major Revision: artefacts and analyses
 
 This folder collects the artefacts produced for the **major revision**
-of manuscript 2303622 (under review at *Geographical Analysis*). It
+of an earlier submission of this manuscript. It
 complements the original reproducibility package in `../codigo/`,
 `../tables/`, `../figuras_clean/`, and `../scripts/`.
 

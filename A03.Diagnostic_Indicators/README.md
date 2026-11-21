@@ -4,7 +4,7 @@ This directory contains all code and data needed to reproduce the results of:
 
 **"Diagnostic Indicators for CDW Treatment Plant Networks: A Plant-Level and Network-Level Panel Framework"**
 
-*Submitted to Waste Management & Research (SAGE)*
+*In preparation for submission*
 
 ## Key Findings
 
