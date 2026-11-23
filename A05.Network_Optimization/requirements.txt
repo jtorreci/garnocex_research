@@ -15,6 +15,9 @@ fiona>=1.9.0
 # Network / routing
 networkx>=3.1.0
 
+# MILP solver (equilibrium_planner/planner_milp.py)
+highspy>=1.7.0
+
 # Plotting
 matplotlib>=3.7.0
 

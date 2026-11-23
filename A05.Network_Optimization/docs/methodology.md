@@ -55,12 +55,25 @@ The script accepts `--rho`, `--dotacion`, `--scenario`, and `--no-plot` argument
 4. Repeat until no municipality changes assignment.
 5. Plants with zero throughput at stabilisation are flagged as eliminated.
 
-The procedure is treated as a fixed-point heuristic; no general convergence proof is claimed. In the Extremadura case the procedure stabilises in **6 iterations**.
+The procedure is treated as a fixed-point heuristic; no general convergence proof is claimed. In the Extremadura case the procedure stabilises in **6 iterations** (the sixth changes no assignment) at 24 plants and 11.34 €/t.
+
+Until 2026-11-23 the script stopped when no plant's throughput changed by more than 1 % and then ran an extra, undocumented phase that removed groups under 2,000 t/year and re-ran the iteration. It now follows the rule above exactly. The manuscript's figures were already those of the fixed point (11.34 €/t, 6,250,392 €/year); only the saved assignment file changed (63 instead of 65 reassigned municipalities).
 
 Outputs:
 
 - `outputs/iterative_optimization.csv`: iteration-by-iteration history.
 - `outputs/optimal_assignments.csv`: per-municipality assignment at stabilisation.
+
+## 4b. Equilibrium versus planner benchmark
+
+`analysis/equilibrium_planner/` reads the fixed point as the equilibrium reached when each municipality chooses its cheapest plant, and compares it with the system-optimal network:
+
+- `fixed_point.py`: the fixed point above (11.3369 €/t, 24 plants).
+- `fixed_point_seeds.py`: 50 random starting assignments, with the same rule and with sequential best response.
+- `planner_milp.py`: concave-cost location-assignment MILP (HiGHS). Secants on 40 log-spaced intervals give a certified lower bound (11.2648 €/t); the optimum found is 11.2675 €/t with 26 plants.
+- `compare_methods.py`: writes `outputs/equilibrium_planner/method_comparison.csv`.
+
+See `analysis/equilibrium_planner/README.md`.
 
 ## 5. Sensitivity sweep
 
@@ -78,7 +91,7 @@ Outputs are written under `outputs/<file>_<scenario>.csv` and aggregated in `sen
 1. Loads the shapefiles and builds a road graph from `carreteras.shp` (≈ 185k nodes, 221k edges).
 2. Routes each municipality → assigned plant via NetworkX shortest path on the road graph.
 3. Panel (a): baseline routes for all 32 plant groups under nearest-plant assignment.
-4. Panel (b): only the routes for the **65** municipalities whose plant assignment changes under the iterative procedure; the unchanged routes are left blank to make the local nature of the change visible.
+4. Panel (b): only the routes for the **63** municipalities whose plant assignment changes under the iterative procedure; the unchanged routes are left blank to make the local nature of the change visible.
 5. Panel (c): kernel density estimates (`scipy.stats.gaussian_kde`) of the municipal unit-cost distribution under baseline vs iterative.
 
 Output: `results/figures/fig_three_panel_a05.png`.

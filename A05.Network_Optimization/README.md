@@ -34,11 +34,14 @@ A05.Network_Optimization/
 │   └── tablas/
 │       ├── codigos_plantas.csv                  # 46 plant id → name
 │       ├── datos_voronoi_municipios.csv         # 383 municipality production / population
-│       └── distancias_reales_plantas_municipios.csv # 46x383 road-network distance matrix
+│       ├── distancias_reales_plantas_municipios.csv # 46x383 road-network distance matrix
+│       └── asignacion_municipios_real.csv       # 383 municipalities (list shared with A01)
 ├── analysis/
 │   ├── analisis_podado.py             # greedy progressive pruning (32 → 3 plants)
 │   ├── iterative_cost_assignment.py   # iterative cost-based reassignment heuristic
-│   └── run_sensitivity.py             # transport-cost + demand scenario runner
+│   ├── run_sensitivity.py             # transport-cost + demand scenario runner
+│   ├── optimize_metaheuristics.py     # SA and GA benchmark of greedy pruning
+│   └── equilibrium_planner/           # fixed point vs planner MILP, random seeds
 ├── replication/
 │   └── generate_three_panel_a05.py    # routed-flow + KDE figure for the manuscript
 ├── outputs/                           # canonical CSV outputs of analysis scripts
@@ -49,7 +52,9 @@ A05.Network_Optimization/
 │   ├── sensitivity_summary.csv        # combined sensitivity table
 │   ├── sensitivity_transport.csv      # transport-cost scenarios (ρ = 0.25, 0.35, 0.45 €/t·km)
 │   ├── sensitivity_demand.csv         # demand scenarios (ρ_CDW = 0.45, 0.50, 0.55 t/inhab·yr)
-│   └── *_<scenario>.csv               # scenario-specific intermediates
+│   ├── *_<scenario>.csv               # scenario-specific intermediates
+│   ├── comparison_metaheuristics.csv  # greedy vs SA/GA by network size
+│   └── equilibrium_planner/           # method_comparison.csv and assignments
 ├── results/
 │   └── figures/
 │       └── fig_three_panel_a05.png    # manuscript Figure 2
@@ -69,6 +74,7 @@ pip install -r requirements.txt
 python analysis/analisis_podado.py --no-plot           # produces pareto_podado.csv + greedy_assignments_24.csv
 python analysis/iterative_cost_assignment.py           # produces optimal_assignments.csv + iterative_optimization.csv
 python analysis/run_sensitivity.py                     # produces sensitivity_*.csv
+python analysis/equilibrium_planner/fixed_point.py     # equilibrium benchmark (then fixed_point_seeds, planner_milp, compare_methods)
 python replication/generate_three_panel_a05.py         # rebuilds Figure 2
 ```
 

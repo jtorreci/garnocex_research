@@ -9,8 +9,8 @@ Algorithm:
   2. Assign each municipality to the plant with MINIMUM TOTAL COST
      (transport + treatment), not just minimum distance
   3. Recalculate throughputs → recalculate treatment costs → iterate
-  4. At convergence, identify plants below viability threshold → eliminate
-  5. Re-iterate until stable
+  4. Stop when no municipality changes plant (fixed point)
+  5. Plants with zero throughput at the fixed point are flagged for elimination
 
 This differs from A01's distance-based assignment because the cost-optimal
 plant may NOT be the nearest one: a larger, more distant plant can be
@@ -37,7 +37,6 @@ V_TREAT = 0.35
 RHO_TRANS = 0.35
 DOTACION = 0.5
 
-VIABILITY_THRESHOLD = 2_000  # t/year: below this, plant is unviable
 
 
 def parse_args():
@@ -76,7 +75,8 @@ def total_cost_for_municipality(dist_km, plant_throughput):
 # DATA LOADING
 # ============================================================
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-A01_DIR = os.path.join(SCRIPT_DIR, "..", "..", "A01.Voronoi", "scripts")
+# Input tables (shared with A01) live in this paper's own data/tablas folder.
+TABLAS_DIR = os.path.join(SCRIPT_DIR, "..", "data", "tablas")
 OUTPUT_DIR = os.path.join(SCRIPT_DIR, "..", "outputs")
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
@@ -95,10 +95,10 @@ print("Loading data...")
 
 # Distance matrix: plant_id -> municipality -> distance (road network)
 # The real-distance matrix covers all 46x383 pairs
-df_dist_raw = pd.read_csv(os.path.join(A01_DIR, "tablas_distancias", "distancias_reales_plantas_municipios.csv"))
+df_dist_raw = pd.read_csv(os.path.join(TABLAS_DIR, "distancias_reales_plantas_municipios.csv"))
 
 # Population
-df_mun_raw = pd.read_csv(os.path.join(A01_DIR, "datos_voronoi_municipios.csv"),
+df_mun_raw = pd.read_csv(os.path.join(TABLAS_DIR, "datos_voronoi_municipios.csv"),
                           encoding="utf-8", on_bad_lines="warn")
 pop_lookup = {}
 for _, row in df_mun_raw.iterrows():
@@ -107,7 +107,7 @@ for _, row in df_mun_raw.iterrows():
         pop_lookup[key] = int(row["HBT"])
 
 # Build municipality list
-asig = pd.read_csv(os.path.join(A01_DIR, "asignacion_municipios_real.csv"))
+asig = pd.read_csv(os.path.join(TABLAS_DIR, "asignacion_municipios_real.csv"))
 municipalities = []
 for _, row in asig.iterrows():
     mun = str(row["municipio"]).strip()
@@ -130,7 +130,7 @@ all_plants = sorted(set(pid for pid, _ in dist_lookup.keys()))
 print(f"Municipalities: {len(df_mun)}, Plants: {len(all_plants)}")
 
 # Plant consolidation (< 15 km) — consistent with A01
-cod = pd.read_csv(os.path.join(A01_DIR, "tablas_distancias", "codigos_plantas.csv"))
+cod = pd.read_csv(os.path.join(TABLAS_DIR, "codigos_plantas.csv"))
 id_to_mun = dict(zip(cod["Id"], cod["MUNICIPIO"].str.strip()))
 
 CONSOLIDATION_15KM = {
@@ -229,44 +229,36 @@ def compute_system_metrics(df_assign, plant_throughputs):
     }
 
 
-def iterate_assignment(active_plants, df_mun, dist_lookup, max_iter=50, tol=0.01):
+def iterate_assignment(active_plants, df_mun, dist_lookup, max_iter=100):
     """
-    Iterate cost-optimal assignment until convergence.
-    Returns: final assignments, throughputs, convergence history.
+    Fixed-point iteration of the cost-based assignment (Algorithm 1 of the paper).
+    Seed: every plant gets the same throughput, so the first assignment is the
+    nearest plant. Each sweep reassigns every municipality to its lowest-cost
+    plant under the current throughputs; the procedure stops when no
+    municipality changes plant.
+    Returns: final assignments, throughputs, history (row 0 = seed).
     """
-    # Initial throughputs: assign by distance first
-    throughputs = {}
-    for pid in active_plants:
-        throughputs[pid] = 1000  # seed with small value
-
-    # First pass: distance-based to get initial throughputs
     df_assign = assign_by_cost(active_plants, {p: 50000 for p in active_plants},
-                                df_mun, dist_lookup)
+                               df_mun, dist_lookup)
     throughputs = compute_throughputs(df_assign)
+    seed = compute_system_metrics(df_assign, throughputs)
+    seed.update(iteration=0, n_changed=len(df_assign))
+    history = [seed]
+    previous = dict(zip(df_assign["mun_key"], df_assign["plant_id"]))
 
-    history = []
-    for iteration in range(max_iter):
-        # Assign by cost using current throughputs
-        df_assign_new = assign_by_cost(active_plants, throughputs, df_mun, dist_lookup)
-        throughputs_new = compute_throughputs(df_assign_new)
-
-        metrics = compute_system_metrics(df_assign_new, throughputs_new)
-        metrics["iteration"] = iteration
+    for iteration in range(1, max_iter + 1):
+        df_assign = assign_by_cost(active_plants, throughputs, df_mun, dist_lookup)
+        throughputs = compute_throughputs(df_assign)
+        current = dict(zip(df_assign["mun_key"], df_assign["plant_id"]))
+        n_changed = sum(previous[k] != v for k, v in current.items())
+        metrics = compute_system_metrics(df_assign, throughputs)
+        metrics.update(iteration=iteration, n_changed=n_changed)
         history.append(metrics)
-
-        # Check convergence
-        max_change = 0
-        for pid in active_plants:
-            old = throughputs.get(pid, 0)
-            new = throughputs_new.get(pid, 0)
-            if old > 0:
-                max_change = max(max_change, abs(new - old) / old)
-
-        throughputs = throughputs_new
-        df_assign = df_assign_new
-
-        if max_change < tol:
+        previous = current
+        if n_changed == 0:
             break
+    else:
+        print(f"  WARNING: no fixed point after {max_iter} sweeps")
 
     return df_assign, throughputs, history
 
@@ -276,52 +268,19 @@ print("=" * 70)
 print("ITERATIVE COST-OPTIMAL ASSIGNMENT")
 print("=" * 70)
 
-# Phase 1: Iterate with all consolidated plants
 active = set(consolidated_plants)
 df_assign, throughputs, history = iterate_assignment(
     active, df_mun, dist_consolidated)
+metrics = history[-1]
+print(f"\nStabilized after {metrics['iteration']} sweeps "
+      f"(the last sweep changes no assignment).")
+print(f"  Cost: {metrics['cost_per_tonne']:.4f} EUR/t, active plants: {metrics['n_plants']}")
 
-metrics = compute_system_metrics(df_assign, throughputs)
-print(f"\nPhase 1 (all {metrics['n_plants']} plants):")
-print(f"  Converged in {len(history)} iterations")
-print(f"  Cost: {metrics['cost_per_tonne']:.2f} EUR/t")
-print(f"  Max: {metrics['max_cost']:.1f}, Total t-km: {metrics['total_tkm']:,.0f}")
-
-# Phase 2: Progressive elimination of unviable plants
-print()
-print("Phase 2: Progressive elimination")
-print("-" * 70)
-
-elimination_results = [metrics.copy()]
-eliminated_plants = []
-
-while True:
-    # Find plants below viability threshold (including zero-throughput)
-    unviable = [pid for pid in active
-                if throughputs.get(pid, 0) < VIABILITY_THRESHOLD]
-
-    if not unviable:
-        print("  No unviable plants remaining. Converged.")
-        break
-
-    # Eliminate the plant with lowest throughput
-    worst = min(unviable, key=lambda p: throughputs.get(p, 0))
-    worst_T = throughputs.get(worst, 0)
-    worst_mun = id_to_mun.get(worst, f"Plant_{worst}")
-    active.remove(worst)
-    eliminated_plants.append((worst, worst_mun, worst_T))
-
-    # Re-iterate
-    df_assign, throughputs, history = iterate_assignment(
-        active, df_mun, dist_consolidated)
-    metrics = compute_system_metrics(df_assign, throughputs)
-    metrics["eliminated"] = f"{worst_mun} (T={worst_T:.0f})"
-    elimination_results.append(metrics.copy())
-
-    print(f"  Eliminated {worst_mun:25s} (T={worst_T:6.0f} t/y) -> "
-          f"{metrics['n_plants']:2d} plants, "
-          f"cost={metrics['cost_per_tonne']:.2f} EUR/t, "
-          f"max={metrics['max_cost']:.1f}")
+# Plants that receive no flow at the fixed point are flagged for elimination (post hoc).
+eliminated_plants = [(pid, id_to_mun.get(pid, f"Plant_{pid}"), 0.0)
+                     for pid in sorted(active) if throughputs.get(pid, 0) <= 0]
+active = {pid for pid in active if throughputs.get(pid, 0) > 0}
+elimination_results = history
 
 # Final summary
 print()
@@ -337,7 +296,7 @@ print()
 # Eliminated plants
 print(f"  Plants eliminated ({len(eliminated_plants)}):")
 for pid, mun, T in eliminated_plants:
-    print(f"    ID {pid:2d} {mun:25s} (was {T:6.0f} t/y)")
+    print(f"    ID {pid:2d} {mun:25s} (no flow at the fixed point)")
 
 # Surviving plants
 print(f"\n  Surviving plants ({len(active)}):")
@@ -382,29 +341,26 @@ if not ARGS.no_plot:
 
         fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
-        n = df_elim["n_plants"].values
+        n = df_elim["iteration"].values
         axes[0].plot(n, df_elim["cost_per_tonne"], "ko-", lw=2, ms=5)
         axes[0].set_ylabel("System cost (EUR/t)")
-        axes[0].set_title("Cost vs Network Size\n(iterative cost-optimal)")
-        axes[0].invert_xaxis()
+        axes[0].set_title("System cost per sweep")
         axes[0].grid(alpha=0.3)
 
         axes[1].plot(n, df_elim["max_cost"], "ro-", lw=2, ms=5)
         axes[1].set_ylabel("Max municipal cost (EUR/t)")
         axes[1].set_title("Worst-case equity")
-        axes[1].invert_xaxis()
         axes[1].grid(alpha=0.3)
 
         axes[2].plot(n, df_elim["total_tkm"] / 1e6, "bo-", lw=2, ms=5)
         axes[2].set_ylabel("Total transport (M t-km/y)")
         axes[2].set_title("Transport effort")
-        axes[2].invert_xaxis()
         axes[2].grid(alpha=0.3)
 
         for ax in axes:
-            ax.set_xlabel("Number of plants")
+            ax.set_xlabel("Sweep")
 
-        plt.suptitle("A05: Iterative cost-optimal network pruning", fontweight="bold")
+        plt.suptitle("A05: Fixed-point iteration of the cost-based assignment", fontweight="bold")
         plt.tight_layout()
         plot_path = os.path.join(OUTPUT_DIR, f"iterative_optimization{SCENARIO_SUFFIX}.png")
         plt.savefig(plot_path, dpi=200, bbox_inches="tight")

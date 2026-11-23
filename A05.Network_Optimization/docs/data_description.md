@@ -33,6 +33,9 @@ CRS: **ETRS89 / UTM zone 30N (EPSG:25830)**.
 | `sensitivity_transport.csv` | `run_sensitivity.py` | Transport-cost scenarios (`ρ = 0.25, 0.35, 0.45 €/t·km`). |
 | `sensitivity_demand.csv` | `run_sensitivity.py` | Demand scenarios (`ρ_CDW = 0.45, 0.50, 0.55 t/inhab·yr`). |
 | `*_<scenario>.csv` | `run_sensitivity.py` | Per-scenario intermediates (pareto and assignments). |
+| `comparison_metaheuristics.csv` | `optimize_metaheuristics.py` | Greedy pruning against simulated annealing and genetic algorithms, by network size. |
+| `equilibrium_planner/method_comparison.csv` | `equilibrium_planner/compare_methods.py` | Fixed-point equilibrium against the planner optimum (cost, plants, C_max, Gini, t-km, municipalities that would switch). |
+| `equilibrium_planner/*.npy` | `equilibrium_planner/*.py` | Assignments (fixed point, MILP) and the 50 random-seed results. |
 
 ## Provenance
 

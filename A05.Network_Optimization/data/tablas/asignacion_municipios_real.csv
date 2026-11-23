@@ -1,0 +1,384 @@
+municipio,planta_asignada,real_distance
+Badajoz,18,10401.7981322
+Mérida,14,38409.2889034
+Don Benito,3,8110.5638814
+Almendralejo,9,21513.8872336
+Villanueva de la Serena,3,17137.7734996
+Zafra,9,13791.7663832
+Montijo,4,26089.832051
+Villafranca de los Barros,2,9801.7286769
+Olivenza,13,3165.8605649
+Jerez de los Caballeros,5,32114.5209711
+Azuaga,10,39019.7364178
+Santos de Maimona. Los,9,13934.5366904
+Guareña,3,37302.4275422
+Fuente del Maestre,9,2678.4297041
+Castuera,15,2880.4820734
+Calamonte,14,2777.7687512
+Llerena,10,2715.1680274
+Puebla de la Calzada,4,26745.1021945
+San Vicente de Alcántara,39,14848.4705568
+Alburquerque,18,41640.5165257
+Aceuchal,9,19997.2444242
+Oliva de la Frontera,5,49231.5832382
+Talavera la Real,4,3209.9602731
+Cabeza del Buey,7,1539.6750519
+Campanario,17,13191.1562309
+Fregenal de la Sierra,8,3426.4818357
+Quintana de la Serena,6,2568.0310404
+Fuente de Cantos,10,27807.3720877
+Navalvillar de Pela,45,33527.8778526
+Monesterio,10,34135.9940873
+Santa Amalia,3,21165.5675507
+Santa Marta,9,32747.0820169
+Arroyo de San Serván,14,10352.9811075
+Valverde de Leganés,13,10714.8409813
+Zalamea de la Serena,15,16478.1597548
+Hornachos,2,16645.636288
+Barcarrota,13,31781.1182354
+Herrera del Duque,11,41867.2312026
+Villanueva del Fresno,13,42261.2183378
+Talarrubias,11,16771.9594239
+Zarza. La,14,30386.0119334
+Ribera del Fresno,2,599.1625206
+Burguillos del Cerro,5,12557.4356728
+Orellana la Vieja,17,25732.9822141
+Zah¡nos,13,48823.1252513
+Puebla de Sancho P‚rez,5,16650.8461613
+Solana de los Barros,14,27640.8112099
+Valdelacalzada,18,25482.5956073
+Lobón,4,18797.0608856
+Monterrubio de la Serena,16,6048.9566014
+Fuentes de León,8,17385.6661278
+Garrovilla. La,14,17954.9690776
+Berlanga,10,28292.7523103
+Higuera la Real,5,60809.5740084
+Villar del Rey,18,27718.4357519
+Granja de Torrehermosa,16,44021.0463071
+Medell¡n,3,17051.076752
+Bienvenida,2,33064.2365839
+Codosera. La,39,35394.5134733
+Valencia del Ventoso,5,17505.7821345
+Coronada. La,17,5438.5785014
+Torremej¡a,14,16068.2475932
+Siruela,11,3687.4448453
+Higuera de Vargas,13,34603.2753077
+Segura de León,8,11361.0517047
+Salvaleón,13,39703.631184
+Pueblonuevo del Guadiana,18,17642.6767016
+Alange,14,24966.8330052
+Puebla de Obando,18,43667.0884925
+Albuera. La,4,22465.3687338
+Usagre,2,24923.2796511
+Fuenlabrada de los Montes,11,33618.0158553
+Alconchel,13,22273.9776364
+Oliva de Mérida,1,32404.4389955
+Salvatierra de los Barros,9,26764.557837
+Villalba de los Barros,9,14889.6061003
+Casas de Don Pedro,11,33489.3263813
+Esparragalejo,14,13499.5465227
+Montemolín,10,28423.9395481
+Roca de la Sierra. La,18,34585.1994405
+Campillo de Llerena,10,42735.0321746
+Cabeza la Vaca,8,23303.7601647
+Villar de Rena,17,19675.7205342
+Trujillanos,14,16622.2856685
+Valle de la Serena,15,30617.6914144
+Parra. La,9,19451.1216502
+Mirandilla,14,18470.0903376
+Haba. La,3,11653.033084
+Villagonzalo,14,35569.9918657
+Feria,9,14715.4742388
+Medina de las Torres,5,12467.3509905
+Valdetorres,3,28456.1828867
+Almendral,13,25561.5434475
+Corte de Peleas,4,26151.7756286
+Cheles,13,30650.2310299
+Puebla de Alcocer,11,21416.065775
+Torre de Miguel Sesmero,13,28335.9300225
+Valdecaballeros,11,67269.8220883
+Peñalsordo,7,18075.0163156
+Valle de Santa Ana,9,49431.2028463
+Valverde de Mérida,14,27914.7305341
+Castilblanco,11,57663.1372143
+Bodonal de la Sierra,8,7259.8062507
+Nava de Santiago. La,14,36038.287198
+Esparragosa de la Serena,15,12640.1531529
+Maguilla,10,26081.8721675
+Calera de León,8,32799.8812567
+Ahillones,10,20341.6671587
+Higuera de la Serena,15,21664.0202503
+Esparragosa de Lares,11,25664.4921329
+Torremayor,14,23120.3231049
+Villagarcía de la Torre,2,37153.5768489
+Cordobilla de Lácara,41,30955.1828573
+Benquerencia de la Serena,15,9678.3081995
+Llera,2,23141.6940764
+San Pedro de Mérida,14,23262.7659078
+Calzadilla de los Barros,5,32046.9167302
+Puebla de la Reina,1,24039.8678423
+Acedera,17,33910.7459662
+Táliga,13,23137.0963382
+Valencia del Mombuey,5,69191.165712
+Puebla del Maestre,10,24454.3008906
+Manchita,3,45832.348449
+Morera. La,9,23296.1273983
+Fuente del Arco,10,16862.8128994
+Don Álvaro,14,36786.4257977
+Alconera,5,7442.0989167
+Nogales,9,32961.7894842
+Helechosa de los Montes,11,86494.8937622
+Valverde de Llerena,10,28310.2222079
+Palomas,1,20293.7016081
+Trasierra,10,6913.3958795
+Valencia de las Torres,10,23705.9272609
+Garlitos,11,20667.2245175
+Rena,17,16858.8660717
+Malpartida de la Serena,15,11885.4043739
+Peraleda del Zaucejo,16,25156.2170577
+Magacela,17,12503.1548243
+Entrín Bajo,4,29754.3436447
+Villarta de los Montes,11,117130.6867133
+Carmonita,41,20965.5425556
+Cristina,3,34612.5059647
+Hinojosa del Valle,2,10362.2552379
+Garbayuela,11,15105.8177777
+Puebla del Prior,2,3995.5533892
+Retamal de Llerena,15,35939.8272777
+Mengabril,3,11636.4572063
+Malcocinado,10,54902.0381253
+Valle de Matamoros,5,40596.6705077
+Zarza-Capilla,7,12881.6754816
+Higuera de Llerena,10,19994.492515
+Baterno,11,17136.1621472
+Atalaya,5,4330.4614947
+Valverde de Burguillos,5,9338.0980183
+Orellana de la Sierra,17,31068.6149705
+Lapa. La,9,20765.1355932
+Tamurejo,11,15365.0373555
+Aljucén,14,23940.5723556
+Sancti-Spíritus,11,8122.7255646
+Reina,10,11175.5151478
+Casas de Reina,10,8343.018331
+Capilla,7,21428.5025775
+Risco,11,11731.4237247
+Carrascalejo. El,14,19984.258321
+C ceres,46,11233.9628066
+Plasencia,29,5715.5346252
+Navalmoral de la Mata,34,7244.8232865
+Coria,32,7626.6581812
+Miajadas,43,2777.5606524
+Trujillo,19,10958.8891194
+Talayuela,27,4022.2201749
+Moraleja,20,3086.5879063
+Arroyo de la Luz,46,22808.4594273
+Jara¡z de la Vera,26,4754.4990083
+Valencia de Alc ntara,39,2594.4903617
+Montehermoso,25,3911.9313853
+Casar de Cáceres,46,5993.7516064
+Malpartida de Plasencia,29,11505.3875663
+Malpartida de Cáceres,46,14919.1565708
+Hervás,22,30217.2119261
+Torrejoncillo,29,36498.8907198
+Jarandilla de la Vera,28,3343.4990986
+Alcuéscar,41,9227.3615894
+Losar de la Vera,28,6817.566301
+Madroñera,19,15579.8827194
+Valverde del Fresno,31,47376.3029691
+Garrovillas de Alconétar,44,27803.8620214
+Aldeanueva de la Vera,28,8308.3399886
+Cabezuela del Valle,22,5506.0993214
+Brozas,44,2947.0385752
+Villanueva de la Vera,28,22740.4997368
+Guadalupe,45,29254.6105531
+Logrosán,45,1634.1846953
+Sierra de Fuentes,46,21859.0775512
+Navaconcejo,22,8544.2702455
+Ceclavín,24,4886.1226539
+Montánchez,41,2705.1164405
+Almoharín,43,13698.5333268
+Aliseda,46,32412.6044371
+Galisteo,29,16066.9628908
+Madrigalejo,45,40595.617573
+Cilleros,31,36742.6365574
+Zarza de Granadilla,23,12169.240856
+Madrigal de la Vera,28,32222.0285144
+Cañamero,45,11875.4601652
+Serradilla,33,2552.6116417
+Torreorgaz,46,24301.743199
+Pinofranqueado,21,20361.2673221
+Zorita,45,22322.440414
+Gata,31,18147.3888512
+Alcántara,44,18093.6657855
+Guijo de Galisteo,25,8506.4178704
+Piornal,26,24370.0133986
+Ahigal,23,26839.3747823
+Peraleda de la Mata,34,20259.0920302
+Navas del Madro¤o,44,14248.1241983
+Nuñomoral,21,5951.5073701
+Valdefuentes,41,11128.9078941
+Zarza la Mayor,24,9350.3445954
+Casatejada,35,3232.5800317
+Casar de Palomero,21,22899.2230148
+Jerte,22,5612.6818648
+Almaraz,37,1210.9140517
+Majadas,35,8771.8151682
+Cañaveral,30,2199.0102439
+Rosalejo,34,27305.9254238
+Caminomorisco,21,15534.8482536
+Riolobos,29,21348.5184237
+Casta¤ar de Ibor,42,1974.1035749
+Tornavacas,22,12693.5409973
+Torrecillas de la Tiesa,40,18486.3117966
+Pesga. La,21,41774.0853916
+Carcaboso,29,14241.7832209
+Garganta la Olla,26,13368.659851
+Torremocha,41,20316.2136421
+Eljas,31,48340.4084688
+Campo Lugar,36,14286.9827621
+Al¡a,45,39395.680914
+Arroyomolinos,41,8468.0629163
+Monroy,33,31434.0822855
+Torno. El,22,27644.0311796
+Cumbre. La,19,20891.9975859
+Hoyos,31,25783.6229247
+Mohedas de Granadilla,21,30008.8411548
+Perales del Puerto,31,25448.2233326
+Talav n,30,25306.5839986
+San Martín de Trevejo,31,46388.7862436
+Cuacos de Yuste,26,11322.1571708
+Tejeda de Tiétar,26,17037.3644747
+Acehúche,24,17891.9673896
+Escurial,36,1692.7146992
+Garciaz,19,34366.4648052
+Membrío,39,25659.3274465
+Deleitosa,42,23054.1995663
+Santibáñez el Bajo,23,30573.1330807
+Saucedilla,37,5793.6562871
+Aldeanueva del Camino,23,818.1078529
+Albalá,41,3352.3452586
+Aldeacentenera,19,35411.321204
+Casas del Monte,23,9582.7239895
+Valdeobispo,29,19056.0859796
+Holguera,29,25914.8423044
+Mirabel,33,12777.3871296
+Aldea del Cano,46,29619.2696396
+Baños de Montemayor,22,38356.7927253
+Navezuelas,45,33337.9782234
+Casas de Millán,30,7551.8236784
+Salorino,39,30206.4094786
+Torrecilla de los Ángeles,31,20025.2562
+Acebo,31,27681.7909556
+Santiago de Alcántara,39,27010.5247826
+Pasarón de la Vera,26,13178.0344126
+Villamiel,31,38401.6876267
+Villar del Pedroso,34,49609.5430012
+Belvís de Monroy,34,11493.7538129
+Casas del Castañar,29,27261.9764648
+Torre de Santa María,41,7864.2578322
+Guijo de Granadilla,23,25566.8397761
+Torremenga,26,7071.1937142
+Zarza de Montánchez,41,18558.496492
+Aceituna,25,11263.3355364
+Torrejón el Rubio,33,21985.0892803
+Torrequemada,41,25042.2576295
+Jaraicejo,37,29056.1268469
+Valverde de la Vera,28,19646.468682
+Torre de Don Miguel,31,14210.0615151
+Pozuelo de Zarzón,25,11772.6759989
+Villa del Campo,25,12900.2415673
+Plasenzuela,41,29174.0672986
+Bohonal de Ibor,34,19946.4381631
+Berzocana,45,18528.878601
+Casares de las Hurdes,21,13692.619086
+Hernán-Pérez,31,14151.0031884
+Villanueva de la Sierra,25,18672.2166128
+Cadalso,31,3909.3162698
+Navalvillar de Ibor,42,8478.2541277
+Arroyomolinos de la Vera,26,18566.5306637
+Cedillo,39,45472.1296677
+Garganta. La,22,44700.1641144
+Ibahernando,19,15488.2319235
+Calzadilla,20,17996.3878518
+Barrado,26,25686.6011735
+Casillas de Coria,32,17448.3347193
+Villasbuenas de Gata,31,16532.1082144
+Valdelacasa de Tajo,34,41075.3962838
+Abertura,36,15500.3981773
+Palomero,25,31917.6789183
+Serrejón,37,13653.2214313
+Hinojal,30,18625.0877309
+Gargantilla,23,4720.4870415
+Santibáñez el Alto,31,11649.8587185
+Cabañas del Castillo,42,32688.8864477
+Robledillo de Trujillo,41,23422.6469199
+Cabezabellosa,23,26698.1868299
+Morcillo,25,7000.3139168
+Portaje,32,4616.4186386
+Guijo de Santa Bárbara,28,8135.0044768
+Robledollano,42,9511.7280885
+Puerto de Santa Cruz,19,16293.4216375
+Herreruela,44,37690.8797938
+Valdastillas,22,19273.0805891
+Cabrero,22,27800.5102502
+Herguijuela,19,17727.126769
+Talaveruela de la Vera,28,18521.0056842
+Granja. La,23,7776.0225656
+Aldea del Obispo. La,40,15870.7453525
+Casas de Don Gómez,20,11157.0212854
+Aldehuela de Jerte,29,18430.083179
+Gordo. El,34,25480.9530025
+Carrascalejo,42,54186.1986138
+Mata de Alcántara,44,16736.7263245
+Fresnedoso de Ibor,42,17187.7935023
+Abadía,23,5139.7371555
+Santa Cruz de Paniagua,25,22379.0644284
+Villamesías,43,14914.6615299
+Santa Marta de Magasca,40,30451.6936773
+Santiago del Campo,30,25411.971935
+Robledillo de la Vera,28,7373.6643855
+Salvatierra de Santiago,41,16923.2267329
+Santa Ana,41,23851.0969789
+Peraleda de San Román,34,29942.6213366
+Oliva de Plasencia,29,15532.4579358
+Herrera de Alcántara,39,47174.2628975
+Santa Cruz de la Sierra,19,15082.1903412
+Portezuelo,32,15404.6667939
+Alcollarín,36,16991.2738455
+Viandar de la Vera,28,17638.7827815
+Millanes,34,6173.4196242
+Marchagaz,21,29701.6617873
+Rebollar,22,18792.1543479
+Guijo de Coria,25,13848.5490467
+Valdemorales,41,17213.9917914
+Villar de Plasencia,23,19263.8183064
+Ladrillar,21,22262.2530819
+Carbajo,39,32502.4576613
+Romangordo,37,11164.4740278
+Casas de Don Antonio,41,22443.7912727
+Valdehúncar,34,9915.198431
+Conquista de la Sierra,19,21441.837608
+Piedras Albas,24,19593.453632
+Collado,26,7981.3709164
+Botija,41,31096.7470931
+Huélaga,20,9549.1756402
+Cerezo,23,30463.7482532
+Descargamaría,31,6075.5642793
+Segura de Toro,23,6422.8211775
+Toril,35,10269.1836332
+Mesas de Ibor,34,27388.2788358
+Pescueza,32,12314.9794288
+Villa del Rey,44,8926.933034
+Jarilla,23,13811.0111125
+Casas de Miravete,37,14210.7047209
+Gargüera,29,25136.1754149
+Robledillo de Gata,31,9034.8651576
+Valdecañas de Tajo,34,36125.4541537
+Pedroso de Acim,30,9509.2747418
+Berrocalejo,34,32893.6851027
+Garvín,34,34280.1376132
+Higuera,37,13553.5167877
+Benquerencia,41,21363.2890938
+Cachorrilla,32,14178.5258694
+Campillo de Deleitosa,34,41006.7781391
+Ruanes,41,20721.878895

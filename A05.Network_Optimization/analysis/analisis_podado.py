@@ -72,19 +72,20 @@ def gini_coefficient(values):
 # LOAD DATA
 # ============================================================
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-A01_DIR = os.path.join(SCRIPT_DIR, "..", "..", "A01.Voronoi", "scripts")
+# Input tables (shared with A01) live in this paper's own data/tablas folder.
+TABLAS_DIR = os.path.join(SCRIPT_DIR, "..", "data", "tablas")
 
 # Full distance matrix: plant_id -> municipality -> distance (road network)
 # The real-distance matrix covers all 46x383 pairs
-asig_real = pd.read_csv(os.path.join(A01_DIR, "asignacion_municipios_real.csv"))
-df_dist = pd.read_csv(os.path.join(A01_DIR, "tablas_distancias", "distancias_reales_plantas_municipios.csv"))
+asig_real = pd.read_csv(os.path.join(TABLAS_DIR, "asignacion_municipios_real.csv"))
+df_dist = pd.read_csv(os.path.join(TABLAS_DIR, "distancias_reales_plantas_municipios.csv"))
 
 print(f"Distance matrix (road): {len(df_dist)} rows")
 # Standardize columns: origin_id=plant, destination_id=municipality, total_cost=distance_m
 df_dist = df_dist.rename(columns={"origin_id": "plant_id", "destination_id": "municipio", "total_cost": "distance"})
 
 # Population data
-df_mun_data = pd.read_csv(os.path.join(A01_DIR, "datos_voronoi_municipios.csv"),
+df_mun_data = pd.read_csv(os.path.join(TABLAS_DIR, "datos_voronoi_municipios.csv"),
                            encoding="utf-8", on_bad_lines="warn")
 
 # Build population lookup (reuse A01 normalization)

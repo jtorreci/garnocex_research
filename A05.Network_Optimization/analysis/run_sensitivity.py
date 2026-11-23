@@ -71,7 +71,7 @@ def summarize_greedy(path: Path, scenario: dict[str, float | str]) -> dict[str, 
 
 def summarize_iterative(history_path: Path, assign_path: Path, scenario: dict[str, float | str]) -> dict[str, float | str]:
     df = pd.read_csv(history_path)
-    row = df.iloc[0]
+    row = df.iloc[-1]  # last sweep = fixed point
     n5000, n15000, n40000, n_active = count_thresholds_from_assignments(assign_path)
     return {
         "scenario_group": scenario["scenario_group"],

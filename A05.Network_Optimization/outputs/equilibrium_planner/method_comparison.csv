@@ -1,0 +1,3 @@
+method,cost_per_t,total_cost,plants,c_max,gini,tkm,would_switch
+fixed_point_equilibrium,11.3369,6250392,24,49.2,0.199,10129148,1
+planner_milp,11.2675,6212129,26,49.2,0.193,9970839,27
