@@ -13,7 +13,7 @@ Cost-Based Assignment and the Scale--Circularity Nexus---A Case Study of Extrema
 - The iterative cost-based reassignment heuristic **stabilizes in 6 iterations** at a **24-plant base-case configuration** with **8 plants receiving zero throughput**.
 - System-average cost falls from **12.22 €/t** (A01 diagnostic baseline, per-physical-plant throughput) to **11.34 €/t** (cost-based heuristic), a **7.2 % reduction**. Relative to A05's own 32-plant distance-based baseline of **11.67 €/t**, the corresponding reduction is **2.8 %**.
 - Greedy distance-based pruning reaches a **near-optimal plateau between 23 and 25 plants** with cost between **11.36 and 11.37 €/t**.
-- **Only 65 of 383 municipalities** change plant assignment under the cost-based heuristic — the rest keep their baseline allocation, so the change is local rather than systemic.
+- **Only 63 of 383 municipalities** change plant assignment under the cost-based heuristic; the rest keep their baseline allocation, so the change is local rather than systemic.
 - **23 of 24** surviving plants exceed the **5,000 t/y** viability threshold for mechanical separation, compared to **24 of 32 (75 %)** in the baseline.
 
 ## Repository Structure
@@ -40,10 +40,13 @@ A05.Network_Optimization/
 │   ├── analisis_podado.py             # greedy progressive pruning (32 → 3 plants)
 │   ├── iterative_cost_assignment.py   # iterative cost-based reassignment heuristic
 │   ├── run_sensitivity.py             # transport-cost + demand scenario runner
-│   ├── optimize_metaheuristics.py     # SA and GA benchmark of greedy pruning
+│   ├── optimize_metaheuristics.py     # SA and GA benchmark of greedy pruning (about 4 min)
+│   ├── plot_metaheuristics.py         # redraws Figure 4 from the saved benchmark CSVs
 │   └── equilibrium_planner/           # fixed point vs planner MILP, random seeds
 ├── replication/
-│   └── generate_three_panel_a05.py    # routed-flow + KDE figure for the manuscript
+│   ├── generate_voronoi_map_a05.py    # Figure 1: Voronoi tessellation of the 32 plant groups
+│   ├── generate_three_panel_a05.py    # Figure 2: routed flows + cost KDE
+│   └── generate_graphical_abstract.py # graphical abstract
 ├── outputs/                           # canonical CSV outputs of analysis scripts
 │   ├── pareto_podado.csv              # greedy pruning system metrics (32 → 3)
 │   ├── greedy_assignments_24.csv      # per-municipality assignment at the 24-plant pivot
@@ -54,10 +57,14 @@ A05.Network_Optimization/
 │   ├── sensitivity_demand.csv         # demand scenarios (ρ_CDW = 0.45, 0.50, 0.55 t/inhab·yr)
 │   ├── *_<scenario>.csv               # scenario-specific intermediates
 │   ├── comparison_metaheuristics.csv  # greedy vs SA/GA by network size
+│   ├── unconstrained_ga.csv           # best network of the unconstrained GA
 │   └── equilibrium_planner/           # method_comparison.csv and assignments
 ├── results/
 │   └── figures/
-│       └── fig_three_panel_a05.png    # manuscript Figure 2
+│       ├── Voronoi.png                # manuscript Figure 1
+│       ├── fig_three_panel_a05.png    # manuscript Figure 2
+│       ├── comparison_metaheuristics.png # manuscript Figure 4
+│       └── graphical_abstract.png
 └── docs/
     ├── methodology.md                 # detailed methodology
     └── data_description.md            # data documentation
@@ -88,6 +95,28 @@ python analysis/iterative_cost_assignment.py
 python analysis/run_sensitivity.py
 python replication/generate_three_panel_a05.py
 ```
+
+### Manuscript figures
+
+All figures are written to `results/figures/` at their printed size and 600 dpi.
+
+```bash
+python replication/generate_voronoi_map_a05.py   # Figure 1: Voronoi.png
+python replication/generate_three_panel_a05.py   # Figure 2: fig_three_panel_a05.png
+python analysis/optimize_metaheuristics.py       # SA/GA search (about 4 min): comparison_metaheuristics.csv,
+                                                 # unconstrained_ga.csv and Figure 4
+python analysis/plot_metaheuristics.py           # Figure 4 only, from the saved CSVs
+```
+
+The map figures read only `data/shp/` and `data/tablas/`. The road attribute
+table `carreteras.dbf` is not in the repository (see `data/shp/README.md`);
+the scripts use only the road geometries and run without it.
+
+Change on 2026-11-25: `generate_three_panel_a05.py` now looks up municipal
+production by normalised name. The distance table carries 82 names with
+garbled accents (e.g. "Talav n"); the former exact-name lookup gave those
+municipalities zero tonnage, which distorted panel (c) and the plant unit
+costs shown on the maps. The analysis CSVs were not affected.
 
 ## Key Parameters
 

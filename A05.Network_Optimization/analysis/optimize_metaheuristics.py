@@ -384,35 +384,20 @@ if __name__ == "__main__":
     print(f"  Unconstrained GA Optimum: {len(unconstrained_active)} plants active, Cost = {unconstrained_cost:.4f} EUR/t")
     print(f"  Active plants: {sorted(unconstrained_active)}")
     
-    # Plot comparison
+    unc_csv = os.path.join(outputs_dir, "unconstrained_ga.csv")
+    pd.DataFrame([{
+        "n_plants": len(unconstrained_active),
+        "cost_eur_t": unconstrained_cost,
+        "active_plants": ",".join(map(str, sorted(unconstrained_active))),
+    }]).to_csv(unc_csv, index=False, float_format="%.4f")
+    print(f"Saved unconstrained GA result to {unc_csv}")
+
+    # Plot comparison (shared with the plot-only script plot_metaheuristics.py)
     if not ARGS.no_plot:
         try:
-            import matplotlib.pyplot as plt
-            
-            plt.figure(figsize=(8, 5))
-            
-            # Plot Greedy curve
-            plt.plot(df_comp["n_plants"], df_comp["greedy_cost_eur_t"], "k.-", label="Greedy Pruning Heuristic", lw=2)
-            
-            # Plot SA/GA Best Meta curve
-            plt.plot(df_comp["n_plants"], df_comp["best_meta_cost_eur_t"], "ro--", label="Metaheuristics (SA/GA)", lw=1.5, alpha=0.8)
-            
-            # Highlight unconstrained GA optimum
-            plt.plot(len(unconstrained_active), unconstrained_cost, "g*", markersize=12, label=f"Unconstrained GA Opt ({len(unconstrained_active)} pl, {unconstrained_cost:.2f} €/t)")
-            
-            plt.xlabel("Number of Active Plants (N)")
-            plt.ylabel("Total System Cost (€/t)")
-            plt.title("Heuristic vs Metaheuristics Cost Frontier")
-            plt.gca().invert_xaxis()
-            plt.legend()
-            plt.grid(alpha=0.3)
-            
-            fig_path = os.path.join(outputs_dir, "comparison_metaheuristics.png")
-            plt.savefig(fig_path, dpi=200, bbox_inches="tight")
-            plt.close()
-            print(f"Saved comparison plot to {fig_path}")
-            
+            from plot_metaheuristics import plot_comparison
+            plot_comparison(df_comp, len(unconstrained_active), unconstrained_cost)
         except ImportError:
             print("matplotlib not available, skipping plot")
-            
+
     print("\nMetaheuristics execution complete.")

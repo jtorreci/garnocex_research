@@ -5,12 +5,20 @@ generate_three_panel_a05.py
 Three-panel routed-flow map for A05 (Network Rationalization paper).
 
 Panels:
-    (a) Baseline: 32-plant nearest-plant assignment.
-    (b) Greedy pilot: 24-plant nearest-plant assignment after greedy pruning.
-    (c) Iterative cost-optimal: 24-plant assignment from the fixed-point heuristic.
+    (a) Baseline: 32-plant nearest-plant assignment, all routed flows.
+    (b) Routed flows of the municipalities whose plant changes under the
+        iterative cost-based (fixed-point) assignment, 24 active plants.
+    (c) Kernel density of municipal unit cost (equal weight per municipality)
+        under both configurations, with production-weighted means.
 
-Each panel shows routed flows on the real road network, coloured by per-tonne
-unit cost; triangles mark active plants and crosses mark eliminated ones.
+Map flows follow the real road network and are coloured by per-tonne unit
+cost (reversed viridis, clipped at the 5th/95th percentiles). The figure is
+drawn at its printed size (6.5 in wide) and saved at 600 dpi to
+results/figures/fig_three_panel_a05.png.
+
+Production per municipality is looked up by normalised name: the distance
+table carries some names with garbled accents (e.g. "Talav n"), and an
+exact-name lookup gave those municipalities zero tonnage.
 
 Self-contained: reads shapefiles from A05.Network_Optimization/data/shp/
 and CSVs from A05.Network_Optimization/data/tablas/ and outputs/.
@@ -35,13 +43,13 @@ ROOT = os.path.dirname(SCRIPT_DIR)
 SHP_DIR = os.path.join(ROOT, "data", "shp")
 TABLAS_DIR = os.path.join(ROOT, "data", "tablas")
 OUT_DIR = os.path.join(ROOT, "outputs")
-FIG_DIR = os.path.join(ROOT, "Latex", "Imagenes")
+FIG_DIR = os.path.join(ROOT, "results", "figures")
 os.makedirs(FIG_DIR, exist_ok=True)
 
 plt.rcParams.update({
     "font.family": "serif",
-    "font.size": 9,
-    "savefig.dpi": 300,
+    "font.size": 7.5,
+    "savefig.dpi": 600,
 })
 
 # Physical plant -> consolidated group mapping (same convention as A01/A03)
@@ -166,8 +174,10 @@ df_group = (df_dist
 # Per-municipality production from datos_voronoi_municipios.csv
 df_mun_data = pd.read_csv(os.path.join(TABLAS_DIR, "datos_voronoi_municipios.csv"),
                           encoding="utf-8", on_bad_lines="warn")
-df_mun_data["municipio"] = df_mun_data["NOMBRE"].astype(str)
-prod_lookup = dict(zip(df_mun_data["municipio"], df_mun_data["Prod"]))
+# Key production by the normalised name: the distance matrix carries some
+# names with mangled accents (e.g. "Talav n"), so an exact-name lookup drops
+# their production and inflates the unit cost of their plant.
+prod_lookup = {norm(n): p for n, p in zip(df_mun_data["NOMBRE"], df_mun_data["Prod"])}
 
 # Cost-model parameters (must match the manuscript / piecewise log)
 C0 = 40_000.0  # EUR/year
@@ -189,7 +199,7 @@ def baseline_assignment_panel():
     then compute per-tonne treatment cost using piecewise-log model."""
     idx = df_group.groupby("municipio")["distance_km"].idxmin()
     chosen = df_group.loc[idx].copy()
-    chosen["produccion"] = chosen["municipio"].map(prod_lookup).fillna(0.0)
+    chosen["produccion"] = chosen["municipio"].map(lambda n: prod_lookup.get(norm(n), 0.0))
     # Aggregate throughput per group
     throughput = chosen.groupby("group_id")["produccion"].sum().to_dict()
     chosen["C_trans"] = chosen["distance_km"] * RHO
@@ -202,8 +212,11 @@ def baseline_assignment_panel():
 
 
 df_baseline = baseline_assignment_panel()
+_w = (df_baseline["C_tot"] * df_baseline["produccion"]).sum() / df_baseline["produccion"].sum()
 print(f"  Baseline: {len(df_baseline)} municipalities, "
-      f"{df_baseline['plant_id'].nunique()} active groups")
+      f"{df_baseline['plant_id'].nunique()} active groups, "
+      f"{(df_baseline['produccion'] <= 0).sum()} without production, "
+      f"max cost {df_baseline['C_tot'].max():.2f}, weighted mean {_w:.4f} EUR/t")
 
 # ============================================================
 # LOAD ITERATIVE ASSIGNMENT
@@ -271,43 +284,68 @@ routes_b = build_routes(df_iter, "municipio", "plant_id", "produccion", "C_tot",
 print(f"  {len(routes_b)} flows")
 
 # ============================================================
-# PLOT 3-PANEL LAYOUT (2 + 1)
+# PLOT 3-PANEL LAYOUT (2 maps + KDE), drawn at printed size
 # ============================================================
 print("\nRendering three-panel figure (baseline, deltas, cost KDE)...")
 from scipy.stats import gaussian_kde
+from matplotlib.colors import ListedColormap
 
-fig = plt.figure(figsize=(16, 18))
-ax_a = fig.add_axes([0.02, 0.50, 0.47, 0.45])  # top-left: baseline map
-ax_b = fig.add_axes([0.51, 0.50, 0.47, 0.45])  # top-right: delta map
-ax_c = fig.add_axes([0.10, 0.06, 0.80, 0.34])  # bottom: KDE plot (wider, lower)
+FIG_W = 6.5  # inches; printed at \textwidth (16.6 cm) without scaling
+bounds = gdf_ext.total_bounds
+PAD = 4000
+map_aspect = (bounds[3] - bounds[1] + 2 * PAD) / (bounds[2] - bounds[0] + 2 * PAD)
+MAP_W = 2.8
+MAP_H = MAP_W * map_aspect
+TITLE_H = 0.3   # space above each map for the panel label
+CBAR_H = 0.62    # colour bar + map legend row
+KDE_H = 1.05     # axes height of panel (c)
+KDE_PAD = 0.62   # x label + panel title of (c)
+FIG_H = TITLE_H + MAP_H + CBAR_H + KDE_H + KDE_PAD
+
+fig = plt.figure(figsize=(FIG_W, FIG_H))
+
+
+def axes_in(left, bottom, width, height):
+    """Add axes from inch coordinates (origin bottom-left)."""
+    return fig.add_axes([left / FIG_W, bottom / FIG_H, width / FIG_W, height / FIG_H])
+
+
+map_bottom = KDE_PAD + KDE_H + CBAR_H
+ax_a = axes_in(0.05, map_bottom, MAP_W, MAP_H)
+ax_b = axes_in(FIG_W - MAP_W - 0.05, map_bottom, MAP_W, MAP_H)
+ax_c = axes_in(0.75, 0.38, FIG_W - 1.0, KDE_H)
 
 all_costs = [r["cost"] for r in routes_a] + list(df_iter["C_tot"])
-vmin, vmax = np.percentile(all_costs, [5, 95])
-cmap = plt.cm.RdYlGn_r
+CLIP_PCT = (5, 95)
+vmin, vmax = np.percentile(all_costs, CLIP_PCT)
+# Reversed viridis without its palest end: low cost light, high cost dark,
+# monotonic in lightness so the scale survives greyscale printing.
+cmap = ListedColormap(plt.cm.viridis_r(np.linspace(0.12, 1.0, 256)))
 norm_c = plt.Normalize(vmin=vmin, vmax=vmax)
+print(f"  Colour scale clipped at percentiles {CLIP_PCT}: {vmin:.2f}-{vmax:.2f} EUR/t")
 
 MINOR = 750  # minor-flow throughput threshold (t/y) for dashed line
 
 
 def draw_panel(ax, routes, title, show_eliminated=True,
                active_groups_override=None):
-    gdf_ext.boundary.plot(ax=ax, color="black", linewidth=1.0, zorder=3)
-    gdf_roads.plot(ax=ax, color="0.92", linewidth=0.15, zorder=1)
-    gdf_mun.boundary.plot(ax=ax, color="0.95", linewidth=0.08, zorder=1)
+    gdf_mun.boundary.plot(ax=ax, color="0.93", linewidth=0.08, zorder=1)
+    gdf_roads.plot(ax=ax, color="0.88", linewidth=0.12, zorder=1)
+    gdf_ext.boundary.plot(ax=ax, color="black", linewidth=0.6, zorder=3)
 
     for route in sorted(routes, key=lambda r: r["prod"]):
         coords = route["coords"]
         if len(coords) < 2:
             continue
-        c = cmap(norm_c(min(route["cost"], vmax)))
+        c = cmap(norm_c(route["cost"]))
         xs = [p[0] for p in coords]
         ys = [p[1] for p in coords]
         if route["prod"] < MINOR:
-            ax.plot(xs, ys, color=c, linewidth=0.5, alpha=0.35, zorder=2,
-                    linestyle=(0, (4, 3)), solid_capstyle="round")
+            ax.plot(xs, ys, color=c, linewidth=0.35, alpha=0.6, zorder=2,
+                    linestyle=(0, (3, 2)), solid_capstyle="round")
         else:
-            lw = max(0.7, min(3.0, 0.4 + 0.45 * math.log(max(route["prod"], 1))))
-            ax.plot(xs, ys, color=c, linewidth=lw, alpha=0.55, zorder=2,
+            lw = max(0.45, min(1.5, 0.2 + 0.17 * math.log(max(route["prod"], 1))))
+            ax.plot(xs, ys, color=c, linewidth=lw, alpha=0.8, zorder=2,
                     solid_capstyle="round")
 
     active_groups = (active_groups_override if active_groups_override is not None
@@ -315,96 +353,100 @@ def draw_panel(ax, routes, title, show_eliminated=True,
     for pid, (x, y) in plant_coords.items():
         cpid = CONSOLIDATION.get(pid, pid)
         if cpid in active_groups:
-            ax.plot(x, y, "k^", ms=4.5, zorder=5, markeredgewidth=0.4)
+            ax.plot(x, y, "^", color="black", mec="white", ms=3.6, zorder=5,
+                    markeredgewidth=0.3)
         elif show_eliminated:
-            ax.plot(x, y, "x", color="gray", ms=3.5, zorder=4, markeredgewidth=1.0)
+            ax.plot(x, y, "x", color="#c0392b", ms=3.6, zorder=5, markeredgewidth=0.9)
 
-    bounds = gdf_ext.total_bounds
-    pad = 5000
-    ax.set_xlim(bounds[0] - pad, bounds[2] + pad)
-    ax.set_ylim(bounds[1] - pad, bounds[3] + pad)
+    ax.set_xlim(bounds[0] - PAD, bounds[2] + PAD)
+    ax.set_ylim(bounds[1] - PAD, bounds[3] + PAD)
     ax.set_aspect("equal")
-    ax.set_title(title, fontsize=11, fontweight="bold", pad=8)
-    ax.set_xticks([])
-    ax.set_yticks([])
-    for s in ax.spines.values():
-        s.set_visible(False)
+    ax.set_title(title, fontsize=8, fontweight="bold", pad=3, loc="left")
+    ax.set_axis_off()
 
 
 # Panel (a): all 32 plants active
-draw_panel(ax_a, routes_a,
-           "(a) Baseline: 32-plant nearest-plant assignment",
+draw_panel(ax_a, routes_a, "(a) Baseline: 32 plants, nearest plant",
            show_eliminated=False)
 
 # Panel (b): only the changed flows under the iterative procedure.
 # Active set for the triangles = 24 plants of the iterative configuration.
 iter_active = set(df_iter["plant_id"].astype(int).unique())
 draw_panel(ax_b, routes_b,
-           f"(b) Delta: {len(changed_keys)} reassigned flows under iterative cost-based assignment",
+           f"(b) {len(changed_keys)} reassigned municipalities, iterative",
            show_eliminated=True,
            active_groups_override=iter_active)
 
-# Shared colorbar across the two maps (well above panel c title to avoid clash)
-cbar_ax = fig.add_axes([0.30, 0.46, 0.40, 0.010])
+# Shared colour bar (left) and map legend (right) under the two maps
+cbar_ax = axes_in(0.3, KDE_PAD + KDE_H + 0.36, 2.6, 0.09)
 sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm_c)
-cbar = fig.colorbar(sm, cax=cbar_ax, orientation="horizontal")
-cbar.set_label("Unit cost (EUR/t)", fontsize=9)
-cbar.ax.tick_params(labelsize=7)
+cbar = fig.colorbar(sm, cax=cbar_ax, orientation="horizontal", extend="both")
+cbar.set_label(f"Unit cost (€/t), clipped at the {CLIP_PCT[0]}th and "
+               f"{CLIP_PCT[1]}th percentiles", fontsize=7)
+cbar.ax.tick_params(labelsize=7, length=2, pad=1.5)
 
-# Panel (c): KDE overlay of municipal cost distribution under each configuration.
-# The KDE itself is over the municipality-level cost (one observation per
-# municipality). The legend labels and the vertical reference lines mark the
-# production-weighted system means; for the baseline we read the canonical figure
-# from the greedy pruning output (pareto_podado.csv at n_plants=32), so that the
-# value displayed on the figure agrees exactly with what is reported in the
-# manuscript tables.
+legend_map = [
+    Line2D([0], [0], color="black", marker="^", mec="white", mew=0.3, ls="None",
+           ms=5, label="Active plant"),
+    Line2D([0], [0], color="#c0392b", marker="x", ls="None", ms=4.5, mew=1.0,
+           label="Plant with zero throughput (b)"),
+    Line2D([0], [0], color="0.35", ls=(0, (3, 2)), lw=0.6,
+           label=f"Flow < {MINOR} t/year"),
+    Line2D([0], [0], color="0.35", ls="-", lw=1.2, label="Flow ≥ 750 t/year"),
+]
+fig.legend(handles=legend_map, loc="center left", fontsize=7, frameon=False, ncol=2,
+           bbox_to_anchor=(3.35 / FIG_W, (KDE_PAD + KDE_H + 0.36) / FIG_H),
+           handlelength=1.8, columnspacing=1.0, labelspacing=0.3)
+
+# Panel (c): KDE of the municipal cost distribution under each configuration.
+# The KDE is over municipality-level cost (one observation per municipality,
+# equal weights). The vertical reference lines mark the production-weighted
+# system means; for the baseline we read the canonical figure from the greedy
+# pruning output (pareto_podado.csv at n_plants=32), so that the value displayed
+# agrees exactly with the manuscript tables.
 costs_baseline = df_baseline["C_tot"].to_numpy()
 costs_iter = df_iter["C_tot"].to_numpy()
 prod_iter = df_iter["produccion"].to_numpy()
 
-# Canonical baseline cost: read directly from pareto_podado.csv (row n_plants=32).
 df_pareto = pd.read_csv(os.path.join(OUT_DIR, "pareto_podado.csv"))
 w_baseline = float(df_pareto.loc[df_pareto["n_plants"] == 32, "cost_per_tonne"].iloc[0])
-# Iterative production-weighted mean (matches optimal_assignments.csv).
 w_iter = (costs_iter * prod_iter).sum() / prod_iter.sum()
+print(f"  Production-weighted means: baseline {w_baseline:.2f}, iterative {w_iter:.2f}")
 
-xs = np.linspace(min(costs_baseline.min(), costs_iter.min()) - 1,
-                 max(costs_baseline.max(), costs_iter.max()) + 1, 600)
+lo = min(costs_baseline.min(), costs_iter.min())
+hi = max(costs_baseline.max(), costs_iter.max())
+xs = np.linspace(lo, hi, 600)
 kde_b = gaussian_kde(costs_baseline)
 kde_i = gaussian_kde(costs_iter)
-ax_c.fill_between(xs, kde_b(xs), alpha=0.30, color="#4a6fa5",
-                  label=(f"Baseline (32 plants, "
-                         f"production-weighted $\\bar{{C}}={w_baseline:.2f}$~EUR/t)"))
-ax_c.fill_between(xs, kde_i(xs), alpha=0.30, color="#c44e52",
-                  label=(f"Iterative cost-based assignment (24 plants, "
-                         f"production-weighted $\\bar{{C}}={w_iter:.2f}$~EUR/t)"))
-ax_c.plot(xs, kde_b(xs), color="#4a6fa5", linewidth=1.5)
-ax_c.plot(xs, kde_i(xs), color="#c44e52", linewidth=1.5)
-ax_c.axvline(w_baseline, color="#4a6fa5", linestyle="--", linewidth=1.0)
-ax_c.axvline(w_iter, color="#c44e52", linestyle="--", linewidth=1.0)
-ax_c.set_xlabel("Total unit cost per municipality (EUR/t)", fontsize=10)
-ax_c.set_ylabel("Density", fontsize=10)
-ax_c.set_title("(c) Distribution of municipal unit cost: baseline vs iterative cost-based",
-               fontsize=11, fontweight="bold", pad=10)
-ax_c.legend(loc="upper right", fontsize=9, framealpha=0.9)
-ax_c.grid(True, alpha=0.3, linestyle=":")
+C_BASE, C_ITER = "#2b4c7e", "#d17a00"
+ax_c.fill_between(xs, kde_b(xs), color=C_BASE, alpha=0.18, lw=0)
+ax_c.fill_between(xs, kde_i(xs), facecolor="none", edgecolor=C_ITER, hatch="////",
+                  lw=0, alpha=0.5)
+ax_c.plot(xs, kde_b(xs), color=C_BASE, lw=1.2,
+          label="Baseline, 32 plants (density)")
+ax_c.plot(xs, kde_i(xs), color=C_ITER, lw=1.2, ls=(0, (4, 1.5)),
+          label="Iterative, 24 plants (density)")
+ax_c.axvline(w_baseline, color=C_BASE, ls=(0, (1, 1.2)), lw=1.0,
+             label=f"Baseline mean, {w_baseline:.2f} €/t")
+ax_c.axvline(w_iter, color=C_ITER, ls=(0, (5, 1.5, 1, 1.5)), lw=1.0,
+             label=f"Iterative mean, {w_iter:.2f} €/t")
+ax_c.set_xlim(lo, hi)
+ax_c.set_ylim(bottom=0)
+ax_c.set_xlabel("Total unit cost per municipality (€/t)", fontsize=7.5, labelpad=2)
+ax_c.set_ylabel("Density", fontsize=7.5, labelpad=2)
+ax_c.tick_params(labelsize=7, length=2.5, pad=2)
+ax_c.set_title("(c) Distribution of municipal unit cost", fontsize=8,
+               fontweight="bold", pad=3, loc="left")
+ax_c.legend(loc="upper right", fontsize=7, frameon=False, handlelength=2.6)
+ax_c.grid(True, alpha=0.3, linestyle=":", lw=0.5)
 ax_c.spines["top"].set_visible(False)
 ax_c.spines["right"].set_visible(False)
 
-# Legend for the two map panels (placed on panel b for visibility)
-legend_map = [
-    Line2D([0], [0], color="black", marker="^", ls="None", ms=6, label="Active plant"),
-    Line2D([0], [0], color="gray", marker="x", ls="None", ms=5, mew=1.2,
-           label="Eliminated"),
-    Line2D([0], [0], color="0.5", ls=(0, (4, 3)), lw=0.8,
-           label="<750 t/y (dashed)"),
-    Line2D([0], [0], color="green", ls="-", lw=1.5, alpha=0.6, label="Low cost"),
-    Line2D([0], [0], color="red", ls="-", lw=1.5, alpha=0.6, label="High cost"),
+out_paths = [
+    os.path.join(FIG_DIR, "fig_three_panel_a05.png"),
 ]
-ax_b.legend(handles=legend_map, loc="lower right", fontsize=7, framealpha=0.9)
-
-out_path = os.path.join(FIG_DIR, "fig_three_panel_a05.png")
-plt.savefig(out_path)
-plt.close()
-print(f"Saved: {out_path}")
+for out_path in out_paths:
+    fig.savefig(out_path, dpi=600)
+    print(f"Saved: {out_path}")
+plt.close(fig)
 print("Done.")

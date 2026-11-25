@@ -11,19 +11,28 @@ import pandas as pd
 
 
 SCRIPT_DIR = Path(__file__).resolve().parent
-INPUT_CSV = SCRIPT_DIR / "plant_level_indicators.csv"
-SUMMARY_CSV = SCRIPT_DIR / "plant_indicator_distribution_summary.csv"
-MAIN_FIG_STEM = SCRIPT_DIR / "plant_indicator_distributions"
-RANK_FIG_STEM = SCRIPT_DIR / "plant_indicator_rankings"
-CORR_SCATTER_STEM = SCRIPT_DIR / "plant_indicator_correlation_scatter"
-CORR_HEATMAP_STEM = SCRIPT_DIR / "plant_indicator_correlation_heatmap"
-CORR_CSV = SCRIPT_DIR / "plant_indicator_spearman_correlation.csv"
+# Inputs and outputs live in ../outputs (plant_level_indicators.csv is the S1
+# plant-level panel written by analysis/compute_indicators.py).
+OUT_DIR = SCRIPT_DIR.parent / "outputs"
+INPUT_CSV = OUT_DIR / "plant_level_indicators.csv"
+SUMMARY_CSV = OUT_DIR / "plant_indicator_distribution_summary.csv"
+MAIN_FIG_STEM = OUT_DIR / "plant_indicator_distributions"
+# Figure 1 of the WM&R submission: 260 mm wide (2x the 130 mm print width), 300 dpi JPEG.
+SUBMISSION_FIG = OUT_DIR / "plant_indicator_distributions.jpg"
+FIG_WIDTH_IN = 260 / 25.4
+# Only cost and accessibility vary across plants under S1; precision, recall, leakage and IET
+# are constant by construction (1, 1, 0, 100) and are stated in the caption instead.
+MAIN_FIG_COLUMNS = ("C_i", "D90")
+RANK_FIG_STEM = OUT_DIR / "plant_indicator_rankings"
+CORR_SCATTER_STEM = OUT_DIR / "plant_indicator_correlation_scatter"
+CORR_HEATMAP_STEM = OUT_DIR / "plant_indicator_correlation_heatmap"
+CORR_CSV = OUT_DIR / "plant_indicator_spearman_correlation.csv"
 
 METRICS = [
     {
         "column": "C_i",
         "label": "Unit cost",
-        "unit": "EUR/t",
+        "unit": "€ t$^{-1}$",
         "color": "#1f77b4",
         "reference": None,
         "xlim": None,
@@ -55,7 +64,7 @@ METRICS = [
     {
         "column": "Leak_dg",
         "label": "Leakage penalty",
-        "unit": "EUR/t",
+        "unit": "€ t$^{-1}$",
         "color": "#e73f74",
         "reference": 0.0,
         "xlim": None,
@@ -127,15 +136,21 @@ def metric_xlim(values: pd.Series, configured: tuple[float, float] | None) -> tu
     vmax = float(values.max())
     if math.isclose(vmin, vmax):
         padding = max(abs(vmin) * 0.1, 1.0)
-        return vmin - padding, vmax + padding
+        lower = vmin - padding
+        if vmin >= 0:
+            lower = max(0.0, lower)
+        return lower, vmax + padding
 
     padding = (vmax - vmin) * 0.08
-    lower = min(0.0, vmin - padding) if vmin >= 0 else vmin - padding
+    # Non-negative indicators never get an axis below 0.
+    lower = max(0.0, vmin - padding) if vmin >= 0 else vmin - padding
     upper = vmax + padding
     return lower, upper
 
 
-def plot_distribution_panel(ax: plt.Axes, values: pd.Series, metric: dict[str, object]) -> None:
+def plot_distribution_panel(
+    ax: plt.Axes, values: pd.Series, metric: dict[str, object], large: bool = False
+) -> None:
     """Draw a compact box-and-strip distribution panel for a single metric."""
     color = str(metric["color"])
     unit = str(metric["unit"])
@@ -155,7 +170,9 @@ def plot_distribution_panel(ax: plt.Axes, values: pd.Series, metric: dict[str, o
         whiskerprops={"color": color, "linewidth": 1.0},
         capprops={"color": color, "linewidth": 1.0},
     )
-    ax.scatter(values, y, s=28, color=color, alpha=0.85, edgecolors="white", linewidths=0.4)
+    marker_size = 70 if large else 28
+    text_size = 14 if large else 8
+    ax.scatter(values, y, s=marker_size, color=color, alpha=0.85, edgecolors="white", linewidths=0.4)
 
     reference = metric["reference"]
     if reference is not None:
@@ -165,20 +182,22 @@ def plot_distribution_panel(ax: plt.Axes, values: pd.Series, metric: dict[str, o
     iqr = float(values.quantile(0.75) - values.quantile(0.25))
     ax.text(
         0.98,
-        0.83,
+        0.96 if large else 0.83,
         f"median {format_stat(median, unit)}\nIQR {format_stat(iqr, unit)}",
         transform=ax.transAxes,
         ha="right",
         va="top",
-        fontsize=8,
+        fontsize=text_size,
         bbox={"boxstyle": "round,pad=0.25", "facecolor": "white", "edgecolor": "#cccccc"},
     )
 
     xlabel = f"{metric['label']} ({unit})" if unit else str(metric["label"])
     ax.set_title(str(metric["label"]), fontsize=11, pad=8)
-    ax.set_xlabel(xlabel, fontsize=9)
+    ax.set_xlabel(xlabel, fontsize=15 if large else 9)
+    if large:
+        ax.tick_params(labelsize=14)
     ax.set_yticks([])
-    ax.set_ylim(0.72, 1.28)
+    ax.set_ylim(0.72, 1.48 if large else 1.28)
     ax.set_xlim(*xlim)
     ax.grid(axis="x", color="#d9d9d9", linewidth=0.7, alpha=0.8)
     ax.set_axisbelow(True)
@@ -222,15 +241,20 @@ def plot_rank_panel(ax: plt.Axes, df: pd.DataFrame, metric: dict[str, object]) -
 
 
 def create_distribution_figure(df: pd.DataFrame, output_stem: Path) -> None:
-    """Create the main manuscript-oriented multi-panel distribution figure."""
-    fig, axes = plt.subplots(2, 3, figsize=(12.5, 7.5), constrained_layout=True)
-    for ax, metric in zip(axes.flat, METRICS):
-        plot_distribution_panel(ax, df[str(metric["column"])], metric)
-
-    fig.suptitle("Plant-level indicator distributions (n = 32 plants)", fontsize=14, y=1.02)
-    fig.savefig(output_stem.with_suffix(".png"), dpi=300, bbox_inches="tight")
-    fig.savefig(output_stem.with_suffix(".pdf"), bbox_inches="tight")
-    plt.close(fig)
+    """Create Figure 1: the two plant-level indicators that vary under S1 (no figure title)."""
+    metrics = [m for m in METRICS if m["column"] in MAIN_FIG_COLUMNS]
+    with plt.rc_context({"font.size": 15, "font.family": "DejaVu Sans"}):
+        fig, axes = plt.subplots(1, len(metrics), figsize=(FIG_WIDTH_IN, 3.4),
+                                 constrained_layout=True)
+        for ax, metric, tag in zip(axes, metrics, ("(a)", "(b)")):
+            plot_distribution_panel(ax, df[str(metric["column"])], metric, large=True)
+            ax.set_title("")
+            ax.set_title(f"{tag} {metric['label']}", fontsize=15, loc="left", pad=6)
+        fig.savefig(output_stem.with_suffix(".png"), dpi=300)
+        fig.savefig(output_stem.with_suffix(".pdf"))
+        SUBMISSION_FIG.parent.mkdir(parents=True, exist_ok=True)
+        fig.savefig(SUBMISSION_FIG, dpi=300, pil_kwargs={"quality": 95})
+        plt.close(fig)
 
 
 def create_ranking_figure(df: pd.DataFrame, output_stem: Path) -> None:
@@ -265,7 +289,7 @@ def create_correlation_outputs(df: pd.DataFrame) -> None:
             ax = axes[i, j]
             x = data[str(col_metric["column"])]
             if i == j:
-                ax.hist(x, bins=9, color=colors[j], alpha=0.75, edgecolor="white")
+                ax.hist(x, bins=9 if float(np.ptp(x)) > 1e-9 else 1, color=colors[j], alpha=0.75, edgecolor="white")
                 ax.text(
                     0.04,
                     0.90,

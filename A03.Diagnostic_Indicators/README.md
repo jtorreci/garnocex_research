@@ -39,15 +39,17 @@ A03.Diagnostic_Indicators/
 │   ├── compute_indicators.py          # Full 13-indicator panel computation (S1)
 │   └── compute_three_scenarios.py     # Full three-scenario pipeline (needs confidential S2 Excels)
 ├── replication/
-│   ├── generate_three_panel_map.py    # Figure: three-panel scenario map
-│   ├── generate_plant_indicator_distributions.py  # Figure: plant indicator distributions
-│   ├── generate_plant_scenario_dynamics.py        # Figure: plant dynamics across scenarios
-│   └── plot_cost_component_kdes.py    # Figure: cost component KDEs
+│   ├── generate_plant_indicator_distributions.py  # Figure 1: plant indicator distributions
+│   ├── generate_three_panel_map.py    # Figure 2: three-panel routed-flow map
+│   ├── plot_cost_component_kdes.py    # Figure 3: cost component KDEs
+│   └── generate_plant_scenario_dynamics.py        # Figure S2: plant indicators across scenarios
 ├── data/
 │   ├── README.md                      # Data source descriptions
+│   ├── s1_proximity_baseline.csv      # S1 municipality table (nearest plant by road)
 │   └── s2_observed_flows_public.csv   # Anonymised S2 flows (730 rows, 383 municipalities)
 ├── outputs/                           # Pre-computed results (CSV + figures)
 │   ├── three_scenarios_comparison.csv
+│   ├── plant_level_indicators.csv     # S1 plant-level panel (input of Figure 1)
 │   ├── plant_level_s1_full.csv
 │   ├── plant_level_s2_full.csv
 │   ├── plant_level_s3_full.csv
@@ -55,8 +57,13 @@ A03.Diagnostic_Indicators/
 │   ├── muni_costs_s2.csv
 │   ├── muni_costs_s3.csv
 │   ├── plant_indicator_deltas.csv
-│   ├── cost_component_kdes.png
-│   └── cost_component_kdes.pdf
+│   ├── plant_indicator_distribution_summary.csv
+│   ├── plant_indicator_spearman_correlation.csv
+│   ├── plant_indicator_distributions.jpg      # Figure 1
+│   ├── fig_three_panel_routed.jpg             # Figure 2
+│   ├── cost_component_kdes.jpg                # Figure 3
+│   ├── plant_indicator_scenarios_overlay.jpg  # Figure S2
+│   └── *.png, *.pdf                           # auxiliary plots (rankings, correlations)
 └── docs/
     ├── data_description.md            # Data sources and structure
     └── methodology.md                 # Indicator definitions and pipeline
@@ -104,14 +111,29 @@ prints a comparison table. Expected output:
 
 ### Manuscript figures
 
-Map figures require the Extremadura shapefiles distributed with A01:
+All figure scripts read from `outputs/` and `data/` and write to `outputs/`
+(JPEG, 260 mm wide at 300 dpi, i.e. twice the 130 mm printed width).
 
 ```bash
-python replication/generate_three_panel_map.py       # needs A01.Voronoi shapefiles
-python replication/generate_plant_indicator_distributions.py
-python replication/generate_plant_scenario_dynamics.py
-python replication/plot_cost_component_kdes.py
+python replication/generate_plant_indicator_distributions.py  # Figure 1
+python replication/generate_three_panel_map.py                # Figure 2 (about 1 min)
+python replication/plot_cost_component_kdes.py                # Figure 3
+python replication/generate_plant_scenario_dynamics.py        # Figure S2
 ```
+
+The map reads the Extremadura shapefiles shipped with A05
+(`../A05.Network_Optimization/data/shp/`), S1 from
+`data/s1_proximity_baseline.csv`, S2 from `data/s2_observed_flows_public.csv`
+and S3 from `../A05.Network_Optimization/outputs/optimal_assignments.csv`. The
+road attribute table `carreteras.dbf` is not in the repository (see
+`../A05.Network_Optimization/data/shp/README.md`); only the road geometries
+are used and the script runs without it.
+
+Change on 2026-11-25: the map now snaps every municipality centroid and plant
+to the largest connected component of the road graph. The road shapefile has
+small disconnected fragments (118 components); snapping to one of them could
+leave a route with no road path, drawn as a straight segment. With the fix no
+route falls back to a straight line.
 
 ### Full S2 pipeline (not reproducible without confidential data)
 

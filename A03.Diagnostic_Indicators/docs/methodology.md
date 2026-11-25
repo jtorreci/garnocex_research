@@ -138,14 +138,18 @@ python analysis/compute_indicators.py        # plant-level panel for S1
 To reproduce the manuscript figures:
 
 ```bash
-python replication/generate_three_panel_map.py
-python replication/generate_plant_indicator_distributions.py
-python replication/generate_plant_scenario_dynamics.py
-python replication/plot_cost_component_kdes.py
+python replication/generate_plant_indicator_distributions.py  # Figure 1
+python replication/generate_three_panel_map.py                # Figure 2
+python replication/plot_cost_component_kdes.py                # Figure 3
+python replication/generate_plant_scenario_dynamics.py        # Figure S2
 ```
 
-Note: map figures require the Extremadura shapefiles distributed with A01 (see
-`../../A01.Voronoi/` — shapefiles are not re-distributed in this package).
+The scripts read their inputs from `outputs/` and `data/` and write the
+figures to `outputs/`. The map uses the shapefiles shipped with A05
+(`../A05.Network_Optimization/data/shp/`). Routes are shortest paths on a graph
+built from the road geometries; municipality centroids and plants snap to the
+largest connected component of that graph, so no route starts on an isolated
+road fragment and falls back to a straight segment.
 
 ---
 

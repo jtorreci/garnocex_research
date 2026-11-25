@@ -1,0 +1,7 @@
+,Unit cost,Accessibility D90,Precision,Recall,Leakage penalty,Transport efficiency
+Unit cost,1.000000,0.626833,,,,0.029179
+Accessibility D90,0.626833,1.000000,,,,0.009726
+Precision,,,,,,
+Recall,,,,,,
+Leakage penalty,,,,,,
+Transport efficiency,0.029179,0.009726,,,,1.000000

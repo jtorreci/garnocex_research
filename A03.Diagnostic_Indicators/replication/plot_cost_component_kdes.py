@@ -2,90 +2,98 @@
 """
 plot_cost_component_kdes.py
 ===========================
-Overlaid kernel-density estimates of the per-municipality unit cost, split into
-transport / treatment / total, for the three scenarios S1 (proximity),
-S2 (real observed use) and S3 (cost-optimal). Reads muni_costs_{s1,s2,s3}.csv
-exported by compute_three_scenarios.py.
+Kernel-density estimates of the per-municipality unit cost, split into
+transport / treatment / total, for S1 (proximity baseline), S2 (observed use
+with conservative closure) and S3 (cost-based fixed assignment). Reads
+muni_costs_{s1,s2,s3}.csv exported by compute_three_scenarios.py.
 
-The figure makes two things visible at a glance:
-  - transport: S2's pathological long-haul tail and how S3 reshapes it;
-  - treatment: the concentration of treatment cost around the optimum under S3;
-  - total: the net distributional effect.
-Dashed vertical lines mark the production-weighted means.
+Figure 3 of the WM&R submission. Written at twice the printed size (260 mm wide,
+300 dpi) so that 15 pt text prints at 7.5 pt at 130 mm. Scenarios differ by line
+style and marker as well as by colour, so the figure reads in greyscale. Costs
+are non-negative, so each KDE is reflected at 0 and drawn only for x >= 0.
+Markers above each panel give the production-weighted means (one row per scenario).
 """
+from __future__ import annotations
+
 import os
+
+import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-
-try:
-    from scipy.stats import gaussian_kde
-    def kde_curve(values, xs):
-        return gaussian_kde(values)(xs)
-except Exception:  # scipy not available -> simple Gaussian KDE fallback
-    def kde_curve(values, xs):
-        values = np.asarray(values, float)
-        n = len(values)
-        bw = 1.06 * values.std(ddof=1) * n ** (-1 / 5)  # Silverman
-        bw = max(bw, 1e-6)
-        diff = (xs[:, None] - values[None, :]) / bw
-        return np.exp(-0.5 * diff ** 2).sum(axis=1) / (n * bw * np.sqrt(2 * np.pi))
+from scipy.stats import gaussian_kde
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-plt.rcParams.update({"font.family": "serif", "font.size": 9, "savefig.dpi": 300})
+OUT_DIR = os.path.join(SCRIPT_DIR, "..", "outputs")
+OUT_JPG = os.path.join(OUT_DIR, "cost_component_kdes.jpg")
+FIG_WIDTH_IN = 260 / 25.4
+
+plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 15, "savefig.dpi": 300})
 
 SCEN = {
-    "s1": {"label": "S1 proximity", "color": "#6f6f6f"},
-    "s2": {"label": "S2 real",      "color": "#e8820c"},
-    "s3": {"label": "S3 optimised", "color": "#2ca02c"},
+    "s1": {"label": "S1 proximity\nbaseline", "color": "#000000", "ls": "-", "marker": "o",
+           "mk_start": 0},
+    "s2": {"label": "S2 observed use\n(conservative closure)", "color": "#c05a00",
+           "ls": (0, (6, 3)), "marker": "s", "mk_start": 40},
+    "s3": {"label": "S3 cost-based\nfixed assignment", "color": "#3b6fb6",
+           "ls": (0, (1.5, 2)), "marker": "^", "mk_start": 20},
 }
-data = {k: pd.read_csv(os.path.join(SCRIPT_DIR, f"muni_costs_{k}.csv")) for k in SCEN}
-
 COMPONENTS = [
     ("transport", "(a) Transport cost"),
     ("treatment", "(b) Treatment cost"),
-    ("total",     "(c) Total unit cost"),
+    ("total", "(c) Total unit cost"),
 ]
 
-fig, axes = plt.subplots(1, 3, figsize=(12, 3.7))
-for ax, (col, title) in zip(axes, COMPONENTS):
-    allv = np.concatenate([data[k][col].values for k in SCEN])
-    allv = allv[np.isfinite(allv)]
-    # full data range so the pathological tails stay visible
-    lo, hi = allv.min(), allv.max()
-    pad = 0.04 * (hi - lo)
-    xs = np.linspace(lo - pad, hi + pad, 600)
-    ymax = 0.0
-    for j, (k, meta) in enumerate(SCEN.items()):
-        v = data[k][col].values
-        v = v[np.isfinite(v)]
-        y = kde_curve(v, xs)
-        ymax = max(ymax, y.max())
-        ax.plot(xs, y, color=meta["color"], lw=1.8, label=meta["label"], zorder=3)
-        ax.fill_between(xs, y, color=meta["color"], alpha=0.10, zorder=2)
-        wmean = np.average(data[k][col].values, weights=data[k]["prod"].values)
-        ax.axvline(wmean, color=meta["color"], lw=1.0, ls="--", alpha=0.85, zorder=4)
-    # rug: one row of ticks per scenario below the axis -> individual municipalities, incl. tail
-    rug_h = 0.045 * ymax
-    for j, (k, meta) in enumerate(SCEN.items()):
-        v = data[k][col].values
-        v = v[np.isfinite(v)]
-        y0 = -(j + 1) * rug_h * 1.3
-        ax.plot(v, np.full_like(v, y0), "|", color=meta["color"],
-                ms=4, alpha=0.45, markeredgewidth=0.6, zorder=1)
-    ax.set_title(title, fontsize=10)
-    ax.set_xlabel("EUR/t")
-    ax.set_yticks([])
-    ax.set_ylim(bottom=-(len(SCEN) + 0.5) * rug_h * 1.3)
-    for s in ("top", "right", "left"):
-        ax.spines[s].set_visible(False)
-axes[0].set_ylabel("Density")
-axes[0].legend(frameon=False, fontsize=8, loc="upper right")
-fig.suptitle("Per-municipality unit-cost distributions across scenarios "
-             "(dashed lines: production-weighted means)", fontsize=11)
-fig.tight_layout(rect=[0, 0, 1, 0.94])
 
-out = os.path.join(SCRIPT_DIR, "cost_component_kdes")
-fig.savefig(out + ".png", dpi=300, bbox_inches="tight")
-fig.savefig(out + ".pdf", bbox_inches="tight")
-print("Saved:", out + ".png / .pdf")
+def kde_reflected(values: np.ndarray, xs: np.ndarray) -> np.ndarray:
+    """Gaussian KDE with reflection at 0 (support is x >= 0)."""
+    kde = gaussian_kde(values)
+    return kde(xs) + kde(-xs)
+
+
+def main() -> None:
+    data = {k: pd.read_csv(os.path.join(OUT_DIR, f"muni_costs_{k}.csv")) for k in SCEN}
+    fig, axes = plt.subplots(1, 3, figsize=(FIG_WIDTH_IN, 4.6))
+    for ax, (col, title) in zip(axes, COMPONENTS):
+        allv = np.concatenate([data[k][col].values for k in SCEN])
+        allv = allv[np.isfinite(allv)]
+        hi = allv.max() * 1.04
+        xs = np.linspace(0.0, hi, 800)
+        ymax = max(kde_reflected(data[k][col].dropna().values, xs).max() for k in SCEN)
+        for j, (k, meta) in enumerate(SCEN.items()):
+            v = data[k][col].dropna().values
+            y = kde_reflected(v, xs)
+            ax.plot(xs, y, color=meta["color"], ls=meta["ls"], lw=2.4, label=meta["label"],
+                    marker=meta["marker"], ms=7, zorder=3,
+                    markevery=[i for i in range(meta["mk_start"], len(xs), 80)
+                               if y[i] > 0.08 * ymax])
+            wmean = np.average(data[k][col].values, weights=data[k]["prod"].values)
+            ax.plot([wmean], [(1.14 + 0.09 * j) * ymax], marker=meta["marker"], color=meta["color"],
+                    ms=10, ls="None", clip_on=False, zorder=4)
+        ax.axhline(1.08 * ymax, color="0.75", lw=0.8, zorder=0)
+        ax.text(hi, 1.36 * ymax, "means", ha="right", va="top", fontsize=13, color="0.35")
+        rug_h = 0.06 * ymax
+        for j, (k, meta) in enumerate(SCEN.items()):
+            v = data[k][col].dropna().values
+            ax.plot(v, np.full_like(v, -(j + 1) * rug_h), "|", color=meta["color"],
+                    ms=7, alpha=0.6, mew=1.0, zorder=1)
+        ax.set_title(title, fontsize=15, loc="left", pad=8)
+        ax.set_xlabel("€ t$^{-1}$")
+        ax.set_xlim(0, hi)
+        ax.set_yticks([])
+        ax.set_ylim(-(len(SCEN) + 0.6) * rug_h, 1.36 * ymax)
+        ax.axhline(0, color="0.6", lw=0.8, zorder=0)
+        for s in ("top", "right", "left"):
+            ax.spines[s].set_visible(False)
+        ax.tick_params(labelsize=14)
+    axes[0].set_ylabel("Density")
+    handles, labels = axes[0].get_legend_handles_labels()
+    fig.legend(handles, labels, loc="upper center", ncol=3, frameon=False, fontsize=14,
+               handlelength=3.2, bbox_to_anchor=(0.5, 1.0))
+    fig.tight_layout(rect=(0, 0, 1, 0.84))
+    fig.savefig(OUT_JPG, dpi=300, pil_kwargs={"quality": 95})
+    plt.close(fig)
+    print("Saved:", OUT_JPG)
+
+
+if __name__ == "__main__":
+    main()

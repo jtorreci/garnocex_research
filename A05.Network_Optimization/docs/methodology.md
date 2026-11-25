@@ -94,4 +94,25 @@ Outputs are written under `outputs/<file>_<scenario>.csv` and aggregated in `sen
 4. Panel (b): only the routes for the **63** municipalities whose plant assignment changes under the iterative procedure; the unchanged routes are left blank to make the local nature of the change visible.
 5. Panel (c): kernel density estimates (`scipy.stats.gaussian_kde`) of the municipal unit-cost distribution under baseline vs iterative.
 
+Municipal production is looked up by normalised name (accents and articles
+stripped), because the distance table carries 82 names with garbled accents
+(e.g. "Talav n"). Before 2026-11-25 the lookup used the exact name and gave
+those municipalities zero tonnage in the figure; the analysis CSVs were not
+affected.
+
 Output: `results/figures/fig_three_panel_a05.png`.
+
+## 7. Other manuscript figures
+
+- `replication/generate_voronoi_map_a05.py` (Figure 1): Euclidean Voronoi
+  tessellation over the 32 consolidated plant-group locations, with merged
+  plants linked to their group centroid. Reads only `data/shp/`. Output:
+  `results/figures/Voronoi.png`.
+- `analysis/optimize_metaheuristics.py` runs simulated annealing and the
+  constrained and unconstrained genetic algorithms (about 4 min). It writes
+  `outputs/comparison_metaheuristics.csv`, `outputs/unconstrained_ga.csv` and
+  Figure 4.
+- `analysis/plot_metaheuristics.py` (Figure 4) redraws the figure from those two
+  CSVs without rerunning the search: (a) average system cost against the number
+  of active plants, (b) gap of greedy pruning above the best metaheuristic.
+  Output: `results/figures/comparison_metaheuristics.png`.
